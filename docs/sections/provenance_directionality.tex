@@ -1,0 +1,21 @@
+\section{Provenance and Directionality Note}
+
+\subsection{Corpus Provenance}
+
+The local CSV fields and sample records match the public \texttt{lipi} corpus layout and data stream exposed in the Yajnadevam repository \citep{yajnadevamLipi}. That resource appears to derive from or align with the Interactive Corpus of Indus Texts (ICIT) tradition associated with Wells and Fuls \citep{fulsICIT}. This is a working provenance statement, not yet a final bibliographic claim.
+
+\subsection{Text-Code Order}
+
+The local \texttt{text} field uses sign codes in a plus-delimited format such as \texttt{+740-540-002-820+}. ICIT documentation labels the searchable text field as text in R/L order. For internal analysis, this project distinguishes:
+
+\begin{description}
+  \item[Text-code order] The sequence exactly as represented in the CSV/ICIT code field.
+  \item[Normalized internal reading order] The sequence reversed from text-code order so that analysis runs from initial side to terminal side.
+\end{description}
+
+The positional script now preserves both modes. The default mode is normalized internal reading order; \texttt{-UseTextCodeOrder} emits the raw text-code control report.
+
+\subsection{Practical Consequence}
+
+The directionality control shows that initial and terminal classes invert between the two modes, while medial signs remain largely stable. Therefore, claims about prefixes or endings must explicitly state which direction convention is being used. Medial behavior is the safer first target for sign-class analysis.
+

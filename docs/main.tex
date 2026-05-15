@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{natbib}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=blue!45!black,
+  urlcolor=blue!45!black
+}
+
+\sisetup{
+  round-mode=places,
+  round-precision=3,
+  group-separator={,},
+  group-minimum-digits=4
+}
+
+\title{Indus Valley Script Research Project\\
+\large Corpus, Positional Grammar, and Hypothesis Control}
+\author{Research Lead: Codex\\Supervisor: Divyanshu}
+\date{Opened 2026-05-15}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document records a disciplined research program for the Indus Valley sign system. The project begins from corpus hygiene, sign distribution, directionality, and rival-model testing rather than from proposed readings. Linguistic hypotheses, including Dravidian, Indo-Aryan/Indo-Iranian, Munda-like, isolate, and mixed administrative models, are admitted only when they produce testable predictions.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{sections/project_scope}
+\input{sections/methodology}
+\input{sections/source_register}
+\input{sections/corpus_profile}
+\input{sections/hypothesis_ledger}
+\input{sections/provenance_directionality}
+\input{sections/first_findings}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

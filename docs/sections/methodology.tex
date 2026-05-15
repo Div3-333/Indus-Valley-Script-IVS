@@ -1,0 +1,57 @@
+\section{Methodology Charter}
+
+\subsection{North Star}
+
+The project will pursue decipherment only through constraints. We will not begin by assigning phonetic or semantic values to signs. We will begin by asking what the corpus permits.
+
+\subsection{Core Rules}
+
+\begin{enumerate}
+  \item The cleaned corpus is the initial data layer. Claimed readings and translations are hypothesis material, not evidence.
+  \item Any language-family claim must predict distributional behavior before it is used to explain individual signs.
+  \item Iconographic resemblance is not a reading. It can generate a hypothesis, but not validate one.
+  \item A proposed value must be tested against more inscriptions than the one that inspired it.
+  \item Negative evidence matters: failed hypotheses stay in the ledger so we do not rediscover them under new names.
+  \item We distinguish at least four levels: sign, allograph, sign cluster, and artifact formula.
+  \item Archaeological context is part of the grammar. Site, medium, object type, iconography, completeness, and directionality are not metadata afterthoughts.
+\end{enumerate}
+
+\subsection{Data Tiers}
+
+\begin{description}
+  \item[Tier A] Complete inscriptions with known or strongly supported directionality, clean sign sequence, stable artifact metadata.
+  \item[Tier B] Complete or near-complete inscriptions with uncertain directionality or minor damage.
+  \item[Tier C] Damaged, fragmentary, unusual, or contextually uncertain inscriptions.
+  \item[Tier D] Disputed, unprovenanced, translated-only, or otherwise circular records. These are excluded from baseline analysis.
+\end{description}
+
+\subsection{Initial Research Questions}
+
+\begin{itemize}
+  \item Which signs are strongly initial, medial, or terminal?
+  \item Which signs behave like numerals, classifiers, titles, commodities, names, or formula delimiters?
+  \item Do object types have distinct sign grammars?
+  \item Does the system look more like language, restricted writing, emblematic identifiers, administrative coding, or a mixed system?
+  \item Do any observed structures resemble Dravidian or Indo-Aryan morphology strongly enough to produce testable predictions?
+\end{itemize}
+
+\subsection{Decision Rule for Candidate Readings}
+
+A reading is not allowed into the main model unless it satisfies all three conditions:
+
+\begin{enumerate}
+  \item It explains a distributional fact in the corpus.
+  \item It predicts at least one additional distributional fact not used to invent it.
+  \item It is more economical than credible non-linguistic and alternative linguistic explanations.
+\end{enumerate}
+
+\subsection{Bias Controls}
+
+\begin{itemize}
+  \item Maintain rival models in parallel.
+  \item Score claims by evidence level.
+  \item Prefer blind tests: train on one site or object class, test on another.
+  \item Keep sign-number mappings distinct across Mahadevan, Parpola, Wells, and local datasets.
+  \item Document every normalization step.
+\end{itemize}
+

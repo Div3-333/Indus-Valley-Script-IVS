@@ -1,0 +1,104 @@
+\section{Initial Corpus Profile}
+
+Generated from \texttt{data/ivs\_corpus\_cleaned.csv} on 2026-05-15.
+
+\subsection{Basic Counts}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Measure} & \textbf{Value} \\
+\midrule
+Rows & 5,679 \\
+Rows marked complete & 3,673 \\
+Unique sites & 77 \\
+Unique artifact types & 32 \\
+Parsed non-zero sign tokens & 18,061 \\
+Unique non-zero sign codes & 713 \\
+Mean parsed text length & 3.512 signs \\
+\bottomrule
+\end{tabular}
+\caption{Initial corpus counts from the first profiling pass.}
+\label{tab:corpus-counts}
+\end{table}
+
+\subsection{Length Distribution}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rr}
+\toprule
+\textbf{Parsed length} & \textbf{Rows} \\
+\midrule
+1 & 698 \\
+2 & 1,514 \\
+3 & 1,051 \\
+4 & 863 \\
+5 & 669 \\
+6 & 381 \\
+7 & 285 \\
+8 & 102 \\
+9 & 55 \\
+10 & 26 \\
+11 & 22 \\
+12 & 4 \\
+13 & 7 \\
+16 & 1 \\
+17 & 1 \\
+\bottomrule
+\end{tabular}
+\caption{Parsed inscription length distribution in the cleaned corpus.}
+\label{tab:length-distribution}
+\end{table}
+
+\subsection{Directionality Metadata}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Direction} & \textbf{Rows} \\
+\midrule
+R/L & 4,265 \\
+-- & 776 \\
+NR & 386 \\
+L/R & 215 \\
+T/B & 16 \\
+BUS & 10 \\
+SYM & 8 \\
+R/L with trailing space & 3 \\
+\bottomrule
+\end{tabular}
+\caption{Directionality values in the cleaned corpus.}
+\label{tab:directionality}
+\end{table}
+
+\subsection{Top Non-Zero Sign Codes}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr@{\qquad}lr}
+\toprule
+\textbf{Sign} & \textbf{Count} & \textbf{Sign} & \textbf{Count} \\
+\midrule
+740 & 1,928 & 861 & 272 \\
+002 & 851 & 003 & 259 \\
+032 & 588 & 031 & 258 \\
+700 & 578 & 235 & 250 \\
+033 & 523 & 820 & 244 \\
+400 & 502 & 590 & 228 \\
+220 & 477 & 741 & 225 \\
+240 & 354 & 060 & 222 \\
+520 & 321 & 817 & 221 \\
+390 & 290 & 705 & 219 \\
+\bottomrule
+\end{tabular}
+\caption{Top 20 non-zero sign codes in the initial profiling pass.}
+\label{tab:top-signs}
+\end{table}
+
+\subsection{Immediate Interpretation}
+
+The local corpus is large enough for statistical analysis, but the 713-sign inventory is too broad to treat as a simple primary-sign inventory. The next step is to separate allographs, numerals, uncertain signs, damaged signs, and local sign-list conventions before making claims about writing-system type or language family.
+

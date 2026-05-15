@@ -1,0 +1,77 @@
+\section{Project Scope}
+
+The aim of this project is not to announce a decipherment prematurely. The aim is to build the strongest possible evidence pipeline: corpus hygiene, sign statistics, positional grammar, non-linguistic baselines, and only then constrained linguistic hypotheses.
+
+\subsection{Working Stance}
+
+\begin{itemize}
+  \item Treat the Indus system as undeciphered.
+  \item Treat all proposed readings as hypotheses, not data.
+  \item Prefer reproducible tests over attractive resemblances.
+  \item Compare Dravidian, Indo-Aryan/Indo-Iranian, Munda-like, isolate, and non-linguistic models under the same evidentiary rules.
+  \item Separate graphemic questions from linguistic questions: first ask what the signs are doing, then ask whether speech is involved.
+\end{itemize}
+
+\subsection{Current Data}
+
+\begin{itemize}
+  \item \texttt{data/ivs\_corpus\_cleaned.csv}: initial neutral working corpus.
+  \item \texttt{data/ivs\_corpus.csv}: same row count, but includes proposed Sanskrit readings and translations. These fields are excluded from the baseline because they risk circular reasoning.
+\end{itemize}
+
+\subsection{Research Phases}
+
+\begin{enumerate}
+  \item Corpus audit and provenance.
+  \item Sign inventory normalization.
+  \item Directionality and positional class analysis.
+  \item Formula, n-gram, and network analysis.
+  \item Non-linguistic baseline modeling.
+  \item Linguistic hypothesis testing.
+  \item Narrow, falsifiable candidate readings only where distributional evidence permits them.
+\end{enumerate}
+
+\subsection{Evidence Ladder}
+
+\begin{description}
+  \item[Speculative] Plausible idea, not yet tested.
+  \item[Suggestive] Agrees with some observed pattern but has weak alternatives.
+  \item[Testable] Predicts a measurable corpus pattern.
+  \item[Statistically supported] Survives predefined quantitative tests.
+  \item[Philologically plausible] Agrees with linguistic, archaeological, and comparative constraints.
+\end{description}
+
+No claim enters the project as a conclusion. It enters as a hypothesis and earns its place.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  node distance=0.9cm and 1.1cm,
+  stage/.style={
+    rectangle,
+    rounded corners=2pt,
+    draw=blue!45!black,
+    fill=blue!4,
+    text width=3.0cm,
+    align=center,
+    minimum height=0.9cm,
+    font=\small
+  },
+  arrow/.style={-{Latex[length=2.5mm]}, thick, draw=blue!45!black}
+]
+\node[stage] (corpus) {Corpus audit};
+\node[stage, right=of corpus] (inventory) {Sign inventory};
+\node[stage, right=of inventory] (grammar) {Positional grammar};
+\node[stage, below=of grammar] (baseline) {Rival baselines};
+\node[stage, left=of baseline] (linguistic) {Linguistic tests};
+\node[stage, left=of linguistic] (readings) {Candidate readings};
+\draw[arrow] (corpus) -- (inventory);
+\draw[arrow] (inventory) -- (grammar);
+\draw[arrow] (grammar) -- (baseline);
+\draw[arrow] (baseline) -- (linguistic);
+\draw[arrow] (linguistic) -- (readings);
+\end{tikzpicture}
+\caption{Research pipeline. Candidate readings are deliberately last.}
+\label{fig:pipeline}
+\end{figure}
+

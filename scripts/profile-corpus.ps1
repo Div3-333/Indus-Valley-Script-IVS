@@ -6,7 +6,7 @@ param(
 $rows = Import-Csv -Path $Path
 
 $tokenRows = foreach ($row in $rows) {
-    $tokens = [regex]::Matches($row.text, '\d{3}') | ForEach-Object { $_.Value }
+    $tokens = [regex]::Matches($row.text, '(?<!\d)\d{3,4}(?!\d)') | ForEach-Object { $_.Value }
     [pscustomobject]@{
         Id = $row.id
         Site = $row.site
@@ -56,4 +56,3 @@ $allTokens |
     Sort-Object Count -Descending |
     Select-Object -First $TopSigns Name, Count |
     Format-Table -AutoSize
-

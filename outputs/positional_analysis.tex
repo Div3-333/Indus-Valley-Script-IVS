@@ -1,0 +1,103 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\begin{document}
+\section*{Positional Analysis}
+
+Generated from \texttt{data/ivs\_corpus\_cleaned.csv}.
+
+Filtering: complete rows, directions \texttt{R/L} or \texttt{L/R}, and no \texttt{000} ambiguous sign tokens unless \texttt{-IncludeAmbiguousRows} is supplied.
+
+Direction mode: normalized reading order. ICIT text-code order is reversed so the internal sequence runs initial to terminal.
+
+Rows analyzed: 3154
+Unique non-zero signs analyzed: 606
+
+\subsection*{Strong Start Candidates}
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Sign} & \textbf{Total} & \textbf{Start} & \textbf{StartPct} & \textbf{MeanNormPosition} \\
+\midrule
+501 & 31 & 29 & 0.9355 & 0.039 \\
+817 & 164 & 146 & 0.8902 & 0.0628 \\
+034 & 132 & 112 & 0.8485 & 0.1424 \\
+692 & 54 & 43 & 0.7963 & 0.1221 \\
+820 & 165 & 125 & 0.7576 & 0.1576 \\
+503 & 69 & 52 & 0.7536 & 0.1337 \\
+413 & 39 & 29 & 0.7436 & 0.1843 \\
+104 & 20 & 13 & 0.65 & 0.2283 \\
+171 & 21 & 13 & 0.619 & 0.1478 \\
+861 & 212 & 130 & 0.6132 & 0.2572 \\
+416 & 38 & 23 & 0.6053 & 0.2919 \\
+003 & 195 & 116 & 0.5949 & 0.2501 \\
+920 & 119 & 69 & 0.5798 & 0.194 \\
+005 & 42 & 23 & 0.5476 & 0.2882 \\
+630 & 23 & 12 & 0.5217 & 0.2709 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Strong End Candidates}
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Sign} & \textbf{Total} & \textbf{End} & \textbf{EndPct} & \textbf{MeanNormPosition} \\
+\midrule
+400 & 360 & 325 & 0.9028 & 0.9583 \\
+527 & 47 & 41 & 0.8723 & 0.9255 \\
+151 & 71 & 61 & 0.8592 & 0.9369 \\
+520 & 255 & 213 & 0.8353 & 0.9293 \\
+700 & 448 & 359 & 0.8013 & 0.8241 \\
+090 & 125 & 97 & 0.776 & 0.874 \\
+156 & 92 & 71 & 0.7717 & 0.8938 \\
+154 & 38 & 29 & 0.7632 & 0.9035 \\
+824 & 23 & 16 & 0.6957 & 0.6957 \\
+740 & 1361 & 924 & 0.6789 & 0.881 \\
+617 & 63 & 40 & 0.6349 & 0.7202 \\
+226 & 26 & 15 & 0.5769 & 0.7212 \\
+407 & 123 & 68 & 0.5528 & 0.8357 \\
+390 & 208 & 104 & 0.5 & 0.7642 \\
+158 & 30 & 13 & 0.4333 & 0.7667 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Strong Medial Candidates}
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Sign} & \textbf{Total} & \textbf{Medial} & \textbf{MedialPct} & \textbf{MeanNormPosition} \\
+\midrule
+845 & 48 & 48 & 1 & 0.4514 \\
+752 & 49 & 48 & 0.9796 & 0.6547 \\
+060 & 181 & 177 & 0.9779 & 0.2832 \\
+760 & 90 & 88 & 0.9778 & 0.6654 \\
+585 & 47 & 45 & 0.9574 & 0.5974 \\
+500 & 20 & 19 & 0.95 & 0.2244 \\
+002 & 593 & 563 & 0.9494 & 0.3547 \\
+100 & 98 & 93 & 0.949 & 0.632 \\
+335 & 28 & 26 & 0.9286 & 0.473 \\
+460 & 28 & 26 & 0.9286 & 0.4653 \\
+435 & 54 & 50 & 0.9259 & 0.4864 \\
+923 & 36 & 33 & 0.9167 & 0.5853 \\
+482 & 33 & 30 & 0.9091 & 0.5742 \\
+070 & 28 & 25 & 0.8929 & 0.5974 \\
+741 & 170 & 151 & 0.8882 & 0.3382 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Output Files}
+
+\begin{itemize}
+\item \texttt{outputs/positional\_sign\_stats.csv}
+\item \texttt{outputs/tier\_a\_length\_distribution.csv}
+\end{itemize}
+\end{document}

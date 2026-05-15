@@ -1,0 +1,33 @@
+\section{Source Register}
+
+This register tracks sources we may use and how much evidentiary weight they should carry.
+
+\begin{longtable}{p{0.25\textwidth}p{0.20\textwidth}p{0.16\textwidth}p{0.30\textwidth}}
+\toprule
+\textbf{Source} & \textbf{Use} & \textbf{Status} & \textbf{Notes} \\
+\midrule
+\endhead
+Local \texttt{data/ivs\_corpus\_cleaned.csv} & Initial working corpus & Active, provenance to verify & 5,679 rows; excludes claimed Sanskrit readings/translations. \\
+Local \texttt{data/ivs\_corpus.csv} & Hypothesis archive only & Restricted & Includes proposed Sanskrit readings/translations; not baseline data. \\
+Yajnadevam \texttt{lipi} repository \citep{yajnadevamLipi} & Public source match for local CSV structure & Active provenance lead & Exposes an \texttt{inscriptions.csv} stream whose fields and sample rows align with the local corpus. \\
+Fuls/ICIT documentation \citep{fulsICIT} & Directionality and text-code conventions & Active provenance lead & Documents the interactive corpus and its R/L text-code search conventions. \\
+Mahadevan, \emph{The Indus Script: Texts, Concordance and Tables} & Standard concordance reference & Foundational & Often cited as M77; sign counts and text lines differ depending on filtering. \\
+Parpola et al., \emph{Corpus of Indus Seals and Inscriptions} & Corpus/reference tradition & Foundational & Important for artifact cataloging and sign traditions. \\
+mayig \texttt{indus-valley-script-corpus} & Open digital CISI-oriented corpus & Candidate comparative corpus & WIP digitization of CISI in JSON; records graphemes left-to-right while assuming right-to-left reading for the script. \\
+Yadav et al. \citep{yadav2010plosone} & N-gram/statistical baseline & Active methodological reference & Reports Zipf-Mandelbrot behavior, positional asymmetry, strong bigram correlations, and Markov modeling. \\
+Rao et al. \citep{rao2009science} & Conditional entropy comparison & Active methodological reference & Argues Indus conditional entropy resembles linguistic systems more than tested non-linguistic controls. \\
+Rao et al. \citep{rao2009pnas} & Markov modeling & Active methodological reference & Uses positional statistics and Markov methods for syntax and missing-sign prediction. \\
+Farmer, Sproat, and Witzel \citep{farmer2004collapse} & Non-linguistic critique & Required adversarial model & Argues against a linguistic-script thesis and stresses brevity, lack of long texts, and non-linguistic symbol-system parallels. \\
+Sinha et al. \citep{sinha2010network} & Network analysis & Candidate methodological reference & Reports network patterns suggestive of syntactic organization. \\
+Nair \citep{nair2026progress} & Recent synthetic non-linguistic baseline & Provisional & New preprint; useful as an emerging baseline design, not yet treated as settled. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Immediate Source Tasks}
+
+\begin{enumerate}
+  \item Identify the provenance of the two local CSV files.
+  \item Determine the sign numbering system used locally.
+  \item Build concordance crosswalks where possible: local code, Mahadevan, Parpola, Wells.
+  \item Decide whether to import the open JSON corpus as a second corpus layer.
+\end{enumerate}

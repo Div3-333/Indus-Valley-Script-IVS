@@ -3,7 +3,7 @@ param(
     [string]$OutDir = "outputs",
     [int]$MinCount = 20,
     [switch]$IncludeAmbiguousRows,
-    [switch]$NoDirectionNormalization
+    [switch]$UseTextCodeOrder
 )
 
 if (-not (Test-Path $OutDir)) {
@@ -16,7 +16,7 @@ $records = New-Object System.Collections.Generic.List[object]
 foreach ($row in $rows) {
     $dir = [string]$row.'dir.'
     $dir = $dir.Trim()
-    $tokens = @([regex]::Matches($row.text, '\d{3}') | ForEach-Object { $_.Value })
+    $tokens = @([regex]::Matches($row.text, '(?<!\d)\d{3,4}(?!\d)') | ForEach-Object { $_.Value })
 
     if (-not $IncludeAmbiguousRows) {
         if ($row.complete -ne "Y") { continue }
@@ -26,9 +26,10 @@ foreach ($row in $rows) {
 
     if ($tokens.Count -eq 0) { continue }
 
-    # Default assumption: the CSV text field is physical order. For R/L
-    # inscriptions, reverse tokens to approximate reading order.
-    if ((-not $NoDirectionNormalization) -and $dir -eq "R/L") {
+    # ICIT documentation labels the search field "Text (R/L)" and treats the
+    # right edge of the code as the initial side. Reverse text-code order to
+    # place inscriptions in internal reading order: initial to terminal.
+    if (-not $UseTextCodeOrder) {
         [array]::Reverse($tokens)
     }
 
@@ -112,10 +113,10 @@ $signStats = foreach ($item in $stats.Values) {
     }
 }
 
-$prefix = if ($NoDirectionNormalization) { "physical_order_" } else { "" }
+$prefix = if ($UseTextCodeOrder) { "text_code_order_" } else { "" }
 $statsPath = Join-Path $OutDir ($prefix + "positional_sign_stats.csv")
 $lengthPath = Join-Path $OutDir ($prefix + "tier_a_length_distribution.csv")
-$summaryPath = Join-Path $OutDir ($prefix + "positional_analysis.md")
+$summaryPath = Join-Path $OutDir ($prefix + "positional_analysis.tex")
 
 $signStats |
     Sort-Object -Property @{Expression="Total"; Descending=$true}, @{Expression="Sign"; Descending=$false} |
@@ -144,52 +145,78 @@ $topMedials = $signStats |
     Sort-Object -Property @{Expression="MedialPct"; Descending=$true}, @{Expression="Total"; Descending=$true} |
     Select-Object -First 15
 
-function Format-MarkdownTable($rowsToFormat, $columns) {
+function ConvertTo-LatexText([string]$Value) {
+    if ($null -eq $Value) { return "" }
+    $text = $Value -replace '\\', '/'
+    $text = $text -replace '_', '\_'
+    return $text
+}
+
+function Format-LatexTable($rowsToFormat, $columns) {
     $lines = New-Object System.Collections.Generic.List[string]
-    $lines.Add("| " + ($columns -join " | ") + " |") | Out-Null
-    $lines.Add("| " + (($columns | ForEach-Object { "---" }) -join " | ") + " |") | Out-Null
+    $alignment = "l" + ("r" * ($columns.Count - 1))
+    $headers = $columns | ForEach-Object { "\textbf{" + $_ + "}" }
+    $lines.Add("\begin{center}") | Out-Null
+    $lines.Add("\begin{tabular}{$alignment}") | Out-Null
+    $lines.Add("\toprule") | Out-Null
+    $lines.Add(($headers -join " & ") + " \\") | Out-Null
+    $lines.Add("\midrule") | Out-Null
 
     foreach ($row in $rowsToFormat) {
         $values = foreach ($column in $columns) { [string]$row.$column }
-        $lines.Add("| " + ($values -join " | ") + " |") | Out-Null
+        $lines.Add(($values -join " & ") + " \\") | Out-Null
     }
+
+    $lines.Add("\bottomrule") | Out-Null
+    $lines.Add("\end{tabular}") | Out-Null
+    $lines.Add("\end{center}") | Out-Null
 
     return $lines
 }
 
 $summary = New-Object System.Collections.Generic.List[string]
-$summary.Add("# Positional Analysis") | Out-Null
+$summary.Add("\documentclass[11pt,a4paper]{article}") | Out-Null
+$summary.Add("\usepackage[margin=1in]{geometry}") | Out-Null
+$summary.Add("\usepackage[T1]{fontenc}") | Out-Null
+$summary.Add("\usepackage[utf8]{inputenc}") | Out-Null
+$summary.Add("\usepackage{booktabs}") | Out-Null
+$summary.Add("\usepackage{hyperref}") | Out-Null
+$summary.Add("\begin{document}") | Out-Null
+$summary.Add("\section*{Positional Analysis}") | Out-Null
 $summary.Add("") | Out-Null
-$summary.Add('Generated from `' + $Path + '`.') | Out-Null
+$summary.Add("Generated from \texttt{" + (ConvertTo-LatexText $Path) + "}.") | Out-Null
 $summary.Add("") | Out-Null
-$summary.Add('Filtering: complete rows, directions `R/L` or `L/R`, and no `000` ambiguous sign tokens unless `-IncludeAmbiguousRows` is supplied.') | Out-Null
+$summary.Add("Filtering: complete rows, directions \texttt{R/L} or \texttt{L/R}, and no \texttt{000} ambiguous sign tokens unless \texttt{-IncludeAmbiguousRows} is supplied.") | Out-Null
 $summary.Add("") | Out-Null
-if ($NoDirectionNormalization) {
-    $summary.Add('Direction mode: physical-order mode. Token order is analyzed exactly as it appears in the CSV.') | Out-Null
+if ($UseTextCodeOrder) {
+    $summary.Add("Direction mode: text-code order. Token order is analyzed exactly as it appears in the CSV/ICIT R/L code field.") | Out-Null
 }
 else {
-    $summary.Add('Direction mode: reading-order mode. The CSV text field is assumed to be physical order; `R/L` rows are reversed for this pass.') | Out-Null
+    $summary.Add("Direction mode: normalized reading order. ICIT text-code order is reversed so the internal sequence runs initial to terminal.") | Out-Null
 }
 $summary.Add("") | Out-Null
 $summary.Add("Rows analyzed: $($records.Count)") | Out-Null
 $summary.Add("Unique non-zero signs analyzed: $($signStats.Count)") | Out-Null
 $summary.Add("") | Out-Null
-$summary.Add("## Strong Start Candidates") | Out-Null
+$summary.Add("\subsection*{Strong Start Candidates}") | Out-Null
 $summary.Add("") | Out-Null
-Format-MarkdownTable $topStarts @("Sign", "Total", "Start", "StartPct", "MeanNormPosition") | ForEach-Object { $summary.Add($_) | Out-Null }
+Format-LatexTable $topStarts @("Sign", "Total", "Start", "StartPct", "MeanNormPosition") | ForEach-Object { $summary.Add($_) | Out-Null }
 $summary.Add("") | Out-Null
-$summary.Add("## Strong End Candidates") | Out-Null
+$summary.Add("\subsection*{Strong End Candidates}") | Out-Null
 $summary.Add("") | Out-Null
-Format-MarkdownTable $topEnds @("Sign", "Total", "End", "EndPct", "MeanNormPosition") | ForEach-Object { $summary.Add($_) | Out-Null }
+Format-LatexTable $topEnds @("Sign", "Total", "End", "EndPct", "MeanNormPosition") | ForEach-Object { $summary.Add($_) | Out-Null }
 $summary.Add("") | Out-Null
-$summary.Add("## Strong Medial Candidates") | Out-Null
+$summary.Add("\subsection*{Strong Medial Candidates}") | Out-Null
 $summary.Add("") | Out-Null
-Format-MarkdownTable $topMedials @("Sign", "Total", "Medial", "MedialPct", "MeanNormPosition") | ForEach-Object { $summary.Add($_) | Out-Null }
+Format-LatexTable $topMedials @("Sign", "Total", "Medial", "MedialPct", "MeanNormPosition") | ForEach-Object { $summary.Add($_) | Out-Null }
 $summary.Add("") | Out-Null
-$summary.Add("## Output Files") | Out-Null
+$summary.Add("\subsection*{Output Files}") | Out-Null
 $summary.Add("") | Out-Null
-$summary.Add("- ``$statsPath``") | Out-Null
-$summary.Add("- ``$lengthPath``") | Out-Null
+$summary.Add("\begin{itemize}") | Out-Null
+$summary.Add("\item \texttt{" + (ConvertTo-LatexText $statsPath) + "}") | Out-Null
+$summary.Add("\item \texttt{" + (ConvertTo-LatexText $lengthPath) + "}") | Out-Null
+$summary.Add("\end{itemize}") | Out-Null
+$summary.Add("\end{document}") | Out-Null
 
 $summary | Set-Content -Path $summaryPath -Encoding UTF8
 

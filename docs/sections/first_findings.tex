@@ -1,0 +1,104 @@
+\section{First Findings: Positional Grammar Pass}
+
+Generated on 2026-05-15 from the positional-analysis outputs.
+
+\subsection{Scope}
+
+This pass used a stricter subset of the cleaned corpus:
+
+\begin{itemize}
+  \item complete inscriptions only;
+  \item directions limited to R/L and L/R;
+  \item rows containing \texttt{000} excluded;
+  \item the ICIT-style text-code order was compared against a normalized internal reading order.
+\end{itemize}
+
+Rows analyzed: 3,154. Unique non-zero sign codes analyzed: 606.
+
+\subsection{Early Functional Classes}
+
+The following are behavioral classes, not readings.
+
+\subsubsection{Strong End Candidates}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Sign} & \textbf{Total} & \textbf{Terminal percent} \\
+\midrule
+400 & 360 & 90.28 \\
+527 & 47 & 87.23 \\
+151 & 71 & 85.92 \\
+520 & 255 & 83.53 \\
+700 & 448 & 80.13 \\
+090 & 125 & 77.60 \\
+156 & 92 & 77.17 \\
+154 & 38 & 76.32 \\
+740 & 1,361 & 67.89 \\
+\bottomrule
+\end{tabular}
+\caption{Strong terminal candidates in normalized internal reading order.}
+\label{tab:terminal-candidates}
+\end{table}
+
+This suggests a terminal class that may include formula closers, titles, classifiers, commodities, or grammatical endings.
+
+\subsubsection{Strong Start Candidates}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Sign} & \textbf{Total} & \textbf{Initial percent} \\
+\midrule
+501 & 31 & 93.55 \\
+817 & 164 & 89.02 \\
+034 & 132 & 84.85 \\
+692 & 54 & 79.63 \\
+820 & 165 & 75.76 \\
+503 & 69 & 75.36 \\
+413 & 39 & 74.36 \\
+861 & 212 & 61.32 \\
+003 & 195 & 59.49 \\
+\bottomrule
+\end{tabular}
+\caption{Strong initial candidates in normalized internal reading order.}
+\label{tab:initial-candidates}
+\end{table}
+
+This suggests an opening class that may include prefixes, header signs, owner/title markers, or object-class indicators.
+
+\subsubsection{Strong Medial Candidates}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Sign} & \textbf{Total} & \textbf{Medial percent} \\
+\midrule
+845 & 48 & 100.00 \\
+752 & 49 & 97.96 \\
+060 & 181 & 97.79 \\
+760 & 90 & 97.78 \\
+585 & 47 & 95.74 \\
+500 & 20 & 95.00 \\
+002 & 593 & 94.94 \\
+100 & 98 & 94.90 \\
+741 & 170 & 88.82 \\
+\bottomrule
+\end{tabular}
+\caption{Strong medial candidates in normalized internal reading order.}
+\label{tab:medial-candidates}
+\end{table}
+
+This suggests a medial class that may carry core lexical, classifying, or internal-formula functions.
+
+\subsection{Directionality Finding}
+
+The first directionality diagnostic produced an important control result: start and end classes invert when analyzed in raw text-code order, while medial signs remain stable. The ICIT source convention appears to encode text in R/L code order, where the terminal side is on the left of the code and the initial side is on the right. Therefore, internal linguistic analysis should reverse text-code order and work from initial to terminal.
+
+\subsection{Next Test}
+
+The next analytical milestone is sign-inventory compression. We must separate primary signs, allographs, stroke/numeral candidates, damaged signs, and local sign-list conventions before treating the 713 observed non-zero codes as linguistic units.
+
