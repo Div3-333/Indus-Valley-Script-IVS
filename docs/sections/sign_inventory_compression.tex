@@ -1,0 +1,109 @@
+\section{Sign-Inventory Compression}
+
+\subsection{Rationale}
+
+The first inventory pass treats every observed code as a code-level observation, not as a final graphemic unit. This distinction is necessary because the local corpus contains 713 observed non-zero codes, while ICIT documentation describes the Wells list as a 676-sign sign list \citep{fulsICIT}. The discrepancy does not by itself prove that the local corpus has extra signs; it tells us that a crosswalk and variant audit must precede any claim about the functional size of the script.
+
+\subsection{Inventory Overview}
+
+The script \texttt{scripts/sign-inventory-analysis.ps1} generated a code-level inventory from \texttt{data/ivs\_corpus\_cleaned.csv}. The output files are:
+
+\begin{itemize}
+  \item \texttt{outputs/sign\_inventory\_stats.csv};
+  \item \texttt{outputs/sign\_frequency\_bands.csv};
+  \item \texttt{outputs/sign\_coverage\_thresholds.csv};
+  \item \texttt{outputs/sign\_candidate\_classes.csv};
+  \item \texttt{outputs/sign\_inventory\_analysis.tex}.
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Measure} & \textbf{Value} \\
+\midrule
+Rows & 5,679 \\
+Non-zero sign tokens & 18,061 \\
+Unique non-zero codes & 713 \\
+Eroded \texttt{000} tokens & 1,881 \\
+Dominant non-zero codes, $\geq 500$ tokens & 6 \\
+Hapax codes & 218 \\
+Codes occurring one to five times & 448 \\
+\bottomrule
+\end{tabular}
+\caption{Code-level sign inventory overview.}
+\label{tab:inventory-overview}
+\end{table}
+
+\subsection{Frequency Compression}
+
+The frequency profile is highly compressed. Six dominant non-zero codes account for 4,970 tokens; 43 codes with at least 100 occurrences account for 12,151 tokens. Conversely, 448 codes occur five times or fewer. These rare codes are the first candidates for allograph checks, damaged readings, narrow regional variants, and possible cataloging noise.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Band} & \textbf{Codes} & \textbf{Tokens} \\
+\midrule
+Dominant, $\geq 500$ & 6 & 4,970 \\
+Common, 100--499 & 37 & 7,181 \\
+Active, 20--99 & 71 & 3,421 \\
+Low, 6--19 & 151 & 1,590 \\
+Rare, 3--5 & 125 & 471 \\
+Dis legomena & 105 & 210 \\
+Hapax & 218 & 218 \\
+\bottomrule
+\end{tabular}
+\caption{Frequency bands for non-zero sign codes.}
+\label{tab:frequency-bands}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{rrrr}
+\toprule
+\textbf{Coverage} & \textbf{Codes required} & \textbf{Tokens covered} & \textbf{Total tokens} \\
+\midrule
+0.50 & 22 & 9,240 & 18,061 \\
+0.75 & 61 & 13,558 & 18,061 \\
+0.90 & 159 & 16,265 & 18,061 \\
+0.95 & 265 & 17,162 & 18,061 \\
+0.99 & 533 & 17,881 & 18,061 \\
+\bottomrule
+\end{tabular}
+\caption{Number of most frequent codes needed to cover the non-zero token stream.}
+\label{tab:coverage-thresholds}
+\end{table}
+
+\subsection{Candidate Functional Classes}
+
+The first functional labels are deliberately mechanical. A code is labeled as an initial or terminal candidate only if it has at least 20 positional observations and reaches a 0.75 edge-position threshold. A medial candidate must have at least 20 positional observations and reach a 0.85 medial-position threshold.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Class} & \textbf{Leading codes} & \textbf{Criterion} & \textbf{Interpretive status} \\
+\midrule
+Initial & 501, 817, 034, 692, 503 & Start proportion $\geq 0.75$ & Behavioral, not phonetic \\
+Terminal & 400, 527, 151, 520, 700, 154, 090 & End proportion $\geq 0.75$ & Behavioral, not grammatical yet \\
+Medial & 845, 752, 060, 760, 585, 500, 100, 002 & Medial proportion $\geq 0.85$ & Robust internal-formula target \\
+\bottomrule
+\end{tabular}
+\caption{First code-level functional classes derived from positional behavior.}
+\label{tab:functional-classes}
+\end{table}
+
+\subsection{Compression Policy}
+
+The project will use four compression layers:
+
+\begin{enumerate}
+  \item \textbf{Frozen code layer}: preserve every local code exactly as recorded.
+  \item \textbf{Functional layer}: mark dominant, initial, terminal, medial, singleton, rare, and eroded categories.
+  \item \textbf{Variant-candidate layer}: identify rare codes and neighboring numerical families for image and concordance review.
+  \item \textbf{Reduced-grapheme layer}: merge only after a Wells/ICIT crosswalk, image inspection, and distributional-neighbor comparison agree.
+\end{enumerate}
+
+No code will be merged solely because it is rare. Rarity is a triage signal, not an argument.
+

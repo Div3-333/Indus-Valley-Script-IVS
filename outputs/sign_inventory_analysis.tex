@@ -1,0 +1,124 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\begin{document}
+\section*{Sign Inventory Compression Analysis}
+
+Generated from \texttt{data/ivs\_corpus\_cleaned.csv}. Counts are code-level observations, not final graphemic units.
+
+\subsection*{Inventory Overview}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Measure} & \textbf{Value} \\
+\midrule
+Rows & 5679 \\
+NonZeroTokens & 18061 \\
+UniqueNonZeroCodes & 713 \\
+Eroded000Tokens & 1881 \\
+DominantCodes500Plus & 6 \\
+HapaxCodes & 218 \\
+RareCodesOneToFive & 448 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Frequency Bands}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Band} & \textbf{Signs} & \textbf{Tokens} \\
+\midrule
+Common100To499 & 37 & 7181 \\
+Dominant500Plus & 6 & 4970 \\
+Active20To99 & 71 & 3421 \\
+Low6To19 & 151 & 1590 \\
+Rare3To5 & 125 & 471 \\
+Hapax & 218 & 218 \\
+DisLegomenon & 105 & 210 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Coverage Thresholds}
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Coverage} & \textbf{Signs} & \textbf{Tokens} & \textbf{TotalTokens} \\
+\midrule
+0.5 & 22 & 9240 & 18061 \\
+0.75 & 61 & 13558 & 18061 \\
+0.9 & 159 & 16265 & 18061 \\
+0.95 & 265 & 17162 & 18061 \\
+0.99 & 533 & 17881 & 18061 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Candidate Functional Classes}
+Functional classes are corpus-derived labels using minimum positional count 20, edge threshold 0.75, and medial threshold 0.85.
+
+\subsubsection*{Initial Candidates}
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Sign} & \textbf{TotalTokens} & \textbf{StartPct} & \textbf{MeanNormPosition} \\
+\midrule
+501 & 31 & 0.9355 & 0.039 \\
+817 & 221 & 0.8902 & 0.0628 \\
+034 & 184 & 0.7832 & 0.1699 \\
+692 & 77 & 0.7818 & 0.129 \\
+503 & 82 & 0.7536 & 0.1337 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection*{Terminal Candidates}
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Sign} & \textbf{TotalTokens} & \textbf{EndPct} & \textbf{MeanNormPosition} \\
+\midrule
+400 & 502 & 0.9028 & 0.9583 \\
+527 & 63 & 0.8723 & 0.9255 \\
+151 & 94 & 0.8472 & 0.9308 \\
+520 & 321 & 0.8353 & 0.9293 \\
+700 & 578 & 0.7821 & 0.8163 \\
+154 & 45 & 0.7632 & 0.9035 \\
+090 & 195 & 0.7578 & 0.8652 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection*{Medial Candidates}
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Sign} & \textbf{TotalTokens} & \textbf{MedialPct} & \textbf{MeanNormPosition} \\
+\midrule
+845 & 55 & 1 & 0.4514 \\
+752 & 53 & 0.9796 & 0.6547 \\
+060 & 222 & 0.9779 & 0.2832 \\
+760 & 134 & 0.9778 & 0.6654 \\
+585 & 60 & 0.9574 & 0.5974 \\
+500 & 24 & 0.95 & 0.2244 \\
+100 & 134 & 0.949 & 0.632 \\
+002 & 851 & 0.9306 & 0.3576 \\
+335 & 43 & 0.9286 & 0.473 \\
+460 & 39 & 0.9286 & 0.4653 \\
+435 & 75 & 0.9259 & 0.4864 \\
+923 & 45 & 0.9167 & 0.5853 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Compression Policy}
+\begin{enumerate}
+\item Treat all 713 observed non-zero codes as code-level observations, not final signs.
+\item Freeze dominant and positional candidates for functional testing before any merger.
+\item Treat hapax and very rare codes as the first allograph/noise candidates, pending image and concordance checks.
+\item Build a crosswalk to Wells/ICIT before claiming a reduced sign inventory.
+\end{enumerate}
+\end{document}
