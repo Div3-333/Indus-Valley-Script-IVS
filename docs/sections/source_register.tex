@@ -11,12 +11,14 @@ Local \texttt{data/ivs\_corpus\_cleaned.csv} & Initial working corpus & Active, 
 Local \texttt{data/ivs\_corpus.csv} & Hypothesis archive only & Restricted & Includes proposed Sanskrit readings/translations; not baseline data. \\
 Yajnadevam \texttt{lipi} repository \citep{yajnadevamLipi} & Public source match for local CSV structure & Active provenance lead & Exposes an \texttt{inscriptions.csv} stream whose fields and sample rows align with the local corpus. \\
 Fuls/ICIT documentation \citep{fulsICIT} & Directionality and text-code conventions & Active provenance lead & Documents the interactive corpus and its R/L text-code search conventions. \\
+Fuls, \emph{Corpus of Indus Inscriptions} \citep{fuls2022corpus} & ICIT corpus and sign-list reference & Tracked local PDF & Stored at \texttt{references/pdfs/fuls/Fuls\_2022\_Corpus\_of\_Indus\_Inscriptions.pdf}. PDF page 21 contains a high-number sign-list panel covering ICIT \texttt{703}--\texttt{958}, including \texttt{705}, \texttt{706}, \texttt{817}, \texttt{820}, \texttt{861}, and \texttt{920}. \\
 Harappa catalog review \citep{harappaCatalog2026} & Public description of Fuls' sign catalog & Contextual reference & Confirms that the catalog is visually detailed and designed as a sign-reference tool, but does not provide a machine-readable target-code image table. \\
 Deutsche Digitale Bibliothek record \citep{ddbFulsCatalog2026} & Bibliographic access to Fuls' catalog & Contextual reference & Confirms publication details for the 560-page illustrated catalog, while noting that only the table of contents is digitally open. \\
-Local Fuls 2023 SearchInside PDF sample & Partial ICIT visual mapping & Active local evidence; not committed & Searchable 35-page sample with embedded sign-list images. It includes visual evidence for ICIT signs \texttt{820} and \texttt{920}, but not a complete visual table for the current Tier 1 target set. \\
+Local Fuls 2023 SearchInside PDF sample & Supplementary ICIT visual mapping & Tracked local PDF & Stored at \texttt{references/pdfs/fuls/Fuls\_2023\_Catalog\_of\_Indus\_Signs\_SearchInside.pdf}. The sample independently shows additional catalog visuals, including \texttt{820} and \texttt{920}. \\
 Daggumati and Revesz \citep{daggumati2021allographs} & Allograph-review method & Active methodological reference & Provides a cautious framework for testing redundancies, mirroring, directionality, space-saving, catalog errors, and image-based allograph claims. \\
-Mahadevan, \emph{The Indus Script: Texts, Concordance and Tables} \citep{mahadevan1977} & Standard concordance reference & Foundational; local scan available but not committed & Often cited as M77; sign counts and text lines differ depending on filtering. Local scan includes the sign list and sign-variant appendix, useful for visual discipline and Mahadevan-code crosswalk work. \\
-Parpola et al., \emph{Corpus of Indus Seals and Inscriptions} & Corpus/reference tradition & Foundational & Important for artifact cataloging and sign traditions. \\
+Mahadevan, \emph{The Indus Script: Texts, Concordance and Tables} \citep{mahadevan1977} & Standard concordance reference & Foundational; tracked local PDF & Stored at \texttt{references/pdfs/mahadevan/Mahadevan\_1977\_The\_Indus\_Script\_Texts\_Concordance\_and\_Tables.pdf}. Often cited as M77; sign counts and text lines differ depending on filtering. \\
+Joshi and Parpola, \emph{Corpus of Indus Seals and Inscriptions}, Vol. 1 \citep{joshiParpola1987cisi1} & Artifact-image authority & Foundational; tracked local PDF & Stored at \texttt{references/pdfs/cisi/Joshi\_Parpola\_1987\_CISI\_Vol1\_Collections\_in\_India.pdf}. Useful later for seal/inscription image checks once ICIT/CISI/page links are built. \\
+CISI remaining volumes & Corpus/reference tradition & Candidate future sources & Additional volumes may be needed for Pakistan and later-discovered materials. \\
 mayig \texttt{indus-valley-script-corpus} & Open digital CISI-oriented corpus & Candidate comparative corpus & WIP digitization of CISI in JSON; records graphemes left-to-right while assuming right-to-left reading for the script. \\
 Yadav et al. \citep{yadav2010plosone} & N-gram/statistical baseline & Active methodological reference & Reports Zipf-Mandelbrot behavior, positional asymmetry, strong bigram correlations, and Markov modeling. \\
 Rao et al. \citep{rao2009science} & Conditional entropy comparison & Active methodological reference & Argues Indus conditional entropy resembles linguistic systems more than tested non-linguistic controls. \\
@@ -33,5 +35,7 @@ Nair \citep{nair2026progress} & Recent synthetic non-linguistic baseline & Provi
   \item Identify the provenance of the two local CSV files.
   \item Determine the sign numbering system used locally.
   \item Build concordance crosswalks where possible: local code, Mahadevan, Parpola, Wells.
+  \item Build a local PDF page index for the curated reference library.
+  \item Link ICIT/CISI identifiers to artifact-image pages in the local CISI volume.
   \item Decide whether to import the open JSON corpus as a second corpus layer.
 \end{enumerate}

@@ -146,28 +146,68 @@ $reviewRows = New-Object System.Collections.Generic.List[object]
 $exampleRows = New-Object System.Collections.Generic.List[object]
 
 $foundVisualSigns = @{
-    "820" = "Fuls 2023 SearchInside local PDF, PDF page 21"
-    "920" = "Fuls 2023 SearchInside local PDF, PDF page 35"
+    "705" = "Fuls 2022 Corpus of Indus Inscriptions, PDF page 21"
+    "706" = "Fuls 2022 Corpus of Indus Inscriptions, PDF page 21"
+    "817" = "Fuls 2022 Corpus of Indus Inscriptions, PDF page 21"
+    "820" = "Fuls 2022 Corpus of Indus Inscriptions, PDF page 21"
+    "861" = "Fuls 2022 Corpus of Indus Inscriptions, PDF page 21"
+    "920" = "Fuls 2022 Corpus of Indus Inscriptions, PDF page 21"
 }
 
 $foundVisualEvidenceRows = @(
     [pscustomobject]@{
-        Sign = "820"
-        Source = "Fuls 2023 SearchInside local PDF"
+        Sign = "705"
+        Source = "Fuls 2022 Corpus of Indus Inscriptions"
         PdfPage = "21"
-        LocalExtract = "scratch/fuls_pages/fuls_page_021_img_000.jpg"
+        LocalExtract = "scratch/corpus_signs_layout/corpus_page_021_sign_705.png"
+        RelatedPairs = "705/706"
+        Status = "Catalog visual available for Tier 1 pair"
+        Notes = "Layout-ordered extraction from sign-list part 3; paired counterpart 706 is also available."
+    },
+    [pscustomobject]@{
+        Sign = "706"
+        Source = "Fuls 2022 Corpus of Indus Inscriptions"
+        PdfPage = "21"
+        LocalExtract = "scratch/corpus_signs_layout/corpus_page_021_sign_706.png"
+        RelatedPairs = "705/706"
+        Status = "Catalog visual available for Tier 1 pair"
+        Notes = "Layout-ordered extraction from sign-list part 3; paired counterpart 705 is also available."
+    },
+    [pscustomobject]@{
+        Sign = "817"
+        Source = "Fuls 2022 Corpus of Indus Inscriptions"
+        PdfPage = "21"
+        LocalExtract = "scratch/corpus_signs_layout/corpus_page_021_sign_817.png"
+        RelatedPairs = "817/861; 817/820"
+        Status = "Catalog visual available for Tier 1 pairs"
+        Notes = "Layout-ordered extraction from sign-list part 3; counterparts 820 and 861 are also available."
+    },
+    [pscustomobject]@{
+        Sign = "820"
+        Source = "Fuls 2022 Corpus of Indus Inscriptions"
+        PdfPage = "21"
+        LocalExtract = "scratch/corpus_signs_layout/corpus_page_021_sign_820.png"
         RelatedPairs = "817/820; 820/861"
-        Status = "One-sided visual evidence for active candidate pairs"
-        Notes = "The sample page shows sign 820 with a frequency plot and related sign figures. Counterparts 817 and 861 were not found in the sample."
+        Status = "Catalog visual available for active candidate pairs"
+        Notes = "Layout-ordered extraction from sign-list part 3; also attested in the Fuls 2023 SearchInside sample."
+    },
+    [pscustomobject]@{
+        Sign = "861"
+        Source = "Fuls 2022 Corpus of Indus Inscriptions"
+        PdfPage = "21"
+        LocalExtract = "scratch/corpus_signs_layout/corpus_page_021_sign_861.png"
+        RelatedPairs = "817/861; 820/861"
+        Status = "Catalog visual available for active candidate pairs"
+        Notes = "Layout-ordered extraction from sign-list part 3; counterparts 817 and 820 are also available."
     },
     [pscustomobject]@{
         Sign = "920"
-        Source = "Fuls 2023 SearchInside local PDF"
-        PdfPage = "35"
-        LocalExtract = "scratch/fuls_pages/fuls_page_035_img_011.jpg"
+        Source = "Fuls 2022 Corpus of Indus Inscriptions"
+        PdfPage = "21"
+        LocalExtract = "scratch/corpus_signs_layout/corpus_page_021_sign_920.png"
         RelatedPairs = "692/920"
         Status = "One-sided visual evidence for active candidate pair"
-        Notes = "The sample sign-list page for 906-940 includes sign 920. Counterpart 692 was not found in the sample."
+        Notes = "Layout-ordered extraction from sign-list part 3; counterpart 692 is not on this page and remains pending. Sign 920 is also visible in the Fuls 2023 SearchInside sample."
     }
 )
 
@@ -310,12 +350,14 @@ $foundVisualEvidenceRows | Export-Csv -NoTypeInformation -Path $foundVisualPath
 
 $sourceStatusRows = @(
     [pscustomobject]@{Source="Committed workspace image corpus"; Status="Unavailable"; Use="No committed sign or artifact image assets are present; local scratch extracts are kept uncommitted."},
-    [pscustomobject]@{Source="Fuls 2023 SearchInside local PDF"; Status="Partial local sample"; Use="Searchable 35-page sample with embedded sign-list images; includes local visuals for signs 820 and 920, but not the complete Tier 1 target set."},
+    [pscustomobject]@{Source="Fuls 2022 Corpus of Indus Inscriptions"; Status="Tracked local PDF"; Use="Searchable 35-page corpus sample; PDF page 21 maps 205 ICIT high-number signs from 703 to 958, including 705, 706, 817, 820, 861, and 920."},
+    [pscustomobject]@{Source="Fuls 2023 SearchInside local PDF"; Status="Tracked supplementary sample"; Use="Searchable 35-page catalog sample with embedded sign-list images; confirms additional visuals including 820 and 920."},
     [pscustomobject]@{Source="ICIT/Epigraphica"; Status="Catalog described, images not harvested"; Use="Primary sign-catalog target; requires direct catalog/image access before visual verdicts."},
     [pscustomobject]@{Source="Deutsche Digitale Bibliothek"; Status="Bibliographic record only"; Use="Confirms Fuls 2023 catalog details, but only the table of contents is openly accessible."},
     [pscustomobject]@{Source="Harappa catalog review"; Status="Public descriptive source"; Use="Confirms catalog scope and scholarly importance, but not a machine-readable sign-image table."},
     [pscustomobject]@{Source="Daggumati and Revesz 2021"; Status="Open-access method source"; Use="Supplies allograph-review logic: shape, mirroring, direction, space, and catalog error checks."},
-    [pscustomobject]@{Source="CISI volumes"; Status="Not locally available"; Use="Artifact-image authority; images must be consulted through legitimate access before merge decisions."}
+    [pscustomobject]@{Source="CISI Vol. 1 local PDF"; Status="Tracked local PDF"; Use="862-page photographic corpus for artifact-level checks against seal and inscription images; later work should link ICIT/CISI IDs to page locations."},
+    [pscustomobject]@{Source="CISI remaining volumes"; Status="Not locally available"; Use="Additional artifact-image authorities to seek later if needed."}
 )
 $sourceStatusRows | Export-Csv -NoTypeInformation -Path $sourceStatusPath
 

@@ -1,0 +1,9 @@
+Curated research PDFs in this directory are included for project reference,
+provenance control, and reproducible scholarship.
+
+Copyright and publication rights remain with the original authors, editors,
+publishers, institutions, and object/photo owners. Inclusion in this repository
+does not relicense the works.
+
+If a rights concern arises, move the affected files to private storage and
+replace them with bibliographic records and retrieval notes.
