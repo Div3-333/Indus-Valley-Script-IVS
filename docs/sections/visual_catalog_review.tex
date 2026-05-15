@@ -1,0 +1,96 @@
+\section{Visual and Catalog Review}
+
+\subsection{Purpose}
+
+The neighbor-profile analysis nominates signs that behave similarly. It does not show that the signs look alike. This milestone therefore creates a visual and catalog review pack: a prioritized list of candidate pairs, same-text examples, source-access status, and a protocol for deciding whether a pair should be merged, linked as variants, kept distinct, or held pending.
+
+The method follows two constraints from prior scholarship. First, ICIT-style grouping uses similar sign-neighbor frequencies to identify paradigmatic behavior \citep{fulsICIT}. Second, allograph claims require image and context review: mirroring, writing direction, space-saving, regional anomalies, carving errors, and catalog errors must be checked before reducing the sign list \citep{daggumati2021allographs}. The Harappa review of Fuls' catalog emphasizes the catalog's visual documentation and sign-reference function \citep{harappaCatalog2026}, but the present workspace does not yet contain the sign images needed for a final verdict.
+
+\subsection{Source Status}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.24\textwidth}p{0.24\textwidth}p{0.40\textwidth}}
+\toprule
+\textbf{Source} & \textbf{Status} & \textbf{Use} \\
+\midrule
+Local workspace images & Unavailable & No local sign or artifact image assets found. \\
+ICIT/Epigraphica & Catalog described, images not harvested & Primary catalog target. \\
+Harappa catalog review & Public descriptive source & Confirms catalog scope and importance. \\
+Daggumati and Revesz 2021 & Open-access method source & Supplies allograph-review checks. \\
+CISI volumes & Not locally available & Artifact-image authority. \\
+\bottomrule
+\end{tabular}
+\caption{Current source status for visual and catalog review.}
+\label{tab:visual-source-status}
+\end{table}
+
+\subsection{Review Tiers}
+
+The script \texttt{scripts/visual-catalog-review.ps1} ranks the top 80 distributional pairs into review tiers. The ranking favors high cosine similarity but penalizes sparse evidence. All rows remain marked as \emph{Pending} for visual/catalog status.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Tier} & \textbf{Pairs} \\
+\midrule
+Tier 1 & 4 \\
+Tier 2 & 3 \\
+Tier 3 & 26 \\
+Sparse-data hold & 47 \\
+\bottomrule
+\end{tabular}
+\caption{Review tiers in the first visual/catalog candidate pack.}
+\label{tab:visual-review-tiers}
+\end{table}
+
+\subsection{Priority Pairs}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llrrrr}
+\toprule
+\textbf{Sign A} & \textbf{Sign B} & \textbf{Cosine} & \textbf{Tokens A} & \textbf{Tokens B} & \textbf{Tier} \\
+\midrule
+817 & 861 & 0.965020 & 221 & 272 & 1 \\
+817 & 820 & 0.956926 & 221 & 244 & 1 \\
+705 & 706 & 0.953396 & 219 & 102 & 1 \\
+692 & 920 & 0.953170 & 77 & 153 & 1 \\
+526 & 527 & 0.982841 & 13 & 63 & 2 \\
+090 & 565 & 0.953096 & 195 & 15 & 2 \\
+400 & 565 & 0.950984 & 502 & 15 & 2 \\
+820 & 861 & 0.924203 & 244 & 272 & 3 \\
+033 & 034 & 0.908290 & 523 & 184 & 3 \\
+\bottomrule
+\end{tabular}
+\caption{Selected visual/catalog review candidates.}
+\label{tab:visual-priority-pairs}
+\end{table}
+
+\subsection{Review Protocol}
+
+Each pair must pass through six questions:
+
+\begin{enumerate}
+  \item \textbf{Shape}: Are the signs graphically similar enough to be variants?
+  \item \textbf{Direction}: Could mirroring or reversal explain the difference?
+  \item \textbf{Space}: Could crowding or line-end compression explain the difference?
+  \item \textbf{Context}: Do positions, neighbors, sites, and artifact types support functional equivalence?
+  \item \textbf{Independence}: Do the occurrences reflect independent texts rather than a repeated-object effect?
+  \item \textbf{Verdict}: Merge, variant-link, keep distinct, or hold pending.
+\end{enumerate}
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/visual\_catalog\_review\_candidates.csv}
+  \item \texttt{outputs/visual\_catalog\_review\_examples.csv}
+  \item \texttt{outputs/visual\_catalog\_review\_protocol.csv}
+  \item \texttt{outputs/visual\_catalog\_source\_status.csv}
+  \item \texttt{outputs/visual\_catalog\_review.tex}
+\end{itemize}
+
+\subsection{Interpretation}
+
+The first review pack identifies \texttt{817}/\texttt{861}, \texttt{817}/\texttt{820}, \texttt{705}/\texttt{706}, and \texttt{692}/\texttt{920} as the strongest immediate candidates for visual/catalog inspection. No sign merge is proposed at this stage.

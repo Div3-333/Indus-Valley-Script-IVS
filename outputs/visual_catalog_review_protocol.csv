@@ -1,0 +1,7 @@
+"Step","Criterion","Question","RequiredEvidence"
+"1","Shape","Are the two catalog signs graphically similar enough to be variants?","Catalog image or artifact image"
+"2","Direction","Could mirroring or reversal explain the difference?","Directionality, asymmetric signs, artifact layout"
+"3","Space","Could crowding or line-end compression explain the difference?","Artifact image and sign position"
+"4","Context","Do positions, neighbors, sites, and artifact types support functional equivalence?","Inventory and neighbor outputs"
+"5","Independence","Do both signs occur in enough independent texts to avoid a repeated-object artifact?","CISI/ICIT IDs and duplicate checks"
+"6","Verdict","Should the pair be merged, linked as variants, kept distinct, or held pending?","All previous fields"

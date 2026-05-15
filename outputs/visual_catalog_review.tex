@@ -1,0 +1,86 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\begin{document}
+\section*{Visual and Catalog Review Pack}
+
+This report prepares distributional candidates for visual/catalog review. It does not merge signs. All candidates remain pending until sign-catalog images or artifact images are inspected.
+
+\subsection*{Review Tiers}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Tier} & \textbf{Pairs} \\
+\midrule
+Tier1 & 4 \\
+Tier2 & 3 \\
+Tier3 & 26 \\
+Sparse & 47 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Source Status}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Source} & \textbf{Status} \\
+\midrule
+Local workspace images & Unavailable \\
+ICIT/Epigraphica & Catalog described, images not harvested \\
+Harappa catalog review & Public descriptive source \\
+Daggumati and Revesz 2021 & Open-access method source \\
+CISI volumes & Not locally available \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Top Review Candidates}
+\begin{center}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+\textbf{SignA} & \textbf{SignB} & \textbf{Cosine} & \textbf{TotalA} & \textbf{TotalB} & \textbf{SiteJaccard} & \textbf{TypeJaccard} & \textbf{SameTextCount} & \textbf{ReviewTier} \\
+\midrule
+817 & 861 & 0.96502 & 221 & 272 & 0.45 & 0.4444 & 2 & Tier1 \\
+817 & 820 & 0.956926 & 221 & 244 & 0.3333 & 0.5 & 4 & Tier1 \\
+705 & 706 & 0.953396 & 219 & 102 & 0.5 & 0.45 & 0 & Tier1 \\
+692 & 920 & 0.95317 & 77 & 153 & 0.3571 & 0.4375 & 7 & Tier1 \\
+526 & 527 & 0.982841 & 13 & 63 & 0.3333 & 0.3333 & 0 & Tier2 \\
+090 & 565 & 0.953096 & 195 & 15 & 0.1429 & 0.1875 & 0 & Tier2 \\
+400 & 565 & 0.950984 & 502 & 15 & 0.1538 & 0.2308 & 1 & Tier2 \\
+167 & 868 & 0.967096 & 19 & 13 & 0.3333 & 0.5 & 0 & Tier3 \\
+090 & 400 & 0.949789 & 195 & 502 & 0.4211 & 0.6111 & 19 & Tier3 \\
+435 & 436 & 0.949715 & 75 & 17 & 0.3333 & 0.3333 & 0 & Tier3 \\
+090 & 679 & 0.946794 & 195 & 19 & 0.2143 & 0.1875 & 0 & Tier3 \\
+482 & 772 & 0.944688 & 41 & 10 & 0.5 & 0.1667 & 0 & Tier3 \\
+151 & 740 & 0.94302 & 94 & 1928 & 0.2143 & 0.3636 & 13 & Tier3 \\
+565 & 679 & 0.940234 & 15 & 19 & 0.6667 & 0.5 & 0 & Tier3 \\
+176 & 927 & 0.94012 & 217 & 11 & 0.3 & 0.3333 & 0 & Tier3 \\
+098 & 137 & 0.937473 & 10 & 16 & 0.5 & 0.6 & 0 & Tier3 \\
+176 & 792 & 0.936572 & 217 & 13 & 0.2 & 0.2727 & 2 & Tier3 \\
+151 & 161 & 0.928616 & 94 & 13 & 0.4 & 0.2222 & 0 & Tier3 \\
+820 & 861 & 0.924203 & 244 & 272 & 0.5 & 0.5789 & 6 & Tier3 \\
+820 & 880 & 0.920347 & 244 & 11 & 0.2222 & 0.1667 & 1 & Tier3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Protocol}
+\begin{enumerate}
+\item \textbf{Shape:} Are the two catalog signs graphically similar enough to be variants?
+\item \textbf{Direction:} Could mirroring or reversal explain the difference?
+\item \textbf{Space:} Could crowding or line-end compression explain the difference?
+\item \textbf{Context:} Do positions, neighbors, sites, and artifact types support functional equivalence?
+\item \textbf{Independence:} Do both signs occur in enough independent texts to avoid a repeated-object artifact?
+\item \textbf{Verdict:} Should the pair be merged, linked as variants, kept distinct, or held pending?
+\end{enumerate}
+\subsection*{Output Files}
+\begin{itemize}
+\item \texttt{outputs/visual\_catalog\_review\_candidates.csv}
+\item \texttt{outputs/visual\_catalog\_review\_examples.csv}
+\item \texttt{outputs/visual\_catalog\_review\_protocol.csv}
+\item \texttt{outputs/visual\_catalog\_source\_status.csv}
+\end{itemize}
+\end{document}
