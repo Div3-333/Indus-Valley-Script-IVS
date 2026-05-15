@@ -1,5 +1,6 @@
 "Source","Status","Use"
 "Committed workspace image corpus","Unavailable","No committed sign or artifact image assets are present; local scratch extracts are kept uncommitted."
+"Fuls 2013 Positional Analysis","Tracked local PDF","Supplies positional-analysis method and the page 10 Sign 692 histogram panel, closing the visual side for the 692/920 Tier 1 pair."
 "Fuls 2022 Corpus of Indus Inscriptions","Tracked local PDF","Searchable 35-page corpus sample; PDF page 21 maps 205 ICIT high-number signs from 703 to 958, including 705, 706, 817, 820, 861, and 920."
 "Fuls 2023 SearchInside local PDF","Tracked supplementary sample","Searchable 35-page catalog sample with embedded sign-list images; confirms additional visuals including 820 and 920."
 "ICIT/Epigraphica","Catalog described, images not harvested","Primary sign-catalog target; requires direct catalog/image access before visual verdicts."
@@ -7,4 +8,5 @@
 "Harappa catalog review","Public descriptive source","Confirms catalog scope and scholarly importance, but not a machine-readable sign-image table."
 "Daggumati and Revesz 2021","Open-access method source","Supplies allograph-review logic: shape, mirroring, direction, space, and catalog error checks."
 "CISI Vol. 1 local PDF","Tracked local PDF","862-page photographic corpus for artifact-level checks against seal and inscription images; later work should link ICIT/CISI IDs to page locations."
+"Marshall 1931 Mohenjo-daro Vol. II","Tracked local PDF","Archaeological context and early excavation reference; not used in current sign-merge decisions."
 "CISI remaining volumes","Not locally available","Additional artifact-image authorities to seek later if needed."
