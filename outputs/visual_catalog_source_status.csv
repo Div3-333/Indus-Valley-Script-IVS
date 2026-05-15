@@ -1,6 +1,7 @@
 "Source","Status","Use"
 "Local workspace images","Unavailable","No local sign or artifact image assets were found in this workspace."
 "ICIT/Epigraphica","Catalog described, images not harvested","Primary sign-catalog target; requires direct catalog/image access before visual verdicts."
+"Deutsche Digitale Bibliothek","Bibliographic record only","Confirms Fuls 2023 catalog details, but only the table of contents is openly accessible."
 "Harappa catalog review","Public descriptive source","Confirms catalog scope and scholarly importance, but not a machine-readable sign-image table."
 "Daggumati and Revesz 2021","Open-access method source","Supplies allograph-review logic: shape, mirroring, direction, space, and catalog error checks."
 "CISI volumes","Not locally available","Artifact-image authority; images must be consulted through legitimate access before merge decisions."

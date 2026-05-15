@@ -272,6 +272,7 @@ $protocolRows | Export-Csv -NoTypeInformation -Path $protocolPath
 $sourceStatusRows = @(
     [pscustomobject]@{Source="Local workspace images"; Status="Unavailable"; Use="No local sign or artifact image assets were found in this workspace."},
     [pscustomobject]@{Source="ICIT/Epigraphica"; Status="Catalog described, images not harvested"; Use="Primary sign-catalog target; requires direct catalog/image access before visual verdicts."},
+    [pscustomobject]@{Source="Deutsche Digitale Bibliothek"; Status="Bibliographic record only"; Use="Confirms Fuls 2023 catalog details, but only the table of contents is openly accessible."},
     [pscustomobject]@{Source="Harappa catalog review"; Status="Public descriptive source"; Use="Confirms catalog scope and scholarly importance, but not a machine-readable sign-image table."},
     [pscustomobject]@{Source="Daggumati and Revesz 2021"; Status="Open-access method source"; Use="Supplies allograph-review logic: shape, mirroring, direction, space, and catalog error checks."},
     [pscustomobject]@{Source="CISI volumes"; Status="Not locally available"; Use="Artifact-image authority; images must be consulted through legitimate access before merge decisions."}
