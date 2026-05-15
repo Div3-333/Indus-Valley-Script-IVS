@@ -1,0 +1,18 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+
+# Local runtime caches
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+node_modules/
+
+# Spreadsheet/document lock files
+~$*
+
