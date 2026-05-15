@@ -16,3 +16,6 @@ node_modules/
 # Spreadsheet/document lock files
 ~$*
 
+# Local reference scans and scratch extraction outputs
+*.pdf
+scratch/
