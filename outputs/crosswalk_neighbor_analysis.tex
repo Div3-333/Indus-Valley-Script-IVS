@@ -1,0 +1,91 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\begin{document}
+\section*{Crosswalk and Neighbor-Profile Analysis}
+
+This report creates a provisional local-code to ICIT/Wells-code identity crosswalk and groups signs by normalized preceding/following neighbor profiles. Similarity is a triage signal for visual and catalog review, not an allograph claim.
+
+\subsection*{Overview}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Measure} & \textbf{Value} \\
+\midrule
+TextsUsedForNeighbors & 3517 \\
+TextsSkipped & 2162 \\
+EligibleSigns & 294 \\
+PairRows & 25193 \\
+Clusters & 18 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Crosswalk Status}
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Status} & \textbf{Codes} & \textbf{Tokens} \\
+\midrule
+EncodedSpace & 1 & 17 \\
+ErodedUnknown & 1 & 1881 \\
+ProvisionalIdentity & 712 & 18044 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Top Similarity Pairs}
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{SignA} & \textbf{SignB} & \textbf{TotalA} & \textbf{TotalB} & \textbf{SharedFeatures} & \textbf{Cosine} \\
+\midrule
+027 & 028 & 6 & 5 & 2 & 1 \\
+636 & 642 & 22 & 8 & 3 & 0.999777 \\
+347 & 849 & 10 & 8 & 2 & 0.992278 \\
+110 & 777 & 6 & 7 & 2 & 0.991241 \\
+027 & 905 & 6 & 13 & 2 & 0.990443 \\
+028 & 905 & 5 & 13 & 2 & 0.990443 \\
+110 & 942 & 6 & 10 & 2 & 0.989949 \\
+201 & 692 & 5 & 77 & 2 & 0.988031 \\
+526 & 527 & 13 & 63 & 5 & 0.982841 \\
+777 & 942 & 7 & 10 & 2 & 0.981278 \\
+467 & 468 & 9 & 10 & 3 & 0.975376 \\
+167 & 868 & 19 & 13 & 3 & 0.967096 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Neighbor Clusters}
+\begin{center}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{ClusterId} & \textbf{Size} & \textbf{Signs} & \textbf{TokenSum} \\
+\midrule
+N001 & 11 & 176 222 362 482 630 760 772 773 792 923 927 & 542 \\
+N002 & 9 & 090 151 161 400 520 565 621 679 740 & 3109 \\
+N003 & 8 & 110 416 515 540 698 749 777 942 & 136 \\
+N004 & 4 & 465 467 468 472 & 31 \\
+N005 & 4 & 817 820 861 880 & 748 \\
+N006 & 3 & 422 423 426 & 22 \\
+N007 & 3 & 027 028 905 & 24 \\
+N008 & 3 & 201 692 920 & 235 \\
+N009 & 2 & 435 436 & 92 \\
+N010 & 2 & 526 527 & 76 \\
+N011 & 2 & 347 849 & 18 \\
+N012 & 2 & 098 137 & 26 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection*{Output Files}
+\begin{itemize}
+\item \texttt{outputs/icit\_wells\_crosswalk\_provisional.csv}
+\item \texttt{outputs/sign\_neighbor\_edges.csv}
+\item \texttt{outputs/sign\_neighbor\_similarity.csv}
+\item \texttt{outputs/sign\_neighbor\_similarity\_top.csv}
+\item \texttt{outputs/sign\_neighbor\_clusters.csv}
+\end{itemize}
+\end{document}

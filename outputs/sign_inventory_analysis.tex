@@ -15,9 +15,10 @@ Generated from \texttt{data/ivs\_corpus\_cleaned.csv}. Counts are code-level obs
 \textbf{Measure} & \textbf{Value} \\
 \midrule
 Rows & 5679 \\
-NonZeroTokens & 18061 \\
-UniqueNonZeroCodes & 713 \\
+AnalyzableSignTokens & 18044 \\
+UniqueAnalyzableCodes & 712 \\
 Eroded000Tokens & 1881 \\
+EncodedSpace999Tokens & 17 \\
 DominantCodes500Plus & 6 \\
 HapaxCodes & 218 \\
 RareCodesOneToFive & 448 \\
@@ -34,7 +35,7 @@ RareCodesOneToFive & 448 \\
 Common100To499 & 37 & 7181 \\
 Dominant500Plus & 6 & 4970 \\
 Active20To99 & 71 & 3421 \\
-Low6To19 & 151 & 1590 \\
+Low6To19 & 150 & 1573 \\
 Rare3To5 & 125 & 471 \\
 Hapax & 218 & 218 \\
 DisLegomenon & 105 & 210 \\
@@ -48,11 +49,11 @@ DisLegomenon & 105 & 210 \\
 \toprule
 \textbf{Coverage} & \textbf{Signs} & \textbf{Tokens} & \textbf{TotalTokens} \\
 \midrule
-0.5 & 22 & 9240 & 18061 \\
-0.75 & 61 & 13558 & 18061 \\
-0.9 & 159 & 16265 & 18061 \\
-0.95 & 265 & 17162 & 18061 \\
-0.99 & 533 & 17881 & 18061 \\
+0.5 & 21 & 9027 & 18044 \\
+0.75 & 61 & 13558 & 18044 \\
+0.9 & 158 & 16248 & 18044 \\
+0.95 & 264 & 17145 & 18044 \\
+0.99 & 532 & 17864 & 18044 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -68,7 +69,7 @@ Functional classes are corpus-derived labels using minimum positional count 20, 
 \midrule
 501 & 31 & 0.9355 & 0.039 \\
 817 & 221 & 0.8902 & 0.0628 \\
-034 & 184 & 0.7832 & 0.1699 \\
+034 & 184 & 0.7872 & 0.1652 \\
 692 & 77 & 0.7818 & 0.129 \\
 503 & 82 & 0.7536 & 0.1337 \\
 \bottomrule
@@ -116,7 +117,7 @@ Functional classes are corpus-derived labels using minimum positional count 20, 
 
 \subsection*{Compression Policy}
 \begin{enumerate}
-\item Treat all 713 observed non-zero codes as code-level observations, not final signs.
+\item Treat all 712 analyzable sign codes as code-level observations, not final signs.
 \item Freeze dominant and positional candidates for functional testing before any merger.
 \item Treat hapax and very rare codes as the first allograph/noise candidates, pending image and concordance checks.
 \item Build a crosswalk to Wells/ICIT before claiming a reduced sign inventory.

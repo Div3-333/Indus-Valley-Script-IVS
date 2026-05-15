@@ -1,0 +1,83 @@
+\section{Crosswalk and Neighbor-Profile Clustering}
+
+\subsection{Purpose}
+
+This milestone creates two linked research layers. First, it defines a provisional crosswalk from local sign code to ICIT/Wells code. Second, it groups signs by distributional neighbor behavior so that possible allographs or functional equivalents can be prioritized for visual and catalog review.
+
+The ICIT documentation explicitly describes sign grouping by similar preceding or following sign-neighbor frequencies and treats this as a way to identify similar paradigmatic behavior \citep{fulsICIT}. The present implementation follows the same spirit but keeps the method simple and reproducible: each sign is represented by a vector of preceding and following neighbors in normalized internal reading order, and sign pairs are scored by cosine similarity.
+
+\subsection{Provisional Crosswalk}
+
+The crosswalk is deliberately conservative. Local codes are mapped to identical ICIT/Wells codes only as a provisional identity relation, because the corpus itself uses ICIT-style numeric sign-code notation. Two non-sign codes are separated from the sign layer:
+
+\begin{itemize}
+  \item \texttt{000}: eroded or illegible sign;
+  \item \texttt{999}: encoded blank space between signs.
+\end{itemize}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Crosswalk status} & \textbf{Codes} & \textbf{Tokens} \\
+\midrule
+Provisional identity & 712 & 18,044 \\
+Eroded unknown & 1 & 1,881 \\
+Encoded space & 1 & 17 \\
+\bottomrule
+\end{tabular}
+\caption{Provisional local-code to ICIT/Wells crosswalk status.}
+\label{tab:crosswalk-status}
+\end{table}
+
+\subsection{Neighbor Similarity}
+
+The script \texttt{scripts/crosswalk-neighbor-analysis.ps1} used 3,517 texts for neighbor profiles and skipped 2,162 texts because they were incomplete, damaged, directionally unsuitable, or contained eroded signs. It considered 294 eligible sign codes with at least five observed tokens and generated 25,193 pairwise similarity rows.
+
+Similarity is not an allograph claim. It is a review priority. A high score means that two signs tend to occur in similar left and right environments; only image inspection, sign-catalog comparison, and artifact-context checks can determine whether they are graphic variants, functional substitutes, or merely distributional companions.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llrrr}
+\toprule
+\textbf{Sign A} & \textbf{Sign B} & \textbf{Tokens A} & \textbf{Tokens B} & \textbf{Cosine} \\
+\midrule
+027 & 028 & 6 & 5 & 1.000000 \\
+636 & 642 & 22 & 8 & 0.999777 \\
+347 & 849 & 10 & 8 & 0.992278 \\
+110 & 777 & 6 & 7 & 0.991241 \\
+027 & 905 & 6 & 13 & 0.990443 \\
+526 & 527 & 13 & 63 & 0.982841 \\
+817 & 861 & 221 & 272 & 0.965020 \\
+817 & 820 & 221 & 244 & 0.956926 \\
+705 & 706 & 219 & 102 & 0.953396 \\
+\bottomrule
+\end{tabular}
+\caption{Selected high-similarity neighbor-profile pairs.}
+\label{tab:neighbor-pairs}
+\end{table}
+
+\subsection{Review Clusters}
+
+At a cosine threshold of 0.90, the first pass yields 18 review clusters. Several clusters are immediately interesting because they reproduce or approximate groupings discussed in ICIT-style positional work: for example, \texttt{817}/\texttt{820}/\texttt{861} form a strong initial-sign neighborhood, and \texttt{705}/\texttt{706} form a tight pair. Other clusters may reflect terminal behavior, numeral/marker behavior, or sparse-data artifacts.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lp{0.64\textwidth}r}
+\toprule
+\textbf{Cluster} & \textbf{Signs} & \textbf{Token sum} \\
+\midrule
+N001 & 176 222 362 482 630 760 772 773 792 923 927 & 542 \\
+N002 & 090 151 161 400 520 565 621 679 740 & 3,109 \\
+N005 & 817 820 861 880 & 748 \\
+N014 & 705 706 & 321 \\
+N016 & 033 034 & 707 \\
+\bottomrule
+\end{tabular}
+\caption{Selected neighbor-profile review clusters.}
+\label{tab:neighbor-clusters}
+\end{table}
+
+\subsection{Next Action}
+
+The next step is image/catalog review for the highest-value pairs and clusters. Priority should go to pairs that combine high similarity with enough tokens to be reliable, such as \texttt{817}/\texttt{861}, \texttt{817}/\texttt{820}, \texttt{705}/\texttt{706}, \texttt{033}/\texttt{034}, and \texttt{526}/\texttt{527}. Sparse pairs remain useful but should be treated as low-confidence prompts for inspection rather than analytic conclusions.

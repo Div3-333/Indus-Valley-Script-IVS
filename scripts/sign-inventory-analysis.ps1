@@ -64,6 +64,7 @@ foreach ($row in $rows) {
 
     $dir = ([string]$row.'dir.').Trim()
     $hasUncertainToken = $tokens -contains "000"
+    $hasEncodedSpace = $tokens -contains "999"
     $hasTextDamage = ([string]$row.text) -match '[\[\]\?]'
     $isComplete = $row.complete -eq "Y"
     $isPreservedComplete = $row.preservation -eq "complete"
@@ -83,7 +84,7 @@ foreach ($row in $rows) {
         }) | Out-Null
     }
 
-    $usableForPosition = $isComplete -and (-not $hasUncertainToken) -and (-not $hasTextDamage) -and (($dir -in @("R/L", "L/R")) -or ($tokens.Count -eq 1))
+    $usableForPosition = $isComplete -and (-not $hasUncertainToken) -and (-not $hasEncodedSpace) -and (-not $hasTextDamage) -and (($dir -in @("R/L", "L/R")) -or ($tokens.Count -eq 1))
     if (-not $usableForPosition) { continue }
 
     $readingTokens = @($tokens)
@@ -92,7 +93,7 @@ foreach ($row in $rows) {
 
     for ($i = 0; $i -lt $n; $i++) {
         $token = $readingTokens[$i]
-        if ($token -eq "000") { continue }
+        if ($token -in @("000", "999")) { continue }
 
         $position = "Medial"
         if ($n -eq 1) {
@@ -162,10 +163,13 @@ $signStats = foreach ($group in ($occurrences | Group-Object Sign)) {
     if ($sign -eq "000") {
         $candidateClasses.Add("ErodedUnknown") | Out-Null
     }
-    if ($group.Count -ge 500 -and $sign -ne "000") {
+    if ($sign -eq "999") {
+        $candidateClasses.Add("EncodedSpace") | Out-Null
+    }
+    if ($group.Count -ge 500 -and $sign -notin @("000", "999")) {
         $candidateClasses.Add("DominantCode") | Out-Null
     }
-    if ($group.Count -le 5 -and $sign -ne "000") {
+    if ($group.Count -le 5 -and $sign -notin @("000", "999")) {
         $candidateClasses.Add("RareOrAllographCandidate") | Out-Null
     }
     if ($position.PositionTotal -ge $MinFunctionalCount -and $position.StartPct -ge $EdgePctThreshold) {
@@ -189,7 +193,7 @@ $signStats = foreach ($group in ($occurrences | Group-Object Sign)) {
         RegionCount = ($items | Select-Object -ExpandProperty Region -Unique).Count
         TypeCount = ($items | Select-Object -ExpandProperty Type -Unique).Count
         DamagedContextTokens = @($items | Where-Object { $_.DamagedContext }).Count
-        RarityBand = if ($sign -eq "000") { "ErodedUnknown" } else { Get-RarityBand $group.Count }
+        RarityBand = if ($sign -eq "000") { "ErodedUnknown" } elseif ($sign -eq "999") { "EncodedSpace" } else { Get-RarityBand $group.Count }
         PositionTotal = $position.PositionTotal
         Start = $position.Start
         End = $position.End
@@ -214,7 +218,7 @@ $summaryPath = Join-Path $OutDir "sign_inventory_analysis.tex"
 
 $signStats | Export-Csv -NoTypeInformation -Path $statsPath
 
-$nonZeroStats = @($signStats | Where-Object { $_.Sign -ne "000" })
+$nonZeroStats = @($signStats | Where-Object { $_.Sign -notin @("000", "999") })
 
 $bandRows = $nonZeroStats |
     Group-Object RarityBand |
@@ -270,12 +274,14 @@ $hapaxCount = @($nonZeroStats | Where-Object { $_.TotalTokens -eq 1 }).Count
 $rareToFiveCount = @($nonZeroStats | Where-Object { $_.TotalTokens -le 5 }).Count
 $dominantCount = @($nonZeroStats | Where-Object { $_.TotalTokens -ge 500 }).Count
 $ambiguousTokens = @($occurrences | Where-Object { $_.Sign -eq "000" }).Count
+$spaceTokens = @($occurrences | Where-Object { $_.Sign -eq "999" }).Count
 
 $overviewRows = @(
     [pscustomobject]@{Measure="Rows"; Value=$rows.Count},
-    [pscustomobject]@{Measure="NonZeroTokens"; Value=$totalNonZeroTokens},
-    [pscustomobject]@{Measure="UniqueNonZeroCodes"; Value=$nonZeroStats.Count},
+    [pscustomobject]@{Measure="AnalyzableSignTokens"; Value=$totalNonZeroTokens},
+    [pscustomobject]@{Measure="UniqueAnalyzableCodes"; Value=$nonZeroStats.Count},
     [pscustomobject]@{Measure="Eroded000Tokens"; Value=$ambiguousTokens},
+    [pscustomobject]@{Measure="EncodedSpace999Tokens"; Value=$spaceTokens},
     [pscustomobject]@{Measure="DominantCodes500Plus"; Value=$dominantCount},
     [pscustomobject]@{Measure="HapaxCodes"; Value=$hapaxCount},
     [pscustomobject]@{Measure="RareCodesOneToFive"; Value=$rareToFiveCount}
@@ -315,7 +321,7 @@ Format-LatexTable $topMedial @("Sign", "TotalTokens", "MedialPct", "MeanNormPosi
 $summary.Add("") | Out-Null
 $summary.Add("\subsection*{Compression Policy}") | Out-Null
 $summary.Add("\begin{enumerate}") | Out-Null
-$summary.Add("\item Treat all 713 observed non-zero codes as code-level observations, not final signs.") | Out-Null
+$summary.Add("\item Treat all 712 analyzable sign codes as code-level observations, not final signs.") | Out-Null
 $summary.Add("\item Freeze dominant and positional candidates for functional testing before any merger.") | Out-Null
 $summary.Add("\item Treat hapax and very rare codes as the first allograph/noise candidates, pending image and concordance checks.") | Out-Null
 $summary.Add("\item Build a crosswalk to Wells/ICIT before claiming a reduced sign inventory.") | Out-Null

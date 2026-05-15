@@ -22,8 +22,10 @@ foreach ($row in $rows) {
         if ($row.complete -ne "Y") { continue }
         if ($dir -notin @("R/L", "L/R")) { continue }
         if ($tokens -contains "000") { continue }
+        if ($tokens -contains "999") { continue }
     }
 
+    $tokens = @($tokens | Where-Object { $_ -ne "999" })
     if ($tokens.Count -eq 0) { continue }
 
     # ICIT documentation labels the search field "Text (R/L)" and treats the
@@ -58,7 +60,7 @@ foreach ($record in $records) {
 
     for ($i = 0; $i -lt $n; $i++) {
         $sign = $tokens[$i]
-        if ($sign -eq "000") { continue }
+        if ($sign -in @("000", "999")) { continue }
 
         if (-not $stats.ContainsKey($sign)) {
             $stats[$sign] = [pscustomobject]@{
@@ -186,7 +188,7 @@ $summary.Add("\section*{Positional Analysis}") | Out-Null
 $summary.Add("") | Out-Null
 $summary.Add("Generated from \texttt{" + (ConvertTo-LatexText $Path) + "}.") | Out-Null
 $summary.Add("") | Out-Null
-$summary.Add("Filtering: complete rows, directions \texttt{R/L} or \texttt{L/R}, and no \texttt{000} ambiguous sign tokens unless \texttt{-IncludeAmbiguousRows} is supplied.") | Out-Null
+$summary.Add("Filtering: complete rows, directions \texttt{R/L} or \texttt{L/R}, no \texttt{000} ambiguous sign tokens, and no \texttt{999} encoded-space tokens unless \texttt{-IncludeAmbiguousRows} is supplied.") | Out-Null
 $summary.Add("") | Out-Null
 if ($UseTextCodeOrder) {
     $summary.Add("Direction mode: text-code order. Token order is analyzed exactly as it appears in the CSV/ICIT R/L code field.") | Out-Null
@@ -196,7 +198,7 @@ else {
 }
 $summary.Add("") | Out-Null
 $summary.Add("Rows analyzed: $($records.Count)") | Out-Null
-$summary.Add("Unique non-zero signs analyzed: $($signStats.Count)") | Out-Null
+$summary.Add("Unique analyzable signs studied positionally: $($signStats.Count)") | Out-Null
 $summary.Add("") | Out-Null
 $summary.Add("\subsection*{Strong Start Candidates}") | Out-Null
 $summary.Add("") | Out-Null

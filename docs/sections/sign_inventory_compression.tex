@@ -2,7 +2,7 @@
 
 \subsection{Rationale}
 
-The first inventory pass treats every observed code as a code-level observation, not as a final graphemic unit. This distinction is necessary because the local corpus contains 713 observed non-zero codes, while ICIT documentation describes the Wells list as a 676-sign sign list \citep{fulsICIT}. The discrepancy does not by itself prove that the local corpus has extra signs; it tells us that a crosswalk and variant audit must precede any claim about the functional size of the script.
+The inventory pass treats every observed code as a code-level observation, not as a final graphemic unit. This distinction is necessary because the local corpus contains 712 analyzable sign codes after excluding eroded \texttt{000} and encoded-space \texttt{999}. ICIT documentation describes the Wells list as a 676-sign sign list \citep{fulsICIT}, while also documenting function and spacing conventions. The discrepancy does not by itself prove that the local corpus has extra signs; it tells us that a crosswalk and variant audit must precede any claim about the functional size of the script.
 
 \subsection{Inventory Overview}
 
@@ -23,10 +23,11 @@ The script \texttt{scripts/sign-inventory-analysis.ps1} generated a code-level i
 \textbf{Measure} & \textbf{Value} \\
 \midrule
 Rows & 5,679 \\
-Non-zero sign tokens & 18,061 \\
-Unique non-zero codes & 713 \\
+Analyzable sign tokens & 18,044 \\
+Unique analyzable codes & 712 \\
 Eroded \texttt{000} tokens & 1,881 \\
-Dominant non-zero codes, $\geq 500$ tokens & 6 \\
+Encoded-space \texttt{999} tokens & 17 \\
+Dominant analyzable codes, $\geq 500$ tokens & 6 \\
 Hapax codes & 218 \\
 Codes occurring one to five times & 448 \\
 \bottomrule
@@ -37,7 +38,7 @@ Codes occurring one to five times & 448 \\
 
 \subsection{Frequency Compression}
 
-The frequency profile is highly compressed. Six dominant non-zero codes account for 4,970 tokens; 43 codes with at least 100 occurrences account for 12,151 tokens. Conversely, 448 codes occur five times or fewer. These rare codes are the first candidates for allograph checks, damaged readings, narrow regional variants, and possible cataloging noise.
+The frequency profile is highly compressed. Six dominant analyzable codes account for 4,970 tokens; 43 codes with at least 100 occurrences account for 12,151 tokens. Conversely, 448 codes occur five times or fewer. These rare codes are the first candidates for allograph checks, damaged readings, narrow regional variants, and possible cataloging noise.
 
 \begin{table}[htbp]
 \centering
@@ -48,13 +49,13 @@ The frequency profile is highly compressed. Six dominant non-zero codes account 
 Dominant, $\geq 500$ & 6 & 4,970 \\
 Common, 100--499 & 37 & 7,181 \\
 Active, 20--99 & 71 & 3,421 \\
-Low, 6--19 & 151 & 1,590 \\
+Low, 6--19 & 150 & 1,573 \\
 Rare, 3--5 & 125 & 471 \\
 Dis legomena & 105 & 210 \\
 Hapax & 218 & 218 \\
 \bottomrule
 \end{tabular}
-\caption{Frequency bands for non-zero sign codes.}
+\caption{Frequency bands for analyzable sign codes.}
 \label{tab:frequency-bands}
 \end{table}
 
@@ -64,14 +65,14 @@ Hapax & 218 & 218 \\
 \toprule
 \textbf{Coverage} & \textbf{Codes required} & \textbf{Tokens covered} & \textbf{Total tokens} \\
 \midrule
-0.50 & 22 & 9,240 & 18,061 \\
-0.75 & 61 & 13,558 & 18,061 \\
-0.90 & 159 & 16,265 & 18,061 \\
-0.95 & 265 & 17,162 & 18,061 \\
-0.99 & 533 & 17,881 & 18,061 \\
+0.50 & 21 & 9,027 & 18,044 \\
+0.75 & 61 & 13,558 & 18,044 \\
+0.90 & 158 & 16,248 & 18,044 \\
+0.95 & 264 & 17,145 & 18,044 \\
+0.99 & 532 & 17,864 & 18,044 \\
 \bottomrule
 \end{tabular}
-\caption{Number of most frequent codes needed to cover the non-zero token stream.}
+\caption{Number of most frequent codes needed to cover the analyzable sign-token stream.}
 \label{tab:coverage-thresholds}
 \end{table}
 
@@ -106,4 +107,3 @@ The project will use four compression layers:
 \end{enumerate}
 
 No code will be merged solely because it is rare. Rarity is a triage signal, not an argument.
-
