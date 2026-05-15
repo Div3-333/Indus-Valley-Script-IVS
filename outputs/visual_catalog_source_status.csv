@@ -1,5 +1,6 @@
 "Source","Status","Use"
-"Local workspace images","Unavailable","No local sign or artifact image assets were found in this workspace."
+"Committed workspace image corpus","Unavailable","No committed sign or artifact image assets are present; local scratch extracts are kept uncommitted."
+"Fuls 2023 SearchInside local PDF","Partial local sample","Searchable 35-page sample with embedded sign-list images; includes local visuals for signs 820 and 920, but not the complete Tier 1 target set."
 "ICIT/Epigraphica","Catalog described, images not harvested","Primary sign-catalog target; requires direct catalog/image access before visual verdicts."
 "Deutsche Digitale Bibliothek","Bibliographic record only","Confirms Fuls 2023 catalog details, but only the table of contents is openly accessible."
 "Harappa catalog review","Public descriptive source","Confirms catalog scope and scholarly importance, but not a machine-readable sign-image table."

@@ -145,6 +145,32 @@ $candidatePairs = $pairRows |
 $reviewRows = New-Object System.Collections.Generic.List[object]
 $exampleRows = New-Object System.Collections.Generic.List[object]
 
+$foundVisualSigns = @{
+    "820" = "Fuls 2023 SearchInside local PDF, PDF page 21"
+    "920" = "Fuls 2023 SearchInside local PDF, PDF page 35"
+}
+
+$foundVisualEvidenceRows = @(
+    [pscustomobject]@{
+        Sign = "820"
+        Source = "Fuls 2023 SearchInside local PDF"
+        PdfPage = "21"
+        LocalExtract = "scratch/fuls_pages/fuls_page_021_img_000.jpg"
+        RelatedPairs = "817/820; 820/861"
+        Status = "One-sided visual evidence for active candidate pairs"
+        Notes = "The sample page shows sign 820 with a frequency plot and related sign figures. Counterparts 817 and 861 were not found in the sample."
+    },
+    [pscustomobject]@{
+        Sign = "920"
+        Source = "Fuls 2023 SearchInside local PDF"
+        PdfPage = "35"
+        LocalExtract = "scratch/fuls_pages/fuls_page_035_img_011.jpg"
+        RelatedPairs = "692/920"
+        Status = "One-sided visual evidence for active candidate pair"
+        Notes = "The sample sign-list page for 906-940 includes sign 920. Counterpart 692 was not found in the sample."
+    }
+)
+
 foreach ($pair in $candidatePairs) {
     $a = $pair.SignA
     $b = $pair.SignB
@@ -198,6 +224,17 @@ foreach ($pair in $candidatePairs) {
         "Tier3" { "Review after Tier1/Tier2" }
         default { "Sparse-data hold" }
     }
+    $foundA = $foundVisualSigns.ContainsKey($a)
+    $foundB = $foundVisualSigns.ContainsKey($b)
+    $visualCatalogStatus = "Pending"
+    $preliminaryVerdict = "Distributional candidate only"
+    if ($foundA -and $foundB) {
+        $visualCatalogStatus = "Local partial visuals found"
+        $preliminaryVerdict = "Visual evidence available locally; artifact-level review still required"
+    } elseif ($foundA -or $foundB) {
+        $visualCatalogStatus = "One-sided local partial visual"
+        $preliminaryVerdict = "Visual evidence incomplete; inspect counterpart before verdict"
+    }
 
     $reviewRows.Add([pscustomobject]@{
         SignA = $a
@@ -223,8 +260,8 @@ foreach ($pair in $candidatePairs) {
         ReviewRank = Get-TierRank $priorityTier
         ReviewTier = $priorityTier
         ReviewAction = $reviewAction
-        VisualCatalogStatus = "Pending"
-        PreliminaryVerdict = "Distributional candidate only"
+        VisualCatalogStatus = $visualCatalogStatus
+        PreliminaryVerdict = $preliminaryVerdict
     }) | Out-Null
 
     foreach ($record in ($sameTextRecords | Select-Object -First 5)) {
@@ -248,6 +285,7 @@ $reviewPath = Join-Path $OutDir "visual_catalog_review_candidates.csv"
 $examplesPath = Join-Path $OutDir "visual_catalog_review_examples.csv"
 $protocolPath = Join-Path $OutDir "visual_catalog_review_protocol.csv"
 $sourceStatusPath = Join-Path $OutDir "visual_catalog_source_status.csv"
+$foundVisualPath = Join-Path $OutDir "visual_catalog_found_signs.csv"
 $summaryPath = Join-Path $OutDir "visual_catalog_review.tex"
 
 $reviewRows |
@@ -268,9 +306,11 @@ $protocolRows = @(
     [pscustomobject]@{Step="6"; Criterion="Verdict"; Question="Should the pair be merged, linked as variants, kept distinct, or held pending?"; RequiredEvidence="All previous fields"}
 )
 $protocolRows | Export-Csv -NoTypeInformation -Path $protocolPath
+$foundVisualEvidenceRows | Export-Csv -NoTypeInformation -Path $foundVisualPath
 
 $sourceStatusRows = @(
-    [pscustomobject]@{Source="Local workspace images"; Status="Unavailable"; Use="No local sign or artifact image assets were found in this workspace."},
+    [pscustomobject]@{Source="Committed workspace image corpus"; Status="Unavailable"; Use="No committed sign or artifact image assets are present; local scratch extracts are kept uncommitted."},
+    [pscustomobject]@{Source="Fuls 2023 SearchInside local PDF"; Status="Partial local sample"; Use="Searchable 35-page sample with embedded sign-list images; includes local visuals for signs 820 and 920, but not the complete Tier 1 target set."},
     [pscustomobject]@{Source="ICIT/Epigraphica"; Status="Catalog described, images not harvested"; Use="Primary sign-catalog target; requires direct catalog/image access before visual verdicts."},
     [pscustomobject]@{Source="Deutsche Digitale Bibliothek"; Status="Bibliographic record only"; Use="Confirms Fuls 2023 catalog details, but only the table of contents is openly accessible."},
     [pscustomobject]@{Source="Harappa catalog review"; Status="Public descriptive source"; Use="Confirms catalog scope and scholarly importance, but not a machine-readable sign-image table."},
@@ -306,6 +346,9 @@ $summary.Add("") | Out-Null
 $summary.Add("\subsection*{Source Status}") | Out-Null
 Format-LatexTable $sourceStatusRows @("Source", "Status") | ForEach-Object { $summary.Add($_) | Out-Null }
 $summary.Add("") | Out-Null
+$summary.Add("\subsection*{Partial Visual Evidence Found}") | Out-Null
+Format-LatexTable $foundVisualEvidenceRows @("Sign", "PdfPage", "RelatedPairs", "Status") | ForEach-Object { $summary.Add($_) | Out-Null }
+$summary.Add("") | Out-Null
 $summary.Add("\subsection*{Top Review Candidates}") | Out-Null
 Format-LatexTable $topReviewRows @("SignA", "SignB", "Cosine", "TotalA", "TotalB", "SiteJaccard", "TypeJaccard", "SameTextCount", "ReviewTier") | ForEach-Object { $summary.Add($_) | Out-Null }
 $summary.Add("") | Out-Null
@@ -317,7 +360,7 @@ foreach ($row in $protocolRows) {
 $summary.Add("\end{enumerate}") | Out-Null
 $summary.Add("\subsection*{Output Files}") | Out-Null
 $summary.Add("\begin{itemize}") | Out-Null
-foreach ($path in @($reviewPath, $examplesPath, $protocolPath, $sourceStatusPath)) {
+foreach ($path in @($reviewPath, $examplesPath, $protocolPath, $sourceStatusPath, $foundVisualPath)) {
     $summary.Add("\item \texttt{" + (ConvertTo-LatexText $path) + "}") | Out-Null
 }
 $summary.Add("\end{itemize}") | Out-Null
@@ -329,4 +372,5 @@ $summary | Set-Content -Path $summaryPath -Encoding UTF8
 "Wrote $examplesPath"
 "Wrote $protocolPath"
 "Wrote $sourceStatusPath"
+"Wrote $foundVisualPath"
 "Wrote $summaryPath"
