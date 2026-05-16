@@ -1,0 +1,7 @@
+"Group","Signs","Tokens","TokenPct","DominantRole","DominantMechanism"
+"Core50","20","8810","0.4883","MedialCarrier","CorePhoneticOrMorphemicCandidate"
+"Core75","40","4689","0.2599","FlexibleCarrier","CorePhoneticOrMorphemicCandidate"
+"Extension90","97","2736","0.1516","MedialCarrier","ExtendedInventoryCandidate"
+"Extension95","106","904","0.0501","MixedPosition","FormulaOrGrammarMarker"
+"LongTail99","268","724","0.0401","MixedPosition","BoundModifierOrFormulaVariantCandidate"
+"RareTail","181","181","0.01","MixedPosition","BoundModifierOrFormulaVariantCandidate"

@@ -1,0 +1,75 @@
+\section{Core Inventory Model}
+
+\subsection{Motivation}
+
+The corpus has hundreds of sign codes, but most tokens are carried by a much smaller core. This matters for the working hypothesis that the system may contain a compact phonetic or morphemic inventory plus extensions: modifiers, ligatures, regional variants, chronological variants, numbers, rare symbols, object marks, or catalog over-splitting. The comparison to Sanskrit or later Brahmic scripts is used only as a model-shape analogy. It is not a claim that the Indus language was Sanskrit or that the script is directly Brahmi.
+
+\subsection{Method}
+
+The script \texttt{scripts/core-inventory-model.ps1} excludes \texttt{000} and \texttt{999}, orders signs by frequency, assigns coverage groups, and computes:
+
+\begin{itemize}
+  \item cumulative token coverage;
+  \item normalized positional entropy across ten text-position bins;
+  \item left- and right-neighbor entropy;
+  \item dominant left and right neighbor shares;
+  \item region, site, and object-type entropy;
+  \item a first mechanism hypothesis for each sign.
+\end{itemize}
+
+\subsection{Coverage Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrll}
+\toprule
+\textbf{Group} & \textbf{Signs} & \textbf{Token pct.} & \textbf{Dominant role} & \textbf{Dominant mechanism} \\
+\midrule
+Core50 & 20 & 0.488 & Medial carrier & Core phonetic/morphemic candidate \\
+Core75 & 40 & 0.260 & Flexible carrier & Core phonetic/morphemic candidate \\
+Extension90 & 97 & 0.152 & Medial carrier & Extended inventory candidate \\
+Extension95 & 106 & 0.050 & Mixed position & Formula or grammar marker \\
+LongTail99 & 268 & 0.040 & Mixed position & Bound modifier/formula variant candidate \\
+RareTail & 181 & 0.010 & Mixed position & Bound modifier/formula variant candidate \\
+\bottomrule
+\end{tabular}
+\caption{Core inventory coverage groups after excluding eroded and blank codes.}
+\label{tab:core-inventory-groups}
+\end{table}
+
+The practical result is that 60 signs cover about 75 percent of analyzable tokens, and 157 signs cover about 90 percent. This supports a fast modeling strategy: build the grammar of the core and extension layer first; treat the long tail as a later classification problem.
+
+\subsection{Abugida-Scale Compatibility Tests}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.32\textwidth}r p{0.44\textwidth}}
+\toprule
+\textbf{Test} & \textbf{Value} & \textbf{Interpretation} \\
+\midrule
+Signs covering 75 percent of analyzable tokens & 60 & Compatible with a compact phonetic core plus extensions, but not diagnostic by itself. \\
+Core75 flexible/medial/mixed carriers & 43 & Supports testing a phonetic or morphemic carrier layer. \\
+Core75 initial or terminal markers & 17 & Warns that formula grammar is substantial; this is not a plain alphabet model. \\
+Signs covering 90 percent of analyzable tokens & 157 & Practical all-sign modeling target before sparse-tail uncertainty dominates. \\
+Signs after 95 percent coverage & 449 & Long tail may include variants, numbers, names, object marks, rare logograms, or catalog over-splitting. \\
+Tail signs with dominant left/right neighbor & 188 & Leads for diacritic, conjunct, affix, or formula-variant behavior. \\
+\bottomrule
+\end{tabular}
+\caption{Compatibility tests for a compact-core-plus-extension model.}
+\label{tab:abugida-scale-tests}
+\end{table}
+
+\subsection{Interpretation}
+
+The working model is now faster and sharper: do not attempt to decipher 700 or 900 signs equally. First model the 60-sign core and the 157-sign 90-percent layer. Within that layer, distinguish carrier signs from formula or grammar markers. Then test whether the long tail behaves like modifiers, conjuncts, numerals, regional spellings, chronological layers, rare logograms, or noise from catalog over-splitting.
+
+This result is compatible with an abugida-like system in the broad structural sense: compact high-frequency core plus extended graphic inventory. It is also compatible with a mixed administrative writing system. The next tests must therefore discriminate between those possibilities rather than choose the more exciting one too early.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/core\_inventory\_sign\_model.csv}
+  \item \texttt{outputs/core\_inventory\_groups.csv}
+  \item \texttt{outputs/core\_inventory\_abugida\_tests.csv}
+  \item \texttt{outputs/core\_inventory\_model.tex}
+\end{itemize}

@@ -1,0 +1,74 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\begin{document}
+\section*{Core Inventory Model}
+This report tests whether the corpus has a compact high-frequency inventory plus a long extension tail. The comparison to abugida-like systems is treated as a compatibility test, not as a claim of Brahmic descent or Sanskrit identity.
+\subsection*{Coverage Groups}
+\begin{center}
+\begin{tabular}{lrrll}
+\toprule
+\textbf{Group} & \textbf{Signs} & \textbf{Token pct.} & \textbf{Dominant role} & \textbf{Dominant mechanism} \\
+\midrule
+Core50 & 20 & 0.4883 & MedialCarrier & CorePhoneticOrMorphemicCandidate \\
+Core75 & 40 & 0.2599 & FlexibleCarrier & CorePhoneticOrMorphemicCandidate \\
+Extension90 & 97 & 0.1516 & MedialCarrier & ExtendedInventoryCandidate \\
+Extension95 & 106 & 0.0501 & MixedPosition & FormulaOrGrammarMarker \\
+LongTail99 & 268 & 0.0401 & MixedPosition & BoundModifierOrFormulaVariantCandidate \\
+RareTail & 181 & 0.01 & MixedPosition & BoundModifierOrFormulaVariantCandidate \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Working Model Tests}
+\begin{center}
+\begin{tabular}{llr}
+\toprule
+\textbf{Test} & \textbf{Metric} & \textbf{Value} \\
+\midrule
+Abugida-scale core inventory & Signs covering 75 percent of analyzable tokens & 60 \\
+High-frequency grammar split & Core75 flexible/medial/mixed carriers & 43 \\
+Formula-marker pressure & Core75 initial or terminal markers & 17 \\
+Extension scale & Signs covering 90 percent of analyzable tokens & 157 \\
+Sparse-tail pressure & Signs after 95 percent coverage & 449 \\
+Bound-modifier lead count & Tail signs with dominant left/right neighbor & 188 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Top Core Signs}
+\begin{center}
+\begin{tabular}{rlrll}
+\toprule
+\textbf{Rank} & \textbf{Sign} & \textbf{Tokens} & \textbf{Role} & \textbf{Mechanism} \\
+\midrule
+1 & 740 & 1928 & TerminalMarker & FormulaOrGrammarMarker \\
+2 & 002 & 851 & MedialCarrier & CorePhoneticOrMorphemicCandidate \\
+3 & 032 & 588 & FlexibleCarrier & CorePhoneticOrMorphemicCandidate \\
+4 & 700 & 578 & TerminalMarker & FormulaOrGrammarMarker \\
+5 & 033 & 523 & MixedPosition & CorePhoneticOrMorphemicCandidate \\
+6 & 400 & 502 & TerminalMarker & FormulaOrGrammarMarker \\
+7 & 220 & 477 & MedialCarrier & CorePhoneticOrMorphemicCandidate \\
+8 & 240 & 354 & MedialCarrier & CorePhoneticOrMorphemicCandidate \\
+9 & 520 & 321 & TerminalMarker & FormulaOrGrammarMarker \\
+10 & 390 & 290 & MixedPosition & CorePhoneticOrMorphemicCandidate \\
+11 & 861 & 272 & InitialMarker & FormulaOrGrammarMarker \\
+12 & 003 & 259 & InitialMarker & FormulaOrGrammarMarker \\
+13 & 031 & 258 & FlexibleCarrier & CorePhoneticOrMorphemicCandidate \\
+14 & 235 & 250 & FlexibleCarrier & CorePhoneticOrMorphemicCandidate \\
+15 & 820 & 244 & InitialMarker & FormulaOrGrammarMarker \\
+16 & 590 & 228 & MedialCarrier & CorePhoneticOrMorphemicCandidate \\
+17 & 741 & 225 & MedialCarrier & CorePhoneticOrMorphemicCandidate \\
+18 & 060 & 222 & MedialCarrier & CorePhoneticOrMorphemicCandidate \\
+19 & 817 & 221 & InitialMarker & FormulaOrGrammarMarker \\
+20 & 705 & 219 & MedialCarrier & CorePhoneticOrMorphemicCandidate \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Outputs}
+\begin{itemize}
+\item \texttt{outputs/core\_inventory\_sign\_model.csv}
+\item \texttt{outputs/core\_inventory\_groups.csv}
+\item \texttt{outputs/core\_inventory\_abugida\_tests.csv}
+\end{itemize}
+\end{document}

@@ -1,0 +1,7 @@
+"Test","Metric","Value","Interpretation"
+"Abugida-scale core inventory","Signs covering 75 percent of analyzable tokens","60","Compatible with a phonetic core plus extensions; not diagnostic by itself."
+"High-frequency grammar split","Core75 flexible/medial/mixed carriers","43","Large carrier set supports testing a phonetic or morphemic core, while marker signs must be modeled separately."
+"Formula-marker pressure","Core75 initial or terminal markers","17","A substantial marker set would push the system toward administrative formula grammar rather than a plain alphabetic inventory."
+"Extension scale","Signs covering 90 percent of analyzable tokens","157","This is the practical modeling target before the sparse tail dominates uncertainty."
+"Sparse-tail pressure","Signs after 95 percent coverage","449","The long tail is compatible with variants, numbers, names, object marks, rare logograms, or catalog over-splitting; it should not drive early decipherment."
+"Bound-modifier lead count","Tail signs with dominant left/right neighbor","188","These are computational leads for diacritic, conjunct, affix, or formula-variant behavior."
