@@ -10,12 +10,10 @@ The canonical research document is now LaTeX:
 
 The working rule is simple: proposed readings are hypotheses, not data. The project begins with corpus hygiene, directionality, positional grammar, sign-inventory normalization, and rival-model testing before any candidate decipherment is allowed into the main model.
 
-To build the research document locally, compile from the `docs` directory:
+To build the research document locally and clean intermediate LaTeX files:
 
 ```powershell
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
+powershell -ExecutionPolicy Bypass -File scripts\build-latex.ps1
 ```
 
+The build helper writes the final PDF to `outputs/ivs_research_report.pdf` and removes the temporary `docs/main.*` build files.

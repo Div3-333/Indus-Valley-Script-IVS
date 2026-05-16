@@ -1,0 +1,123 @@
+\section{Onomastic Anchor Model}
+
+\subsection{Motivation}
+
+The Linear-Elamite-style proper-name strategy is useful as a search pattern: if a writing system contains royal names, personal names, titles, lineage labels, toponyms, or office markers, those elements may recur in formulaic positions and create the first phonetic footholds. The Indus corpus does not give us known kings or bilingual readings, so the first version of this strategy must remain internal. We search for name-like anchors without assigning values.
+
+\subsection{Method}
+
+The script \texttt{scripts/onomastic-anchor-model.py} enumerates one- to five-sign n-grams in normalized reading order, excluding \texttt{000} and \texttt{999}. For each repeated n-gram it records frequency, text count, site and region spread, type spread, position, dominant left and right neighbors, immediate frame, seal share, and complete-text share.
+
+The model then gives each n-gram four auditable scores:
+
+\begin{itemize}
+  \item \textbf{Name anchor score}: repeated two- to five-sign blocks with stable context and complete/seal support.
+  \item \textbf{Title marker score}: short high-frequency signs or bigrams with fixed position and diverse neighboring material.
+  \item \textbf{Cross-site anchor score}: name-like blocks whose distribution is not restricted to a single findspot.
+  \item \textbf{Formula risk score}: a caution score for blocks that may be administrative formula rather than names.
+\end{itemize}
+
+The same script also scores immediate frames of the form \texttt{left \_ right}. A high-scoring frame has many different fillers inside the same local environment, which is exactly the kind of slot where names or titles might hide.
+
+\subsection{Corpus-Wide Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Analyzable texts & 5531 \\
+Complete analyzable texts & 3673 \\
+Repeated n-grams & 3356 \\
+Strong title/classifier candidates & 17 \\
+Strong repeated name-like candidates & 299 \\
+Cross-site name-anchor candidates & 35 \\
+Variable formula-slot candidates & 1013 \\
+\bottomrule
+\end{tabular}
+\caption{Onomastic-anchor search results using repeated one- to five-sign n-grams.}
+\label{tab:onomastic-summary}
+\end{table}
+
+\subsection{Title and Classifier Leads}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Sign/ngram} & \textbf{Count} & \textbf{Sites} & \textbf{Start pct.} & \textbf{End pct.} \\
+\midrule
+520 & 321 & 16 & 0.044 & 0.822 \\
+820 & 244 & 18 & 0.775 & 0.164 \\
+151 & 94 & 10 & 0.075 & 0.883 \\
+817 & 221 & 14 & 0.873 & 0.077 \\
+003 & 259 & 14 & 0.583 & 0.108 \\
+390 & 290 & 25 & 0.128 & 0.514 \\
+740 & 1928 & 41 & 0.093 & 0.700 \\
+235 & 250 & 12 & 0.432 & 0.064 \\
+\bottomrule
+\end{tabular}
+\caption{Top title/classifier-marker leads. These signs are not assigned meanings; the table only says that their distribution looks formulaic and positionally marked.}
+\label{tab:title-classifier-leads}
+\end{table}
+
+Several of these leads agree with earlier positional results. Signs \texttt{520}, \texttt{151}, and \texttt{740} are strongly terminal; \texttt{820}, \texttt{817}, and \texttt{003} are strongly initial. This split is important: an onomastic model should not treat every repeated sign as a name. Some signs probably mark a role, object class, title, suffix, or formula boundary.
+
+\subsection{Name-Like Block Leads}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{N-gram} & \textbf{Count} & \textbf{Sites} & \textbf{Name score} & \textbf{Formula risk} \\
+\midrule
+002-003-390 & 14 & 5 & 0.966 & 0.572 \\
+706-033-520 & 16 & 3 & 0.943 & 0.598 \\
+017-585-740 & 14 & 4 & 0.927 & 0.593 \\
+016-390 & 14 & 5 & 0.924 & 0.612 \\
+920-060-741 & 38 & 7 & 0.923 & 0.640 \\
+820-060 & 26 & 5 & 0.934 & 0.620 \\
+\bottomrule
+\end{tabular}
+\caption{High-ranking repeated blocks for artifact-level review. These are candidates for names, offices, lineages, places, or fixed administrative phrases.}
+\label{tab:name-like-block-leads}
+\end{table}
+
+The strongest immediate action is not phonetic reading. It is artifact-level review. For each candidate, we need to inspect whether the block occurs on seals, tablets, pottery, or mixed media; whether the surrounding signs are stable; whether variants replace one another in the same slot; and whether the visual artifact context suggests owner, authority, commodity, place, or ritual formula.
+
+\subsection{Variable Formula Slots}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llrrr}
+\toprule
+\textbf{Left} & \textbf{Right} & \textbf{Count} & \textbf{Fillers} & \textbf{Slot score} \\
+\midrule
+002 & 740 & 345 & 247 & 0.957 \\
+060 & \texttt{<END>} & 193 & 176 & 0.949 \\
+\texttt{<START>} & 390 & 236 & 163 & 0.941 \\
+002 & \texttt{<END>} & 705 & 508 & 0.937 \\
+741 & \texttt{<END>} & 198 & 163 & 0.936 \\
+060 & 740 & 101 & 85 & 0.928 \\
+\bottomrule
+\end{tabular}
+\caption{Top variable formula frames. A high filler count means the same local environment admits many different inner blocks, making it a plausible grammatical or onomastic slot.}
+\label{tab:variable-formula-slots}
+\end{table}
+
+The frame \texttt{002 \_ 740} is especially important: it has 345 occurrences and 247 distinct fillers. This looks less like a single word and more like a productive slot inside a formula. If names exist in the corpus, this kind of environment is one of the best places to search.
+
+\subsection{Interpretation}
+
+This stage gives the project its first proper-name hunting protocol. The model does not assume kings, Sanskrit, Dravidian, Brahmi, or any particular phonetic value. It identifies slots and repeated blocks where names and titles would be likely if the corpus contains them. The next milestone is an artifact review queue for the strongest title markers, cross-site anchors, and variable slots, beginning with candidates that overlap our visually reviewed signs such as \texttt{705}/\texttt{706}, \texttt{817}/\texttt{820}/\texttt{861}, and \texttt{692}/\texttt{920}.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/onomastic\_anchor\_ngram\_candidates.csv}
+  \item \texttt{outputs/onomastic\_title\_marker\_candidates.csv}
+  \item \texttt{outputs/onomastic\_formula\_slots.csv}
+  \item \texttt{outputs/onomastic\_anchor\_summary.csv}
+  \item \texttt{outputs/onomastic\_anchor\_model.tex}
+\end{itemize}

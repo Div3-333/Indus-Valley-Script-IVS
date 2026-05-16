@@ -1,0 +1,8 @@
+Metric,Value,Note
+Analyzable texts,5531,"Texts with at least one non-eroded, non-blank sign."
+Complete analyzable texts,3673,Texts marked complete=Y.
+Candidate ngrams,3356,Repeated ngrams with count at least 2.
+Title/classifier candidates,17,Length 1-2 ngrams with strong title-marker score.
+Repeated name-like candidates,299,Length 2-5 repeated blocks with strong name-anchor score.
+Cross-site name-anchor candidates,35,Repeated blocks with broader site/region spread.
+Formula slot candidates,1013,Immediate frames with multiple fillers.

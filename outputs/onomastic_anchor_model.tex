@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\begin{document}
+\section*{Onomastic Anchor Model}
+This report turns the Linear-Elamite-style proper-name strategy into an internal Indus test: find repeated name-like blocks, possible titles/classifiers, and formula frames with variable fillers. These are anchor candidates only, not readings.
+\subsection*{Summary}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Analyzable texts & 5531 \\
+Complete analyzable texts & 3673 \\
+Candidate ngrams & 3356 \\
+Title/classifier candidates & 17 \\
+Repeated name-like candidates & 299 \\
+Cross-site name-anchor candidates & 35 \\
+Formula slot candidates & 1013 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Top Name-Like Blocks}
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Ngram} & \textbf{Count} & \textbf{Sites} & \textbf{Name} & \textbf{Formula risk} \\
+\midrule
+740-679 & 10 & 2 & 0.9663 & 0.557 \\
+002-003-390 & 14 & 5 & 0.9657 & 0.5717 \\
+460-740 & 10 & 2 & 0.9463 & 0.557 \\
+772-740 & 8 & 2 & 0.9459 & 0.5443 \\
+920-060-742 & 9 & 2 & 0.9446 & 0.5459 \\
+706-033-520 & 16 & 3 & 0.9425 & 0.5983 \\
+773-740 & 9 & 2 & 0.939 & 0.5676 \\
+820-060 & 26 & 5 & 0.9341 & 0.6197 \\
+017-585-740 & 14 & 4 & 0.9271 & 0.5931 \\
+817-002-048 & 12 & 2 & 0.925 & 0.5751 \\
+016-390 & 14 & 5 & 0.9239 & 0.6124 \\
+920-060-741 & 38 & 7 & 0.9234 & 0.6401 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Top Title or Classifier Markers}
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Ngram} & \textbf{Count} & \textbf{Sites} & \textbf{Title} & \textbf{Diversity} \\
+\midrule
+520 & 321 & 16 & 0.8363 & 0.5144 \\
+820 & 244 & 18 & 0.8284 & 0.4803 \\
+151 & 94 & 10 & 0.8185 & 0.5857 \\
+817 & 221 & 14 & 0.813 & 0.3278 \\
+003 & 259 & 14 & 0.8076 & 0.6547 \\
+390 & 290 & 25 & 0.8064 & 0.6274 \\
+740 & 1928 & 41 & 0.8034 & 0.5417 \\
+235 & 250 & 12 & 0.8027 & 0.7206 \\
+861 & 272 & 15 & 0.7959 & 0.4419 \\
+031 & 258 & 16 & 0.7951 & 0.7678 \\
+920 & 153 & 13 & 0.7942 & 0.6189 \\
+140 & 110 & 8 & 0.7906 & 0.7879 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Top Variable Formula Slots}
+\begin{center}
+\begin{tabular}{llrrr}
+\toprule
+\textbf{Left} & \textbf{Right} & \textbf{Count} & \textbf{Fillers} & \textbf{Slot} \\
+\midrule
+002 & 740 & 345 & 247 & 0.957 \\
+060 & $<$END$>$ & 193 & 176 & 0.949 \\
+$<$START$>$ & 390 & 236 & 163 & 0.9409 \\
+002 & $<$END$>$ & 705 & 508 & 0.9374 \\
+741 & $<$END$>$ & 198 & 163 & 0.9357 \\
+060 & 740 & 101 & 85 & 0.9276 \\
+001 & $<$END$>$ & 177 & 131 & 0.9257 \\
+820 & $<$END$>$ & 170 & 147 & 0.9239 \\
+820 & 740 & 74 & 72 & 0.9229 \\
+235 & $<$END$>$ & 206 & 128 & 0.9221 \\
+$<$START$>$ & 001 & 184 & 136 & 0.9181 \\
+233 & $<$END$>$ & 174 & 105 & 0.9172 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Outputs}
+\begin{itemize}
+\item \texttt{outputs/onomastic\_anchor\_ngram\_candidates.csv}
+\item \texttt{outputs/onomastic\_title\_marker\_candidates.csv}
+\item \texttt{outputs/onomastic\_formula\_slots.csv}
+\item \texttt{outputs/onomastic\_anchor\_summary.csv}
+\end{itemize}
+\end{document}
