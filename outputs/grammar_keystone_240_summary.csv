@@ -1,0 +1,10 @@
+Metric,Value,Note
+240 token occurrences,354,texts=354
+Position profile,Medial:234; Initial:96; Final:16; Standalone:8,Reading-order positions in cleaned corpus.
+Distinct signs after 240,69,520:46; 740:25; 233:24; 636:19; 482:15
+Distinct signs before 240,28,002:83; 235:45; 798:20; 060:16; 220:15
+Observed local frames,182,002|520:29; 235|740:15; <START>|636:10; <START>|705:9; <START>|233:9
+240+X slot groups,54,18 frame-locked groups at score >= 0.70
+Controlled 240+STEM lanes,3,Can feed later phonetic tests after image checks.
+Validated 240 morphology constraints,8,Promoted to grammar model only.
+Leading 240 model,Qualifier/title/classifier prefix operator,score=0.986; status=LEADING MODEL

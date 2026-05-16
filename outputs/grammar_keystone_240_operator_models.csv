@@ -1,0 +1,6 @@
+ModelId,Model,Score,Status,Evidence,Consequence
+H240-A,Qualifier/title/classifier prefix operator,0.986,LEADING MODEL,8 morphology constraints; 69 following signs; 18 frame-locked 240+X groups; 3 controlled stem lanes.,Use 240+STEM as a formal environment before assigning any sound values.
+H240-E,Polyfunctional mixed sign,0.615,CONTROL RISK,position entropy=0.615; local-frame entropy=0.913.,Split 240 contexts by frame before any phonetic comparison.
+H240-C,Formula opener/boundary marker,0.463,SECONDARY FUNCTION,240::235 contrast rows=1; context entropy=0.913; probes involving 240=14.,Model 240 against 235 as a rival opener while keeping 240+STEM separate.
+H240-D,Terminal/suffix/numeral value,0.060,LOW SUPPORT,final share=0.045; 235|END contexts=1.,Do not use 240 as a terminal anchor unless a specific local frame demands it.
+H240-B,Ordinary lexical stem,0.012,WEAKENED,standalone share=0.023; final share=0.045; distinct following signs=69.,Would block 240 from serving as a grammar operator; current evidence does not favor this.
