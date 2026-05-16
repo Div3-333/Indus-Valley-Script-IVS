@@ -1,0 +1,10 @@
+Metric,Value,Note
+Medium/high ready reconstructions,607,Rows with structural evidence strong enough for phonetic test design.
+Abstract sign variables,338,"Variables are functional placeholders, not readings."
+Distinct reading units,627,Slot fillers extracted from ready reconstructions.
+Strong onomastic anchors,7,Prime-entity fillers with cross-site and minimal-pair evidence.
+Cross-frame phonetic anchors,31,Reusable fillers in multiple frames with minimal alternations.
+Affix/formula anchors,75,"Initial, terminal, or pre-terminal units suited to morpheme tests."
+Prime-entity fillers,85,Candidate owner/name/title/place/lineage units.
+Abstract reconstructions exported,607,Sentence-like structural reconstructions with phonetic variables.
+Minimal alternation tests,300,Top same-frame contrasts for falsification.

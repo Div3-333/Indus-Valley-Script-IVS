@@ -1,0 +1,91 @@
+\section{Phonetic Bootstrap Testbench}
+
+\subsection{Purpose}
+
+This generated note formalizes a strictly abstract phonetic layer. Variables such as \texttt{C01}, \texttt{T01}, and \texttt{R01} are not sound values. They are placeholders for signs that may later receive phonetic, morphemic, or classifier readings if external evidence supports them.
+
+\subsection{Summary}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ll}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Medium/high ready reconstructions & 607 \\
+Abstract sign variables & 338 \\
+Distinct reading units & 627 \\
+Strong onomastic anchors & 7 \\
+Cross-frame phonetic anchors & 31 \\
+Affix/formula anchors & 75 \\
+Prime-entity fillers & 85 \\
+Abstract reconstructions exported & 607 \\
+Minimal alternation tests & 300 \\
+\bottomrule
+\end{tabular}
+\caption{Abstract phonetic bootstrap summary.}
+\end{table}
+
+\subsection{Top Reading Units}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{llllll}
+\toprule
+\textbf{Unit} & \textbf{Abstract} & \textbf{Role} & \textbf{Score} & \textbf{Sites} & \textbf{Class} \\
+\midrule
+235 & M01 & InitialFiller & 0.931 & 5 & CrossFramePhoneticAnchor \\
+520 & T02 & TerminalFiller & 0.886 & 7 & CrossFramePhoneticAnchor \\
+740 & T01 & TerminalFiller & 0.878 & 5 & CrossFramePhoneticAnchor \\
+031 & M03 & InitialFiller & 0.856 & 6 & CrossFramePhoneticAnchor \\
+233 & A04 & InitialFiller & 0.848 & 4 & CrossFramePhoneticAnchor \\
+032 & A07 & TerminalFiller & 0.816 & 3 & CrossFramePhoneticAnchor \\
+176-740 & R02-T01 & TerminalFiller & 0.807 & 4 & CrossFramePhoneticAnchor \\
+240-520 & A02-T02 & TerminalFiller & 0.807 & 3 & CrossFramePhoneticAnchor \\
+\bottomrule
+\end{tabular}
+\caption{Highest-scoring sound-bearing or morpheme-bearing units for testing.}
+\end{table}
+
+\subsection{Abstract Sentence Reconstructions}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lllp{0.32\textwidth}}
+\toprule
+\textbf{Text} & \textbf{Site} & \textbf{Frame} & \textbf{Abstract} \\
+\midrule
+M-355 & Mohenjo-daro & ClassifierSlotTerminalFormula & M07-R145-T02-R126-C02-A01-M01-R21-A13-A11-A07-R81-T01 \\
+M-1114 & Mohenjo-daro & PrimeEntitySealFormula & M04-A06-A03-A01-M07-T01 \\
+- & Dholavira & TerminalFormula & M01-T02 \\
+- & Kanmer & TerminalFormula & M03-T02 \\
+H-148 & Harappa & TerminalFormula & M01-A02-T02 \\
+H-440 & Harappa & TerminalFormula & M03-A02-T01-A10 \\
+\bottomrule
+\end{tabular}
+\caption{Examples of phonetic-variable reconstruction.}
+\end{table}
+
+\subsection{Minimal Alternation Tests}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{llll}
+\toprule
+\textbf{Frame} & \textbf{A} & \textbf{B} & \textbf{Relation} \\
+\midrule
+002|<END> & 240-520 & 240 & Minimal alternation \\
+002|<END> & 240-520 & 520 & Minimal alternation \\
+002|<END> & 240-520 & 220-520 & Same-frame substitution \\
+002|<END> & 240-520 & 231-520 & Same-frame substitution \\
+861|<END> & 002 & 740 & Same-frame substitution \\
+<START>|240 & 235 & 798 & Same-frame substitution \\
+<START>|520 & 415-220 & 220 & Minimal alternation \\
+002|<END> & 003-390 & 004-390 & Same-frame substitution \\
+\bottomrule
+\end{tabular}
+\caption{Same-frame alternations that can constrain future readings.}
+\end{table}

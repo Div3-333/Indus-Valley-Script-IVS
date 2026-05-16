@@ -1,0 +1,146 @@
+\section{Phonetic Bootstrap Testbench}
+
+\subsection{Purpose}
+
+The project can now begin phonetic bootstrapping in a controlled sense. This does not mean that a sign has been read as a sound. It means that a reproducible testbench now assigns abstract variables to signs and extracts the inscriptions where future sound values, morphemes, titles, classifiers, or proper-name readings can be falsified.
+
+The notation is deliberately conservative. A variable such as \texttt{C01}, \texttt{T01}, or \texttt{R02} is not a phoneme. It is a placeholder for a sign whose function is constrained enough that a phonetic hypothesis can later be tested against every occurrence.
+
+\subsection{Method}
+
+The script \texttt{scripts/phonetic-bootstrap-testbench.py} combines:
+
+\begin{itemize}
+  \item the 607 medium/high phonetic-readiness reconstructions from the structural model;
+  \item functional proto-glosses for signs such as \texttt{820}, \texttt{861}, \texttt{817}, \texttt{740}, and \texttt{520};
+  \item cross-frame filler reuse from the slot-paradigm model;
+  \item minimal alternation pairs within the same structural frame.
+\end{itemize}
+
+Each sign receives a stable abstract variable. The prefix marks only the current functional class:
+
+\begin{itemize}
+  \item \texttt{C}: classifier/title-like sign;
+  \item \texttt{T}: terminal title/suffix-like sign;
+  \item \texttt{M}: formula marker;
+  \item \texttt{A}: slot modifier;
+  \item \texttt{R}: possible root or unresolved sign.
+\end{itemize}
+
+\subsection{Corpus-Wide Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Medium/high ready reconstructions & 607 \\
+Abstract sign variables & 338 \\
+Distinct reading units & 627 \\
+Strong onomastic anchors & 7 \\
+Cross-frame phonetic anchors & 31 \\
+Affix/formula anchors & 75 \\
+Prime-entity fillers & 85 \\
+Abstract reconstructions exported & 607 \\
+Minimal alternation tests & 300 \\
+\bottomrule
+\end{tabular}
+\caption{Abstract phonetic bootstrap summary.}
+\label{tab:phonetic-bootstrap-summary}
+\end{table}
+
+\subsection{Variable Map}
+
+The strongest currently constrained variables are shown in Table~\ref{tab:phonetic-variable-map}. These are the variables that future proposed readings must explain first.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Sign} & \textbf{Variable} & \textbf{Current functional class} \\
+\midrule
+820 & \texttt{C01} & classifier/title-like \\
+861 & \texttt{C02} & classifier/title-like \\
+817 & \texttt{C03} & classifier/title-like \\
+740 & \texttt{T01} & terminal title/suffix-like \\
+520 & \texttt{T02} & terminal title/suffix-like \\
+235 & \texttt{M01} & formula marker / slot modifier \\
+390 & \texttt{M02} & formula marker / slot modifier \\
+002 & \texttt{A01} & slot modifier \\
+240 & \texttt{A02} & slot modifier \\
+176 & \texttt{R02} & possible root or unresolved sign \\
+\bottomrule
+\end{tabular}
+\caption{Selected abstract variables. These are not sound values.}
+\label{tab:phonetic-variable-map}
+\end{table}
+
+\subsection{Strong Onomastic Anchors}
+
+The most important new class is the strong onomastic anchor: a prime-entity filler that appears in a semantically narrow slot, occurs across more than one site, and participates in minimal alternation evidence. These are the closest analogues, in our current data, to the proper-name strategy used in successful decipherments.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{llllr}
+\toprule
+\textbf{Unit} & \textbf{Abstract} & \textbf{Role} & \textbf{Frame evidence} & \textbf{Score} \\
+\midrule
+176 & \texttt{R02} & prime entity filler & \texttt{002|740}; \texttt{<START>|741} & 0.790 \\
+032-220 & \texttt{A07-A09} & prime entity filler & \texttt{002|740}; \texttt{<START>|233} & 0.757 \\
+590-390 & \texttt{A08-M02} & prime entity filler & \texttt{002|740} & 0.737 \\
+240-482 & \texttt{A02-R16} & prime entity filler & \texttt{002|740} & 0.664 \\
+235-222 & \texttt{M01-R31} & prime entity filler & \texttt{002|740} & 0.623 \\
+240-176 & \texttt{A02-R02} & prime entity filler & \texttt{002|740} & 0.608 \\
+235-840-032 & \texttt{M01-R10-A07} & prime entity filler & \texttt{002|740} & 0.600 \\
+\bottomrule
+\end{tabular}
+\caption{First strong onomastic-style anchors for controlled phonetic testing.}
+\label{tab:strong-onomastic-anchors}
+\end{table}
+
+\subsection{Example Abstract Reconstructions}
+
+The output file \texttt{outputs/abstract\_phonetic\_reconstructions.csv} renders 607 inscriptions in abstract variables. A few examples:
+
+\begin{itemize}
+  \item \textbf{L-41, Lothal}:\\
+  {\footnotesize\texttt{817-002-233-740-090} to \texttt{C03-A01-A04-T01-A10}}.\\
+  The sign \texttt{233} is the prime entity filler inside \texttt{002 X 740}.
+  \item \textbf{M-708, Mohenjo-daro}:\\
+  {\footnotesize\texttt{140-390-002-061-740} to \texttt{M07-M02-A01-R29-T01}}.\\
+  This also preserves the \texttt{002 X 740} entity slot.
+  \item \textbf{M-1114, Mohenjo-daro}:\\
+  {\footnotesize\texttt{920-060-741-002-140-740} to \texttt{M04-A06-A03-A01-M07-T01}}.\\
+  This is a longer prime-entity seal formula.
+\end{itemize}
+
+This is the first point where the project can speak of sentence-like reconstruction with a phonetic layer: the formula is structurally and semantically constrained, while the sound layer remains abstract.
+
+\subsection{Minimal Alternation Protocol}
+
+The file \texttt{outputs/phonetic\_minimal\_tests.csv} contains the top 300 same-frame alternations. These are essential because a proposed reading is not allowed to explain only one attractive inscription. It must survive the alternation set.
+
+For example, if two fillers occupy the same \texttt{002|740} prime-entity slot and differ by one sign, then a proposed phonetic value for that sign must preserve the same frame. The alternation may indicate a phonemic contrast, an affix, a classifier, an allograph, a numeral, or a graphic modifier. The testbench does not decide which one is correct; it gives us the falsification grid.
+
+\subsection{Interpretation}
+
+The current working reconstruction pipeline is now:
+
+\begin{center}
+\texttt{STRUCTURAL FRAME -> SEMANTIC OPTIONS -> ABSTRACT PHONETIC VARIABLES -> MINIMAL TESTS}
+\end{center}
+
+The next empirical breakthrough will probably not come from guessing a sound for a sign in isolation. It should come from taking a strong anchor such as \texttt{176}, \texttt{590-390}, or \texttt{235-222}, collecting every artifact and image context where it appears, and asking whether one proposed semantic or phonetic value predicts the whole set.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/phonetic\_bootstrap\_summary.csv}
+  \item \texttt{outputs/phonetic\_variable\_map.csv}
+  \item \texttt{outputs/phonetic\_reading\_units.csv}
+  \item \texttt{outputs/abstract\_phonetic\_reconstructions.csv}
+  \item \texttt{outputs/phonetic\_minimal\_tests.csv}
+  \item \texttt{outputs/phonetic\_bootstrap\_testbench.tex}
+\end{itemize}

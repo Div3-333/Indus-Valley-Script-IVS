@@ -1,0 +1,339 @@
+Sign,Variable,FunctionalClass,ProtoGloss,CountInReadyTexts,RoleContexts,SemanticFrames,ReadingConstraint
+820,C01,CLASSIFIER,INITIAL_TITLE_OR_CLASSIFIER / SLOT_INITIAL_MODIFIER,82,InitialFiller:40; TerminalFiller:3,ClassifierSlotTerminalFormula:48; InitialClassifierFormula:21; PrimeEntitySealFormula:12; PrimeEntityAdministrativeFormula:1,"must behave like an initial title, classifier, or determinative in matching frames"
+861,C02,CLASSIFIER,INITIAL_TITLE_OR_CLASSIFIER / SLOT_INITIAL_MODIFIER,76,InitialFiller:33; TerminalFiller:2; PrimeEntityFiller:1,PrimeEntitySealFormula:36; ClassifierSlotTerminalFormula:24; InitialClassifierFormula:9; PrimeEntityAdministrativeFormula:7,"must behave like an initial title, classifier, or determinative in matching frames"
+817,C03,CLASSIFIER,INITIAL_TITLE_OR_CLASSIFIER / SLOT_INITIAL_MODIFIER,53,InitialFiller:27; TerminalFiller:2; PrimeEntityFiller:1,PrimeEntitySealFormula:22; ClassifierSlotTerminalFormula:18; InitialClassifierFormula:9; PrimeEntityAdministrativeFormula:4,"must behave like an initial title, classifier, or determinative in matching frames"
+740,T01,TERMINAL,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,378,TerminalFiller:220; InitialFiller:20; PrimeEntityFiller:1,TerminalFormula:209; PrimeEntitySealFormula:105; ClassifierSlotTerminalFormula:51; PrimeEntityAdministrativeFormula:12; NameLikeTerminalFormula:1,"must behave like a terminal title, suffix, or formula ending across seals"
+520,T02,TERMINAL,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,115,TerminalFiller:105; InitialFiller:1,TerminalFormula:87; ClassifierSlotTerminalFormula:25; NameLikeTerminalFormula:2; PrimeEntitySealFormula:1,"must behave like a terminal title, suffix, or formula ending across seals"
+400,T03,TERMINAL,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,26,TerminalFiller:23; InitialFiller:1,TerminalFormula:20; ClassifierSlotTerminalFormula:5; PrimeEntitySealFormula:1,"must behave like a terminal title, suffix, or formula ending across seals"
+527,T04,TERMINAL,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,17,TerminalFiller:15; InitialFiller:1,TerminalFormula:8; ClassifierSlotTerminalFormula:7; PrimeEntitySealFormula:2,"must behave like a terminal title, suffix, or formula ending across seals"
+151,T05,TERMINAL,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,15,TerminalFiller:13,TerminalFormula:11; ClassifierSlotTerminalFormula:4,"must behave like a terminal title, suffix, or formula ending across seals"
+156,T06,TERMINAL,TERMINAL_TITLE_OR_SUFFIX,9,TerminalFiller:7; PrimeEntityFiller:1,TerminalFormula:5; ClassifierSlotTerminalFormula:2; PrimeEntitySealFormula:2,"must behave like a terminal title, suffix, or formula ending across seals"
+235,M01,FORMULA_MARKER,LEADING_FORMULA_MARKER / SLOT_FINAL_MODIFIER / SLOT_INITIAL_MODIFIER,112,InitialFiller:54; TerminalFiller:24; PrimeEntityFiller:22,TerminalFormula:70; PrimeEntitySealFormula:22; ClassifierSlotTerminalFormula:15; LowEvidenceSequence:5,must remain formulaic across repeated contexts before phonetic value is proposed
+390,M02,FORMULA_MARKER,CLOSING_FORMULA_MARKER / SLOT_FINAL_MODIFIER,88,TerminalFiller:12; PrimeEntityFiller:10; InitialFiller:5,TerminalFormula:29; InitialClassifierFormula:19; LowEvidenceSequence:17; PrimeEntitySealFormula:15; ClassifierSlotTerminalFormula:6,must remain formulaic across repeated contexts before phonetic value is proposed
+031,M03,FORMULA_MARKER,LEADING_FORMULA_MARKER / SLOT_INITIAL_MODIFIER,78,TerminalFiller:31; InitialFiller:23; PrimeEntityFiller:2,TerminalFormula:42; LowEvidenceSequence:13; PrimeEntitySealFormula:11; ClassifierSlotTerminalFormula:9; InitialClassifierFormula:3,must remain formulaic across repeated contexts before phonetic value is proposed
+920,M04,FORMULA_MARKER,LEADING_FORMULA_MARKER,66,InitialFiller:45; TerminalFiller:9; PrimeEntityFiller:2,TerminalFormula:37; LowEvidenceSequence:18; PrimeEntitySealFormula:6; ClassifierSlotTerminalFormula:3; InitialClassifierFormula:2,must remain formulaic across repeated contexts before phonetic value is proposed
+003,M05,FORMULA_MARKER,LEADING_FORMULA_MARKER / SLOT_INITIAL_MODIFIER,54,InitialFiller:26; TerminalFiller:19; PrimeEntityFiller:7,LowEvidenceSequence:16; TerminalFormula:15; InitialClassifierFormula:12; PrimeEntitySealFormula:9; ClassifierSlotTerminalFormula:2,must remain formulaic across repeated contexts before phonetic value is proposed
+806,M06,FORMULA_MARKER,LEADING_FORMULA_MARKER,34,InitialFiller:16; TerminalFiller:8; PrimeEntityFiller:7,TerminalFormula:16; PrimeEntitySealFormula:7; ClassifierSlotTerminalFormula:5; LowEvidenceSequence:5; InitialClassifierFormula:1,must remain formulaic across repeated contexts before phonetic value is proposed
+140,M07,FORMULA_MARKER,LEADING_FORMULA_MARKER,28,InitialFiller:13; TerminalFiller:5; PrimeEntityFiller:3,PrimeEntitySealFormula:9; TerminalFormula:8; ClassifierSlotTerminalFormula:5; LowEvidenceSequence:5; InitialClassifierFormula:1,must remain formulaic across repeated contexts before phonetic value is proposed
+002,A01,SLOT_MODIFIER,SLOT_FINAL_MODIFIER / SLOT_INITIAL_MODIFIER,219,InitialFiller:119; PreTerminalFiller:2; TerminalFiller:1,PrimeEntitySealFormula:104; TerminalFormula:42; ClassifierSlotTerminalFormula:35; InitialClassifierFormula:19; PrimeEntityAdministrativeFormula:12,must explain slot alternations without breaking frame identity
+240,A02,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,173,TerminalFiller:106; PrimeEntityFiller:43; InitialFiller:9,TerminalFormula:98; PrimeEntitySealFormula:33; ClassifierSlotTerminalFormula:18; PrimeEntityAdministrativeFormula:10; LowEvidenceSequence:6,must explain slot alternations without breaking frame identity
+741,A03,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,128,TerminalFiller:33; InitialFiller:21,TerminalFormula:97; LowEvidenceSequence:19; ClassifierSlotTerminalFormula:6; PrimeEntitySealFormula:2; InitialClassifierFormula:2,must explain slot alternations without breaking frame identity
+233,A04,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,104,TerminalFiller:40; PrimeEntityFiller:18; InitialFiller:12,TerminalFormula:58; PrimeEntitySealFormula:20; ClassifierSlotTerminalFormula:15; LowEvidenceSequence:10; InitialClassifierFormula:1,must explain slot alternations without breaking frame identity
+001,A05,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,99,TerminalFiller:10; InitialFiller:3; PrimeEntityFiller:1,TerminalFormula:53; ClassifierSlotTerminalFormula:17; LowEvidenceSequence:17; PrimeEntitySealFormula:6; InitialClassifierFormula:6,must explain slot alternations without breaking frame identity
+060,A06,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,87,InitialFiller:52,TerminalFormula:45; ClassifierSlotTerminalFormula:21; LowEvidenceSequence:15; InitialClassifierFormula:5; PrimeEntitySealFormula:1,must explain slot alternations without breaking frame identity
+032,A07,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,74,InitialFiller:27; TerminalFiller:26; PrimeEntityFiller:11; PreTerminalFiller:1,TerminalFormula:42; PrimeEntitySealFormula:15; ClassifierSlotTerminalFormula:8; LowEvidenceSequence:6; NameLikeTerminalFormula:2,must explain slot alternations without breaking frame identity
+590,A08,SLOT_MODIFIER,SLOT_FINAL_MODIFIER,58,InitialFiller:31; PrimeEntityFiller:13; TerminalFiller:12; PreTerminalFiller:1,TerminalFormula:33; PrimeEntitySealFormula:16; ClassifierSlotTerminalFormula:5; InitialClassifierFormula:3; LowEvidenceSequence:1,must explain slot alternations without breaking frame identity
+220,A09,SLOT_MODIFIER,SLOT_FINAL_MODIFIER / SLOT_INITIAL_MODIFIER,52,TerminalFiller:20; InitialFiller:13; PrimeEntityFiller:8; PreTerminalFiller:1,TerminalFormula:26; ClassifierSlotTerminalFormula:12; PrimeEntitySealFormula:10; NameLikeTerminalFormula:3; LowEvidenceSequence:1,must explain slot alternations without breaking frame identity
+090,A10,SLOT_MODIFIER,SLOT_FINAL_MODIFIER,49,TerminalFiller:38; InitialFiller:3,TerminalFormula:32; PrimeEntitySealFormula:10; ClassifierSlotTerminalFormula:5; LowEvidenceSequence:1; InitialClassifierFormula:1,must explain slot alternations without breaking frame identity
+033,A11,SLOT_MODIFIER,SLOT_FINAL_MODIFIER,48,TerminalFiller:32; InitialFiller:7; PrimeEntityFiller:4,TerminalFormula:19; ClassifierSlotTerminalFormula:15; LowEvidenceSequence:8; PrimeEntitySealFormula:5; NameLikeTerminalFormula:1,must explain slot alternations without breaking frame identity
+803,A12,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,34,InitialFiller:15; TerminalFiller:12; PrimeEntityFiller:5,TerminalFormula:21; PrimeEntitySealFormula:5; ClassifierSlotTerminalFormula:5; NameLikeTerminalFormula:1; PrimeEntityAdministrativeFormula:1,must explain slot alternations without breaking frame identity
+705,A13,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,31,TerminalFiller:20; InitialFiller:6; PrimeEntityFiller:2,TerminalFormula:12; ClassifierSlotTerminalFormula:10; LowEvidenceSequence:7; PrimeEntitySealFormula:2,must explain slot alternations without breaking frame identity
+798,A14,SLOT_MODIFIER,SLOT_INITIAL_MODIFIER,30,TerminalFiller:13; InitialFiller:9; PrimeEntityFiller:5,TerminalFormula:17; ClassifierSlotTerminalFormula:8; PrimeEntitySealFormula:4; PrimeEntityAdministrativeFormula:1,must explain slot alternations without breaking frame identity
+100,A15,SLOT_MODIFIER,SLOT_FINAL_MODIFIER,23,TerminalFiller:15; PrimeEntityFiller:7,TerminalFormula:12; PrimeEntitySealFormula:7; ClassifierSlotTerminalFormula:3; InitialClassifierFormula:1,must explain slot alternations without breaking frame identity
+760,A16,SLOT_MODIFIER,SLOT_FINAL_MODIFIER,19,TerminalFiller:10; PrimeEntityFiller:6; InitialFiller:1,TerminalFormula:9; PrimeEntitySealFormula:6; ClassifierSlotTerminalFormula:3; InitialClassifierFormula:1,must explain slot alternations without breaking frame identity
+405,R01,ROOT_OR_UNRESOLVED,UNRESOLVED,43,InitialFiller:31; TerminalFiller:4; PrimeEntityFiller:4; PreTerminalFiller:1,TerminalFormula:31; PrimeEntitySealFormula:7; LowEvidenceSequence:3; ClassifierSlotTerminalFormula:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+176,R02,ROOT_OR_UNRESOLVED,UNRESOLVED,33,TerminalFiller:23; PrimeEntityFiller:7; InitialFiller:2,TerminalFormula:23; PrimeEntitySealFormula:7; ClassifierSlotTerminalFormula:3,must be tested as a possible lexical root or unresolved sign
+501,R03,ROOT_OR_UNRESOLVED,UNRESOLVED,29,InitialFiller:29,TerminalFormula:29,must be tested as a possible lexical root or unresolved sign
+368,R04,ROOT_OR_UNRESOLVED,UNRESOLVED,22,InitialFiller:14; TerminalFiller:5,TerminalFormula:6; ClassifierSlotTerminalFormula:5; InitialClassifierFormula:4; PrimeEntitySealFormula:3; LowEvidenceSequence:3,must be tested as a possible lexical root or unresolved sign
+125,R05,ROOT_OR_UNRESOLVED,UNRESOLVED,17,InitialFiller:10; TerminalFiller:3; PrimeEntityFiller:1,TerminalFormula:9; ClassifierSlotTerminalFormula:3; PrimeEntitySealFormula:3; LowEvidenceSequence:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+900,R06,ROOT_OR_UNRESOLVED,UNRESOLVED,17,InitialFiller:9; TerminalFiller:5; PrimeEntityFiller:2,TerminalFormula:9; PrimeEntitySealFormula:4; LowEvidenceSequence:2; ClassifierSlotTerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+255,R07,ROOT_OR_UNRESOLVED,UNRESOLVED,16,TerminalFiller:6; InitialFiller:4; PreTerminalFiller:3; PrimeEntityFiller:2,TerminalFormula:11; PrimeEntitySealFormula:3; InitialClassifierFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+690,R08,ROOT_OR_UNRESOLVED,UNRESOLVED,15,TerminalFiller:5; InitialFiller:4; PreTerminalFiller:3,TerminalFormula:11; PrimeEntitySealFormula:2; ClassifierSlotTerminalFormula:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+706,R09,ROOT_OR_UNRESOLVED,UNRESOLVED,15,TerminalFiller:9; InitialFiller:3; PrimeEntityFiller:1,TerminalFormula:7; ClassifierSlotTerminalFormula:5; InitialClassifierFormula:1; PrimeEntitySealFormula:1; NameLikeTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+840,R10,ROOT_OR_UNRESOLVED,UNRESOLVED,15,TerminalFiller:7; PrimeEntityFiller:3; InitialFiller:2; PreTerminalFiller:1,TerminalFormula:8; PrimeEntitySealFormula:4; ClassifierSlotTerminalFormula:2; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+350,R11,ROOT_OR_UNRESOLVED,UNRESOLVED,14,TerminalFiller:11; PrimeEntityFiller:1; InitialFiller:1,TerminalFormula:6; PrimeEntitySealFormula:3; LowEvidenceSequence:3; InitialClassifierFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+407,R12,ROOT_OR_UNRESOLVED,UNRESOLVED,14,TerminalFiller:11; InitialFiller:2,TerminalFormula:7; LowEvidenceSequence:5; PrimeEntitySealFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+415,R13,ROOT_OR_UNRESOLVED,UNRESOLVED,14,TerminalFiller:7; PrimeEntityFiller:3; InitialFiller:2,ClassifierSlotTerminalFormula:5; TerminalFormula:5; PrimeEntitySealFormula:3; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+435,R14,ROOT_OR_UNRESOLVED,UNRESOLVED,14,TerminalFiller:7; PreTerminalFiller:3; InitialFiller:3,TerminalFormula:10; LowEvidenceSequence:2; PrimeEntitySealFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+550,R15,ROOT_OR_UNRESOLVED,UNRESOLVED,14,TerminalFiller:7; InitialFiller:4,TerminalFormula:6; ClassifierSlotTerminalFormula:4; PrimeEntitySealFormula:2; LowEvidenceSequence:2,must be tested as a possible lexical root or unresolved sign
+482,R16,ROOT_OR_UNRESOLVED,UNRESOLVED,13,PrimeEntityFiller:8; TerminalFiller:3; PreTerminalFiller:2,PrimeEntityAdministrativeFormula:7; TerminalFormula:5; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+017,R17,ROOT_OR_UNRESOLVED,UNRESOLVED,12,TerminalFiller:6; PrimeEntityFiller:5,PrimeEntitySealFormula:5; TerminalFormula:4; ClassifierSlotTerminalFormula:2; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+692,R18,ROOT_OR_UNRESOLVED,UNRESOLVED,12,InitialFiller:3; PrimeEntityFiller:1; TerminalFiller:1,TerminalFormula:7; LowEvidenceSequence:4; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+904,R19,ROOT_OR_UNRESOLVED,UNRESOLVED,12,TerminalFiller:8; PrimeEntityFiller:3; InitialFiller:1,TerminalFormula:7; PrimeEntityAdministrativeFormula:3; InitialClassifierFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+070,R20,ROOT_OR_UNRESOLVED,UNRESOLVED,11,TerminalFiller:4; PrimeEntityFiller:3; InitialFiller:2; PreTerminalFiller:1,TerminalFormula:4; PrimeEntitySealFormula:3; ClassifierSlotTerminalFormula:2; LowEvidenceSequence:1; NameLikeTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+231,R21,ROOT_OR_UNRESOLVED,UNRESOLVED,11,TerminalFiller:7; InitialFiller:2; PrimeEntityFiller:1,ClassifierSlotTerminalFormula:6; TerminalFormula:3; LowEvidenceSequence:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+575,R22,ROOT_OR_UNRESOLVED,UNRESOLVED,11,InitialFiller:7; PrimeEntityFiller:3; TerminalFiller:1,TerminalFormula:5; PrimeEntitySealFormula:4; LowEvidenceSequence:2,must be tested as a possible lexical root or unresolved sign
+055,R23,ROOT_OR_UNRESOLVED,UNRESOLVED,10,TerminalFiller:5; InitialFiller:3; PrimeEntityFiller:1,TerminalFormula:6; LowEvidenceSequence:3; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+585,R24,ROOT_OR_UNRESOLVED,UNRESOLVED,10,TerminalFiller:7; PrimeEntityFiller:2,ClassifierSlotTerminalFormula:3; LowEvidenceSequence:3; PrimeEntitySealFormula:2; TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+645,R25,ROOT_OR_UNRESOLVED,UNRESOLVED,10,InitialFiller:7; TerminalFiller:3,TerminalFormula:8; InitialClassifierFormula:2,must be tested as a possible lexical root or unresolved sign
+923,R26,ROOT_OR_UNRESOLVED,UNRESOLVED,10,TerminalFiller:5; PrimeEntityFiller:3; PreTerminalFiller:1; InitialFiller:1,TerminalFormula:5; PrimeEntitySealFormula:3; ClassifierSlotTerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+384,R27,ROOT_OR_UNRESOLVED,UNRESOLVED,9,TerminalFiller:7; PrimeEntityFiller:1; PreTerminalFiller:1,TerminalFormula:8; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+004,R28,ROOT_OR_UNRESOLVED,UNRESOLVED,8,TerminalFiller:5; InitialFiller:2,TerminalFormula:4; LowEvidenceSequence:3; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+061,R29,ROOT_OR_UNRESOLVED,UNRESOLVED,8,TerminalFiller:6; PrimeEntityFiller:1; PreTerminalFiller:1,ClassifierSlotTerminalFormula:4; PrimeEntitySealFormula:2; TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+104,R30,ROOT_OR_UNRESOLVED,UNRESOLVED,8,InitialFiller:7,TerminalFormula:7; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+222,R31,ROOT_OR_UNRESOLVED,UNRESOLVED,8,TerminalFiller:5; PrimeEntityFiller:3,TerminalFormula:4; PrimeEntitySealFormula:3; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+347,R32,ROOT_OR_UNRESOLVED,UNRESOLVED,8,InitialFiller:8,TerminalFormula:8,must be tested as a possible lexical root or unresolved sign
+388,R33,ROOT_OR_UNRESOLVED,UNRESOLVED,8,TerminalFiller:5; PrimeEntityFiller:2; InitialFiller:1,TerminalFormula:4; PrimeEntitySealFormula:3; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+416,R34,ROOT_OR_UNRESOLVED,UNRESOLVED,8,TerminalFiller:7,TerminalFormula:5; PrimeEntitySealFormula:2; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+679,R35,ROOT_OR_UNRESOLVED,UNRESOLVED,8,TerminalFiller:5,PrimeEntitySealFormula:4; TerminalFormula:3; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+892,R36,ROOT_OR_UNRESOLVED,UNRESOLVED,8,InitialFiller:5; TerminalFiller:2,TerminalFormula:6; PrimeEntitySealFormula:2,must be tested as a possible lexical root or unresolved sign
+320,R37,ROOT_OR_UNRESOLVED,UNRESOLVED,7,TerminalFiller:5; PrimeEntityFiller:2,TerminalFormula:5; PrimeEntitySealFormula:2,must be tested as a possible lexical root or unresolved sign
+440,R38,ROOT_OR_UNRESOLVED,UNRESOLVED,7,TerminalFiller:4; InitialFiller:2; PrimeEntityFiller:1,TerminalFormula:3; ClassifierSlotTerminalFormula:2; PrimeEntitySealFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+503,R39,ROOT_OR_UNRESOLVED,UNRESOLVED,7,PrimeEntityFiller:2; TerminalFiller:2; InitialFiller:1,PrimeEntitySealFormula:5; TerminalFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+555,R40,ROOT_OR_UNRESOLVED,UNRESOLVED,7,TerminalFiller:7,TerminalFormula:4; ClassifierSlotTerminalFormula:3,must be tested as a possible lexical root or unresolved sign
+717,R41,ROOT_OR_UNRESOLVED,UNRESOLVED,7,PrimeEntityFiller:3; TerminalFiller:2; InitialFiller:1,PrimeEntitySealFormula:4; TerminalFormula:2; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+832,R42,ROOT_OR_UNRESOLVED,UNRESOLVED,7,TerminalFiller:4; PrimeEntityFiller:1,PrimeEntitySealFormula:2; InitialClassifierFormula:2; TerminalFormula:2; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+048,R43,ROOT_OR_UNRESOLVED,UNRESOLVED,6,TerminalFiller:5; PrimeEntityFiller:1,TerminalFormula:5; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+455,R44,ROOT_OR_UNRESOLVED,UNRESOLVED,6,TerminalFiller:3; InitialFiller:2,TerminalFormula:3; ClassifierSlotTerminalFormula:2; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+504,R45,ROOT_OR_UNRESOLVED,UNRESOLVED,6,TerminalFiller:5; InitialFiller:1,LowEvidenceSequence:3; InitialClassifierFormula:1; PrimeEntitySealFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+595,R46,ROOT_OR_UNRESOLVED,UNRESOLVED,6,InitialFiller:4; TerminalFiller:2,TerminalFormula:2; InitialClassifierFormula:2; PrimeEntitySealFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+621,R47,ROOT_OR_UNRESOLVED,UNRESOLVED,6,TerminalFiller:3; InitialFiller:1,TerminalFormula:4; PrimeEntitySealFormula:2,must be tested as a possible lexical root or unresolved sign
+636,R48,ROOT_OR_UNRESOLVED,UNRESOLVED,6,TerminalFiller:4; PrimeEntityFiller:2,TerminalFormula:3; PrimeEntitySealFormula:2; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+005,R49,ROOT_OR_UNRESOLVED,UNRESOLVED,5,TerminalFiller:4,TerminalFormula:2; LowEvidenceSequence:2; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+142,R50,ROOT_OR_UNRESOLVED,UNRESOLVED,5,TerminalFiller:4,TerminalFormula:3; ClassifierSlotTerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+154,R51,ROOT_OR_UNRESOLVED,UNRESOLVED,5,TerminalFiller:5,TerminalFormula:4; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+250,R52,ROOT_OR_UNRESOLVED,UNRESOLVED,5,InitialFiller:4; TerminalFiller:1,TerminalFormula:3; LowEvidenceSequence:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+269,R53,ROOT_OR_UNRESOLVED,UNRESOLVED,5,TerminalFiller:3; InitialFiller:2,TerminalFormula:2; LowEvidenceSequence:1; ClassifierSlotTerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+406,R54,ROOT_OR_UNRESOLVED,UNRESOLVED,5,TerminalFiller:3; PreTerminalFiller:1; InitialFiller:1,TerminalFormula:4; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+500,R55,ROOT_OR_UNRESOLVED,UNRESOLVED,5,InitialFiller:3; TerminalFiller:1,TerminalFormula:4; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+530,R56,ROOT_OR_UNRESOLVED,UNRESOLVED,5,InitialFiller:4,TerminalFormula:4; PrimeEntityAdministrativeFormula:1,must be tested as a possible lexical root or unresolved sign
+617,R57,ROOT_OR_UNRESOLVED,UNRESOLVED,5,InitialFiller:2; TerminalFiller:2,TerminalFormula:3; ClassifierSlotTerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+632,R58,ROOT_OR_UNRESOLVED,UNRESOLVED,5,InitialFiller:5,TerminalFormula:5,must be tested as a possible lexical root or unresolved sign
+752,R59,ROOT_OR_UNRESOLVED,UNRESOLVED,5,TerminalFiller:3; PrimeEntityFiller:1,TerminalFormula:3; ClassifierSlotTerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+773,R60,ROOT_OR_UNRESOLVED,UNRESOLVED,5,PrimeEntityFiller:4; TerminalFiller:1,PrimeEntitySealFormula:4; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+838,R61,ROOT_OR_UNRESOLVED,UNRESOLVED,5,TerminalFiller:3; InitialFiller:1,TerminalFormula:3; ClassifierSlotTerminalFormula:1; NameLikeTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+845,R62,ROOT_OR_UNRESOLVED,UNRESOLVED,5,TerminalFiller:2; PrimeEntityFiller:1,PrimeEntitySealFormula:3; TerminalFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+013,R63,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:2; PrimeEntityFiller:1,ClassifierSlotTerminalFormula:1; TerminalFormula:1; InitialClassifierFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+016,R64,ROOT_OR_UNRESOLVED,UNRESOLVED,4,TerminalFiller:2; InitialFiller:1; PrimeEntityFiller:1,TerminalFormula:2; ClassifierSlotTerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+091,R65,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:4,TerminalFormula:2; LowEvidenceSequence:2,must be tested as a possible lexical root or unresolved sign
+165,R66,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:3,PrimeEntitySealFormula:1; TerminalFormula:1; ClassifierSlotTerminalFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+171,R67,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:4,TerminalFormula:4,must be tested as a possible lexical root or unresolved sign
+175,R68,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:3; PrimeEntityFiller:1,TerminalFormula:3; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+243,R69,ROOT_OR_UNRESOLVED,UNRESOLVED,4,TerminalFiller:3; InitialFiller:1,TerminalFormula:2; ClassifierSlotTerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+297,R70,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:3,TerminalFormula:3; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+382,R71,ROOT_OR_UNRESOLVED,UNRESOLVED,4,TerminalFiller:3; PrimeEntityFiller:1,ClassifierSlotTerminalFormula:2; PrimeEntitySealFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+480,R72,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:3,InitialClassifierFormula:2; TerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+565,R73,ROOT_OR_UNRESOLVED,UNRESOLVED,4,TerminalFiller:2; PrimeEntityFiller:1,PrimeEntitySealFormula:2; TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+572,R74,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:4,TerminalFormula:4,must be tested as a possible lexical root or unresolved sign
+630,R75,ROOT_OR_UNRESOLVED,UNRESOLVED,4,TerminalFiller:2; InitialFiller:2,TerminalFormula:2; ClassifierSlotTerminalFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+742,R76,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:2; TerminalFiller:1,TerminalFormula:4,must be tested as a possible lexical root or unresolved sign
+745,R77,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:4,TerminalFormula:3; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+831,R78,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:4,TerminalFormula:3; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+842,R79,ROOT_OR_UNRESOLVED,UNRESOLVED,4,TerminalFiller:2,TerminalFormula:3; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+850,R80,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:3,TerminalFormula:3; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+877,R81,ROOT_OR_UNRESOLVED,UNRESOLVED,4,InitialFiller:2; PreTerminalFiller:1; TerminalFiller:1,ClassifierSlotTerminalFormula:2; TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+927,R82,ROOT_OR_UNRESOLVED,UNRESOLVED,4,TerminalFiller:4,TerminalFormula:4,must be tested as a possible lexical root or unresolved sign
+072,R83,ROOT_OR_UNRESOLVED,UNRESOLVED,3,InitialFiller:2; TerminalFiller:1,PrimeEntitySealFormula:2; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+095,R84,ROOT_OR_UNRESOLVED,UNRESOLVED,3,InitialFiller:3,TerminalFormula:3,must be tested as a possible lexical root or unresolved sign
+150,R85,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:2; InitialFiller:1,TerminalFormula:2; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+236,R86,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:2; PrimeEntityFiller:1,LowEvidenceSequence:2; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+272,R87,ROOT_OR_UNRESOLVED,UNRESOLVED,3,InitialFiller:3,TerminalFormula:2; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+374,R88,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:1; InitialFiller:1,TerminalFormula:1; LowEvidenceSequence:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+443,R89,ROOT_OR_UNRESOLVED,UNRESOLVED,3,PrimeEntityFiller:1; InitialFiller:1; TerminalFiller:1,PrimeEntitySealFormula:1; TerminalFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+456,R90,ROOT_OR_UNRESOLVED,UNRESOLVED,3,InitialFiller:2; TerminalFiller:1,TerminalFormula:2; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+460,R91,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:2; PrimeEntityFiller:1,TerminalFormula:2; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+463,R92,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:2,TerminalFormula:1; InitialClassifierFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+495,R93,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:2; PrimeEntityFiller:1,TerminalFormula:2; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+502,R94,ROOT_OR_UNRESOLVED,UNRESOLVED,3,,TerminalFormula:2; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+521,R95,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:1,PrimeEntitySealFormula:2; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+564,R96,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:2; InitialFiller:1,ClassifierSlotTerminalFormula:1; PrimeEntitySealFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+592,R97,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:3,LowEvidenceSequence:3,must be tested as a possible lexical root or unresolved sign
+615,R98,ROOT_OR_UNRESOLVED,UNRESOLVED,3,PrimeEntityFiller:1; TerminalFiller:1; InitialFiller:1,PrimeEntitySealFormula:1; LowEvidenceSequence:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+772,R99,ROOT_OR_UNRESOLVED,UNRESOLVED,3,PrimeEntityFiller:1; TerminalFiller:1,PrimeEntitySealFormula:1; NameLikeTerminalFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+790,R100,ROOT_OR_UNRESOLVED,UNRESOLVED,3,TerminalFiller:2; InitialFiller:1,TerminalFormula:2; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+808,R101,ROOT_OR_UNRESOLVED,UNRESOLVED,3,InitialFiller:2,PrimeEntitySealFormula:1; TerminalFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+851,R102,ROOT_OR_UNRESOLVED,UNRESOLVED,3,InitialFiller:3,TerminalFormula:3,must be tested as a possible lexical root or unresolved sign
+065,R103,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,ClassifierSlotTerminalFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+066,R104,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+081,R105,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:1; InitialFiller:1,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+101,R106,ROOT_OR_UNRESOLVED,UNRESOLVED,2,PrimeEntityFiller:2,PrimeEntitySealFormula:2,must be tested as a possible lexical root or unresolved sign
+161,R107,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:2,LowEvidenceSequence:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+168,R108,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1; PrimeEntityFiller:1,TerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+190,R109,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1,TerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+201,R110,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+202,R111,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:1; InitialFiller:1,InitialClassifierFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+226,R112,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:2,LowEvidenceSequence:2,must be tested as a possible lexical root or unresolved sign
+232,R113,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:2,LowEvidenceSequence:2,must be tested as a possible lexical root or unresolved sign
+260,R114,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1,PrimeEntitySealFormula:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+263,R115,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:1; NameLikeTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+309,R116,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1,LowEvidenceSequence:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+315,R117,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,ClassifierSlotTerminalFormula:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+319,R118,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1,ClassifierSlotTerminalFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+322,R119,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+324,R120,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:1; InitialFiller:1,ClassifierSlotTerminalFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+335,R121,ROOT_OR_UNRESOLVED,UNRESOLVED,2,PrimeEntityFiller:1; TerminalFiller:1,PrimeEntitySealFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+337,R122,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:2,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+345,R123,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+346,R124,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,PrimeEntitySealFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+354,R125,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:2,PrimeEntitySealFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+360,R126,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1,ClassifierSlotTerminalFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+361,R127,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+365,R128,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1,TerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+380,R129,ROOT_OR_UNRESOLVED,UNRESOLVED,2,PrimeEntityFiller:1,PrimeEntitySealFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+467,R130,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1; TerminalFiller:1,TerminalFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+472,R131,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:1,TerminalFormula:1; ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+484,R132,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:2,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+518,R133,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:1; InitialFiller:1,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+543,R134,ROOT_OR_UNRESOLVED,UNRESOLVED,2,PrimeEntityFiller:1; TerminalFiller:1,PrimeEntitySealFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+544,R135,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:1; InitialFiller:1,TerminalFormula:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+579,R136,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+605,R137,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:2,ClassifierSlotTerminalFormula:1; InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+700,R138,ROOT_OR_UNRESOLVED,UNRESOLVED,2,TerminalFiller:1; InitialFiller:1,LowEvidenceSequence:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+702,R139,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+720,R140,ROOT_OR_UNRESOLVED,UNRESOLVED,2,PrimeEntityFiller:1; InitialFiller:1,PrimeEntitySealFormula:1; LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+812,R141,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,ClassifierSlotTerminalFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+821,R142,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1; TerminalFiller:1,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+903,R143,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,TerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+906,R144,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:1,TerminalFormula:1; PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+919,R145,ROOT_OR_UNRESOLVED,UNRESOLVED,2,InitialFiller:2,ClassifierSlotTerminalFormula:2,must be tested as a possible lexical root or unresolved sign
+921,R146,ROOT_OR_UNRESOLVED,UNRESOLVED,2,,PrimeEntitySealFormula:1; TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+006,R147,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+012,R148,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+015,R149,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+034,R150,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+036,R151,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+042,R152,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+046,R153,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+056,R154,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+063,R155,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+064,R156,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+067,R157,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+092,R158,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+093,R159,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+097,R160,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+099,R161,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+103,R162,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+105,R163,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+111,R164,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+112,R165,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+121,R166,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+123,R167,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+132,R168,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+137,R169,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+139,R170,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+155,R171,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+157,R172,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+159,R173,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+166,R174,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+167,R175,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+192,R176,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+194,R177,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+195,R178,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+204,R179,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+205,R180,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+208,R181,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+215,R182,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+216,R183,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+219,R184,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+221,R185,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+234,R186,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+241,R187,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+244,R188,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+252,R189,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+257,R190,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+262,R191,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+268,R192,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+278,R193,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,NameLikeTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+279,R194,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+285,R195,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+286,R196,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+287,R197,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+291,R198,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+300,R199,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+305,R200,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+308,R201,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+321,R202,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+325,R203,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+326,R204,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+338,R205,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+351,R206,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+353,R207,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+362,R208,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+367,R209,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+370,R210,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+371,R211,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+383,R212,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+392,R213,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+402,R214,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+409,R215,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+412,R216,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+413,R217,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+420,R218,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+422,R219,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+423,R220,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+424,R221,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+427,R222,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+429,R223,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+444,R224,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+458,R225,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+466,R226,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+468,R227,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+469,R228,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+483,R229,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+505,R230,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+510,R231,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+511,R232,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+519,R233,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+533,R234,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+535,R235,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+540,R236,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+542,R237,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+545,R238,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+551,R239,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+554,R240,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+556,R241,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+560,R242,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+561,R243,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+563,R244,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+586,R245,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+603,R246,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+610,R247,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+622,R248,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+625,R249,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+626,R250,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+634,R251,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PreTerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+635,R252,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+637,R253,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+639,R254,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+643,R255,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+647,R256,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+683,R257,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+684,R258,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+685,R259,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+686,R260,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+688,R261,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+689,R262,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+694,R263,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+703,R264,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+707,R265,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+713,R266,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+716,R267,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+728,R268,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+744,R269,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+746,R270,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+759,R271,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+765,R272,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+770,R273,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+777,R274,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+786,R275,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+791,R276,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+792,R277,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+793,R278,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+794,R279,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+795,R280,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+804,R281,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+805,R282,ROOT_OR_UNRESOLVED,UNRESOLVED,1,PrimeEntityFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+807,R283,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+809,R284,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+810,R285,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+824,R286,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+844,R287,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+849,R288,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+858,R289,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+859,R290,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+862,R291,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+865,R292,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+869,R293,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,InitialClassifierFormula:1,must be tested as a possible lexical root or unresolved sign
+871,R294,ROOT_OR_UNRESOLVED,UNRESOLVED,1,,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+874,R295,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+880,R296,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+893,R297,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+912,R298,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+922,R299,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+924,R300,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,LowEvidenceSequence:1,must be tested as a possible lexical root or unresolved sign
+940,R301,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+944,R302,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,PrimeEntitySealFormula:1,must be tested as a possible lexical root or unresolved sign
+950,R303,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+952,R304,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,TerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+953,R305,ROOT_OR_UNRESOLVED,UNRESOLVED,1,TerminalFiller:1,ClassifierSlotTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
+958,R306,ROOT_OR_UNRESOLVED,UNRESOLVED,1,InitialFiller:1,NameLikeTerminalFormula:1,must be tested as a possible lexical root or unresolved sign
