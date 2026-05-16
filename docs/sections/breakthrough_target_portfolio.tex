@@ -1,0 +1,107 @@
+\section{Breakthrough Target Portfolio}
+
+\subsection{Purpose}
+
+This section identifies the targets where a successful resolution would make later phases disproportionately faster. The goal is to avoid flat exploration. A high-value target is not merely interesting; it should unlock many downstream tests.
+
+\subsection{Method}
+
+The script \texttt{scripts/breakthrough-target-prioritizer.py} combines:
+
+\begin{itemize}
+  \item validated probe results;
+  \item component contrast groups;
+  \item the stem contrast lattice;
+  \item sign roles and ready-text counts;
+  \item role-boundary controls and blocked phonetic comparisons.
+\end{itemize}
+
+It scores targets by downstream unlock value: number of affected probes, corpus coverage, validated grammar constraints, role-boundary risk, and dependency links to later phases.
+
+\subsection{Portfolio Summary}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Breakthrough targets ranked & 9 \\
+Dependency edges & 9 \\
+Action-plan items & 7 \\
+\bottomrule
+\end{tabular}
+\caption{Breakthrough target summary.}
+\label{tab:breakthrough-target-summary}
+\end{table}
+
+\subsection{Highest-Leverage Targets}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{rlp{0.38\textwidth}r}
+\toprule
+\textbf{Rank} & \textbf{Target} & \textbf{Type} & \textbf{Score} \\
+\midrule
+1 & \texttt{240} & Grammar keystone & 1.000 \\
+2 & \texttt{740::520} & Terminal keystone & 0.828 \\
+3 & \texttt{176/482/904/048/061/773} & Stem lattice keystone & 0.788 \\
+4 & \texttt{002 X 740} & Frame keystone & 0.737 \\
+5 & \texttt{482::904 inside 240+STEM} & Phonetic keystone & 0.726 \\
+6 & \texttt{176 with 048/061} & Stem-family keystone & 0.718 \\
+7 & \texttt{240::235} & Formula boundary keystone & 0.695 \\
+8 & \texttt{032 role split} & Blocker removal & 0.661 \\
+\bottomrule
+\end{tabular}
+\caption{Highest-leverage decipherment targets.}
+\label{tab:breakthrough-targets}
+\end{table}
+
+\subsection{Interpretation}
+
+The top target is \texttt{240}. If \texttt{240} can be stabilized as a qualifier, title, or classifier-like component, then \texttt{240-482}, \texttt{240-176}, and \texttt{240-740-090} become part of one controlled grammar problem instead of separate curiosities. That makes the stem contrasts easier to test.
+
+The second target is \texttt{740::520}. These signs affect the terminal side of many inscriptions. Solving this contrast would constrain whether the right edge is suffixal, titular, numerical, allographic, or formulaic.
+
+The first phonetic keystone remains \texttt{482::904} inside \texttt{240+STEM}. It is not ranked first because it depends on the grammar environment: if \texttt{240} is not understood well enough, the phonetic test floats without an anchor.
+
+\subsection{Action Plan}
+
+The recommended breakthrough order is:
+
+\begin{enumerate}
+  \item Promote all validated \texttt{240} morphology constraints into a grammar model.
+  \item Model \texttt{740::520} as competing terminal functions.
+  \item Build a stem-lattice consistency test for \texttt{176}, \texttt{482}, \texttt{904}, \texttt{048}, \texttt{061}, and \texttt{773}.
+  \item Treat \texttt{002|740} as a formal test environment and score every \texttt{X} filler.
+  \item Image-check all \texttt{240-482} and \texttt{240-904} occurrences.
+  \item Verify every \texttt{048} and \texttt{061} occurrence in \texttt{002|740}.
+  \item Model \texttt{240::235} as a rival opener contrast.
+\end{enumerate}
+
+\subsection{Dependency Logic}
+
+The portfolio has a dependency chain:
+
+\begin{center}
+\texttt{240 GRAMMAR -> 240+STEM -> 482::904 -> STEM LATTICE -> PHONETIC TESTS}
+\end{center}
+
+and a second chain:
+
+\begin{center}
+\texttt{740::520 -> 002 X 740 FRAME -> ENTITY-SLOT GRAMMAR}
+\end{center}
+
+The main blocker is \texttt{032}. It creates many role-boundary controls. Until its functions are split, it should protect the project from false phonetic comparisons rather than drive new readings.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/breakthrough\_target\_summary.csv}
+  \item \texttt{outputs/breakthrough\_targets.csv}
+  \item \texttt{outputs/breakthrough\_dependency\_edges.csv}
+  \item \texttt{outputs/breakthrough\_action\_plan.csv}
+  \item \texttt{outputs/breakthrough\_target\_portfolio.tex}
+\end{itemize}

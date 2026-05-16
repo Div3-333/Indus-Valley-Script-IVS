@@ -1,0 +1,10 @@
+SourceTarget,UnlockedTarget,Relation,SourceScore,TargetScore
+BT-01,BT-02,240 grammar makes 240+STEM contrasts interpretable.,1.000,0.726
+BT-01,BT-07,240 behavior helps separate prime-entity and terminal formulas.,1.000,0.737
+BT-02,BT-09,482::904 anchors the stem lattice.,0.726,0.788
+BT-04,BT-09,176 with 048/061 expands the stem lattice beyond Harappa-heavy 482.,0.718,0.788
+BT-05,BT-01,240::235 separates qualifier from formula-opener behavior.,0.695,1.000
+BT-03,BT-07,740/520 terminal grammar constrains the right edge of 002 X 740.,0.828,0.737
+BT-06,BT-09,032 role split removes contaminated stem-like comparisons.,0.661,0.788
+BT-08,BT-07,Classifier behavior constrains the left edge of entity formulas.,0.231,0.737
+BT-07,BT-02,A stable 002 X 740 frame makes 482::904 a stronger phonetic probe.,0.737,0.726

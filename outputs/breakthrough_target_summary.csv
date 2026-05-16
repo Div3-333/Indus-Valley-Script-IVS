@@ -1,0 +1,7 @@
+Metric,Value,Note
+Breakthrough targets ranked,9,Keystone targets scored for downstream unlock value.
+Dependency edges,9,How one breakthrough unlocks another.
+Action-plan items,7,Highest-priority next research moves.
+Top target,240,240 is a reusable qualifier/title/classifier-like component.
+Top target score,1.000,Grammar Keystone
+Target type mix,Grammar Keystone:1; Terminal Keystone:1; Stem Lattice Keystone:1; Frame Keystone:1; Phonetic Keystone:1,Portfolio composition.
