@@ -1,0 +1,8 @@
+"Hypothesis","PairCount","MeanAllographScore","MeanModifierScore","MeanFunctionalClusterScore"
+"ChronologicalLayeringTest","50","0.6875","0.1685","0.6753"
+"FunctionalCluster","20","0.7094","0.1706","0.6641"
+"FunctionalClusterNotAllograph","1","0.7055","0.1162","0.669"
+"ModifierOrVariantCandidate","1","0.9364","0.7409","0.2942"
+"NeedsVisualReview","2","0.6677","0.1718","0.5029"
+"RegionalAllographyTest","4","0.6993","0.1697","0.6406"
+"VisualFunctionalFamily","2","0.8341","0.5018","0.439"

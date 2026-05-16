@@ -1,0 +1,64 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\begin{document}
+\section*{Sign-Family Hypothesis Model}
+This report scores candidate sign pairs as allograph, regional, chronological, modifier, or functional-cluster hypotheses. Scores are heuristic and auditable; they do not change the sign inventory.
+\subsection*{Model Features}
+\begin{itemize}
+\item Neighbor-profile cosine similarity from the crosswalk/neighbor stage.
+\item Positional similarity from initial, medial, and terminal proportions.
+\item Jensen-Shannon divergence by region, site, type, period, phase, and time metadata.
+\item Permutation simulations with seed 1729 and 75 iterations per pair/field.
+\item Visual priors only for catalog-reviewed Tier 1 pairs; all other pairs remain visual-pending.
+\end{itemize}
+\subsection*{Hypothesis Counts}
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Hypothesis} & \textbf{Pairs} & \textbf{Allograph} & \textbf{Modifier} & \textbf{Functional} \\
+\midrule
+ChronologicalLayeringTest & 50 & 0.6875 & 0.1685 & 0.6753 \\
+FunctionalCluster & 20 & 0.7094 & 0.1706 & 0.6641 \\
+FunctionalClusterNotAllograph & 1 & 0.7055 & 0.1162 & 0.669 \\
+ModifierOrVariantCandidate & 1 & 0.9364 & 0.7409 & 0.2942 \\
+NeedsVisualReview & 2 & 0.6677 & 0.1718 & 0.5029 \\
+RegionalAllographyTest & 4 & 0.6993 & 0.1697 & 0.6406 \\
+VisualFunctionalFamily & 2 & 0.8341 & 0.5018 & 0.439 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Top Reviewed/High-Priority Rows}
+\begin{center}
+\begin{tabular}{lllrrrr}
+\toprule
+\textbf{A} & \textbf{B} & \textbf{Hypothesis} & \textbf{Allograph} & \textbf{Regional} & \textbf{Chron.} & \textbf{Modifier} \\
+\midrule
+705 & 706 & ModifierOrVariantCandidate & 0.936403 & 0.043614 & 0.043413 & 0.740868 \\
+817 & 820 & VisualFunctionalFamily & 0.849517 & 0.053204 & 0.049196 & 0.489326 \\
+817 & 861 & VisualFunctionalFamily & 0.818658 & 0.021235 & 0.032624 & 0.514254 \\
+692 & 920 & FunctionalClusterNotAllograph & 0.705467 & 0.044365 & 0.041644 & 0.116165 \\
+090 & 565 & FunctionalCluster & 0.739074 & 0.101665 & 0.106922 & 0.175621 \\
+526 & 527 & ChronologicalLayeringTest & 0.719671 & 0.160857 & 0.406118 & 0.179826 \\
+400 & 565 & ChronologicalLayeringTest & 0.680863 & 0.088833 & 0.198789 & 0.177672 \\
+151 & 520 & FunctionalCluster & 0.759029 & 0.043384 & 0.06562 & 0.175513 \\
+176 & 927 & RegionalAllographyTest & 0.741927 & 0.205757 & 0.271209 & 0.178653 \\
+820 & 861 & FunctionalCluster & 0.74183 & 0.036322 & 0.040521 & 0.185038 \\
+176 & 630 & FunctionalCluster & 0.74017 & 0.068897 & 0.102403 & 0.181393 \\
+630 & 792 & ChronologicalLayeringTest & 0.736641 & 0.068156 & 0.274825 & 0.170547 \\
+090 & 400 & FunctionalCluster & 0.729995 & 0.120044 & 0.120218 & 0.182275 \\
+167 & 868 & ChronologicalLayeringTest & 0.729442 & 0.168179 & 0.305037 & 0.165913 \\
+151 & 161 & ChronologicalLayeringTest & 0.725971 & 0.090329 & 0.225967 & 0.182315 \\
+820 & 880 & FunctionalCluster & 0.72376 & 0.135859 & 0.14156 & 0.178086 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Outputs}
+\begin{itemize}
+\item \texttt{outputs/sign\_family\_pair\_features.csv}
+\item \texttt{outputs/sign\_family\_hypothesis\_scores.csv}
+\item \texttt{outputs/sign\_family\_model\_summary.csv}
+\end{itemize}
+\end{document}

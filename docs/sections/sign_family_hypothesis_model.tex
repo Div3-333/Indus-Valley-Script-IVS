@@ -1,0 +1,64 @@
+\section{Sign-Family Hypothesis Model}
+
+\subsection{Motivation}
+
+The visual-review stage changes the question from ``are these signs identical?'' to ``what kind of difference are we seeing?'' A pair of signs may be distinct signs, regional allographs, chronological variants, base-plus-modifier forms, members of a shared syntactic family, or visually similar but functionally unrelated shapes. This section begins a computational model for those alternatives.
+
+The model is inspired by the observation that later South Asian scripts preserve related graphic habits across regional scripts, but it does not assume direct descent from the Indus system to Brahmi or any Brahmic descendant. The Brahmic comparison is used only as a hypothesis generator: if base signs plus added strokes, doubling, mirroring, or other modifications mattered in the Indus corpus, they should leave measurable traces in position, neighbors, region, chronology, object type, or text class.
+
+\subsection{Features}
+
+The script \texttt{scripts/sign-family-hypothesis-model.ps1} takes the visual-review candidates and scores them with auditable features:
+
+\begin{itemize}
+  \item neighbor-profile cosine similarity;
+  \item positional similarity from initial, medial, and terminal proportions;
+  \item Jensen-Shannon divergence across region, site, object type, period, phase, and time metadata;
+  \item permutation simulations for distributional separation using a fixed random seed;
+  \item visual priors only for catalog-reviewed Tier 1 pairs.
+\end{itemize}
+
+The scores are heuristic. They rank hypotheses for review; they do not change the sign inventory.
+
+\subsection{Hypothesis Classes}
+
+\begin{description}
+  \item[Modifier or variant candidate] visually close signs where an added stroke or related graphic operation may carry value.
+  \item[Visual functional family] visually related signs that should remain distinct unless artifact-level review supports a stronger claim.
+  \item[Functional cluster, not allograph] signs that behave alike distributionally but do not look alike.
+  \item[Regional allography test] signs whose similarity coexists with unusually separated site or regional distributions.
+  \item[Chronological layering test] signs whose similarity coexists with period, phase, or time separation; this remains provisional because chronological metadata are sparse.
+\end{description}
+
+\subsection{Current Tier 1 Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.13\textwidth}p{0.27\textwidth}rrrr}
+\toprule
+\textbf{Pair} & \textbf{Model hypothesis} & \textbf{Allograph} & \textbf{Regional} & \textbf{Chron.} & \textbf{Modifier} \\
+\midrule
+\texttt{705}/\texttt{706} & Modifier or variant candidate & 0.936 & 0.044 & 0.043 & 0.741 \\
+\texttt{817}/\texttt{820} & Visual functional family & 0.850 & 0.053 & 0.049 & 0.489 \\
+\texttt{817}/\texttt{861} & Visual functional family & 0.819 & 0.021 & 0.033 & 0.514 \\
+\texttt{692}/\texttt{920} & Functional cluster, not allograph & 0.705 & 0.044 & 0.042 & 0.116 \\
+\bottomrule
+\end{tabular}
+\caption{First sign-family hypothesis scores for Tier 1 visual candidates.}
+\label{tab:sign-family-tier1}
+\end{table}
+
+\subsection{Interpretation}
+
+The model supports the current research direction. \texttt{705}/\texttt{706} is the strongest base-plus-modifier or variant-link candidate. \texttt{817}/\texttt{820} and \texttt{817}/\texttt{861} look like a related initial-sign family rather than a simple merge. \texttt{692}/\texttt{920} is valuable as a control case: high distributional similarity does not imply visual equivalence.
+
+The broader output also creates new queues for regional and chronological tests. These should be treated as computational leads, not conclusions, because chronology fields are incomplete and many pairs still lack visual adjudication.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/sign\_family\_pair\_features.csv}
+  \item \texttt{outputs/sign\_family\_hypothesis\_scores.csv}
+  \item \texttt{outputs/sign\_family\_model\_summary.csv}
+  \item \texttt{outputs/sign\_family\_model.tex}
+\end{itemize}
