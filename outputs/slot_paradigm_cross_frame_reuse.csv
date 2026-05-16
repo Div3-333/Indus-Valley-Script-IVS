@@ -1,0 +1,190 @@
+Filler,TotalCount,FrameCount,SiteCount,Frames,DominantSite,DominantSiteShare,Lead
+002,55,11,9,861|<END>:20; 817|<END>:13; 820|<END>:10; <START>|240:3; 820|740:3; 002|<END>:1; 741|<END>:1; <START>|233:1; <START>|520:1; 031|<END>:1; <START>|390:1,Harappa,0.3091,SameFillerAcrossFrames
+240,31,10,6,<START>|233:9; <START>|520:8; 002|<END>:4; 060|740:2; 741|<END>:2; 002|740:2; 031|<END>:1; 235|<END>:1; 060|<END>:1; 032|740:1,Harappa,0.5484,SameFillerAcrossFrames
+003,21,10,5,<START>|390:9; 741|<END>:2; 001|<END>:2; 002|<END>:2; <START>|741:1; 861|<END>:1; <START>|233:1; <START>|001:1; 817|<END>:1; 031|<END>:1,Harappa,0.4286,SameFillerAcrossFrames
+220,23,9,6,<START>|520:7; 002|<END>:5; 032|740:4; <START>|240:2; 002|740:1; 233|<END>:1; <START>|233:1; 060|740:1; <START>|001:1,Harappa,0.5217,SameFillerAcrossFrames
+740,34,8,9,031|<END>:9; 861|<END>:9; 817|<END>:4; 002|<END>:4; 235|<END>:3; 233|<END>:3; <START>|001:1; 060|<END>:1,Harappa,0.4412,SameFillerAcrossFrames
+032,25,8,5,031|<END>:8; 820|<END>:5; 002|<END>:4; <START>|001:2; <START>|240:2; <START>|390:2; 060|740:1; <START>|520:1,Chanhu-daro,0.28,SameFillerAcrossFrames
+176-740,20,8,6,233|<END>:7; 002|<END>:3; 741|<END>:3; 031|<END>:2; 001|<END>:2; 060|<END>:1; 235|<END>:1; <START>|001:1,Mohenjo-daro,0.55,SameFillerAcrossFrames
+031,16,8,8,<START>|520:4; <START>|240:3; 002|<END>:2; 031|<END>:2; <START>|001:2; 820|740:1; 817|<END>:1; 820|<END>:1,Mohenjo-daro,0.375,SameFillerAcrossFrames
+032-220,11,7,4,<START>|240:3; 002|<END>:3; 060|<END>:1; <START>|233:1; 002|740:1; 817|<END>:1; <START>|520:1,Harappa,0.4545,SameFillerAcrossFrames
+520,42,6,10,233|<END>:20; 235|<END>:10; 031|<END>:5; 001|<END>:3; 002|<END>:3; <START>|390:1,Mohenjo-daro,0.3333,SameFillerAcrossFrames
+235,35,6,5,<START>|240:15; <START>|233:9; <START>|520:5; 002|<END>:4; 060|<END>:1; 002|740:1,Mohenjo-daro,0.6,SameFillerAcrossFrames
+590-390-740,21,6,3,235|<END>:6; 002|<END>:4; 741|<END>:4; 233|<END>:4; 060|<END>:2; 001|<END>:1,Harappa,0.4762,SameFillerAcrossFrames
+798,18,6,2,<START>|240:12; 002|740:2; 820|740:1; 233|<END>:1; <START>|233:1; 002|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+803,16,6,4,<START>|233:6; 060|740:4; <START>|240:3; 002|<END>:1; 861|<END>:1; 002|740:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+176,14,6,4,002|740:9; 032|740:1; 741|<END>:1; 060|740:1; 002|<END>:1; <START>|741:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+705-033-520,14,6,4,233|<END>:5; 235|<END>:4; 002|<END>:2; 031|<END>:1; 060|<END>:1; <START>|001:1,Mohenjo-daro,0.6429,SameFillerAcrossFrames
+233,13,6,4,<START>|520:7; 002|<END>:2; 002|740:1; 235|<END>:1; 060|740:1; <START>|001:1,Mohenjo-daro,0.4615,SameFillerAcrossFrames
+140,9,6,2,<START>|001:3; <START>|390:2; <START>|741:1; 820|<END>:1; 001|<END>:1; 002|740:1,Harappa,0.5556,SameFillerAcrossFrames
+240-520,33,5,3,002|<END>:29; 235|<END>:1; 741|<END>:1; 031|<END>:1; 060|<END>:1,Harappa,0.9091,SameFillerAcrossFrames
+590,20,5,5,<START>|390:14; <START>|741:2; 233|<END>:2; <START>|240:1; 820|<END>:1,Harappa,0.5,SameFillerAcrossFrames
+840-032-740,10,5,4,002|<END>:3; 233|<END>:3; 235|<END>:2; 820|<END>:1; 741|<END>:1,Harappa,0.5,SameFillerAcrossFrames
+803-740,9,5,4,233|<END>:3; 060|<END>:2; 235|<END>:2; 741|<END>:1; 002|<END>:1,Mohenjo-daro,0.5556,SameFillerAcrossFrames
+100-740,7,5,2,233|<END>:2; 235|<END>:2; 001|<END>:1; 031|<END>:1; 002|<END>:1,Mohenjo-daro,0.8571,SameFillerAcrossFrames
+390,7,5,5,<START>|390:3; 060|<END>:1; <START>|741:1; 001|<END>:1; 820|<END>:1,Mohenjo-daro,0.4286,SameFillerAcrossFrames
+706-033-520,7,5,3,233|<END>:2; 002|<END>:2; 235|<END>:1; 031|<END>:1; 060|<END>:1,Mohenjo-daro,0.4286,SameFillerAcrossFrames
+017-575-740,6,5,2,031|<END>:2; 235|<END>:1; 002|<END>:1; 060|<END>:1; 233|<END>:1,Mohenjo-daro,0.8333,SameFillerAcrossFrames
+231,6,5,3,002|<END>:2; <START>|390:1; 060|<END>:1; <START>|520:1; <START>|233:1,Harappa,0.3333,SameFillerAcrossFrames
+923-740,6,5,2,235|<END>:2; 002|<END>:1; 233|<END>:1; 741|<END>:1; <START>|001:1,Mohenjo-daro,0.8333,SameFillerAcrossFrames
+033,5,5,3,<START>|520:1; 820|<END>:1; <START>|390:1; <START>|001:1; 001|<END>:1,Harappa,0.6,SameFillerAcrossFrames
+255,5,5,4,<START>|741:1; <START>|520:1; 032|740:1; 235|<END>:1; 060|<END>:1,Harappa,0.4,SameFillerAcrossFrames
+415,5,5,5,<START>|390:1; <START>|240:1; 031|<END>:1; 233|<END>:1; 820|<END>:1,Altyn Depe,0.2,SameFillerAcrossFrames
+742,5,5,4,<START>|390:1; 060|<END>:1; 031|<END>:1; <START>|001:1; 861|<END>:1,Harappa,0.4,SameFillerAcrossFrames
+002-003-390,11,4,5,820|<END>:4; 817|<END>:3; 861|<END>:3; 031|<END>:1,Mohenjo-daro,0.5455,SameFillerAcrossFrames
+061,11,4,2,002|740:8; 031|<END>:1; 060|740:1; 002|<END>:1,Mohenjo-daro,0.7273,SameFillerAcrossFrames
+590-390,11,4,4,002|740:5; 032|740:3; 060|740:2; <START>|741:1,Mohenjo-daro,0.4545,SameFillerAcrossFrames
+004-407,10,4,2,002|<END>:4; 001|<END>:4; 060|<END>:1; <START>|001:1,Mohenjo-daro,0.7,SameFillerAcrossFrames
+368,10,4,2,861|<END>:4; 817|<END>:4; 001|<END>:1; 002|740:1,Harappa,0.6,SameFillerAcrossFrames
+760-740,10,4,3,001|<END>:4; 235|<END>:3; 002|<END>:2; 820|<END>:1,Mohenjo-daro,0.8,SameFillerAcrossFrames
+384-740,9,4,4,233|<END>:4; 031|<END>:2; 002|<END>:2; 741|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+705-033,9,4,5,<START>|520:5; 235|<END>:2; 002|<END>:1; 233|<END>:1,Harappa,0.3333,SameFillerAcrossFrames
+760,9,4,3,032|740:5; 002|740:2; 031|<END>:1; 820|740:1,Mohenjo-daro,0.7778,SameFillerAcrossFrames
+820-002,9,4,6,<START>|240:5; <START>|520:2; <START>|390:1; <START>|233:1,Harappa,0.2222,SameFillerAcrossFrames
+002-004-390,8,4,3,817|<END>:4; 861|<END>:2; 820|<END>:1; 031|<END>:1,Mohenjo-daro,0.625,SameFillerAcrossFrames
+550-527,8,4,3,002|<END>:3; 233|<END>:2; 235|<END>:2; 741|<END>:1,Mohenjo-daro,0.625,SameFillerAcrossFrames
+798-740,8,4,3,235|<END>:3; 233|<END>:3; 820|<END>:1; 002|<END>:1,Mohenjo-daro,0.625,SameFillerAcrossFrames
+255-435-690-740,7,4,4,002|<END>:4; 001|<END>:1; 233|<END>:1; <START>|001:1,Mohenjo-daro,0.5714,SameFillerAcrossFrames
+095,6,4,3,<START>|390:2; <START>|520:2; <START>|001:1; 031|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+125,6,4,5,<START>|390:3; 002|<END>:1; <START>|741:1; 001|<END>:1,Mohenjo-daro,0.3333,SameFillerAcrossFrames
+151,6,4,2,031|<END>:3; 233|<END>:1; 060|<END>:1; 002|<END>:1,Mohenjo-daro,0.8333,SameFillerAcrossFrames
+220-520,6,4,2,002|<END>:3; 031|<END>:1; 235|<END>:1; 001|<END>:1,Mohenjo-daro,0.8333,SameFillerAcrossFrames
+388-740,6,4,3,031|<END>:2; 235|<END>:2; 233|<END>:1; 002|<END>:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+032-590-390,5,4,2,002|<END>:2; 002|740:1; 060|740:1; <START>|741:1,Lothal,0.6,SameFillerAcrossFrames
+415-220-520,5,4,2,060|<END>:2; 002|<END>:1; 235|<END>:1; 817|<END>:1,Mohenjo-daro,0.8,SameFillerAcrossFrames
+550,5,4,2,233|<END>:2; <START>|001:1; <START>|520:1; <START>|240:1,Mohenjo-daro,0.6,SameFillerAcrossFrames
+741,5,4,2,060|<END>:2; 861|<END>:1; <START>|390:1; 031|<END>:1,Mohenjo-daro,0.6,SameFillerAcrossFrames
+142,4,4,3,<START>|001:1; <START>|741:1; 001|<END>:1; 002|740:1,Harappa,0.5,SameFillerAcrossFrames
+233-520,4,4,2,002|<END>:1; 741|<END>:1; 060|<END>:1; 031|<END>:1,Mohenjo-daro,0.75,SameFillerAcrossFrames
+831,4,4,2,<START>|741:1; 820|740:1; <START>|390:1; <START>|233:1,Mohenjo-daro,0.75,SameFillerAcrossFrames
+861-002,19,3,3,<START>|240:15; <START>|233:3; 031|<END>:1,Harappa,0.4737,SameFillerAcrossFrames
+240-740-090,15,3,3,235|<END>:13; 031|<END>:1; 060|<END>:1,Mohenjo-daro,0.6,SameFillerAcrossFrames
+004-390,13,3,5,002|<END>:10; 741|<END>:2; 817|<END>:1,Mohenjo-daro,0.5385,SameFillerAcrossFrames
+016,10,3,4,<START>|390:6; 002|740:2; 002|<END>:2,Mohenjo-daro,0.7,SameFillerAcrossFrames
+061-740,10,3,2,002|<END>:7; 001|<END>:2; 060|<END>:1,Mohenjo-daro,0.7,SameFillerAcrossFrames
+176-740-090,10,3,2,741|<END>:8; 002|<END>:1; 233|<END>:1,Harappa,0.8,SameFillerAcrossFrames
+806,10,3,3,<START>|233:6; 002|<END>:3; <START>|240:1,Mohenjo-daro,0.8,SameFillerAcrossFrames
+142-617,9,3,1,001|<END>:7; 002|<END>:1; <START>|001:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+222-740,9,3,3,233|<END>:5; 002|<END>:3; 235|<END>:1,Mohenjo-daro,0.7778,SameFillerAcrossFrames
+240-415-100,6,3,4,002|740:4; 820|740:1; 741|<END>:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+416,6,3,3,001|<END>:3; 002|<END>:2; 002|740:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+482-740,6,3,3,235|<END>:4; 002|<END>:1; 233|<END>:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+806-235,6,3,1,<START>|233:3; <START>|240:2; <START>|520:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+001,5,3,4,<START>|520:2; 031|<END>:2; 820|<END>:1,Banawali,0.4,SameFillerAcrossFrames
+032-877-740,5,3,3,<START>|001:2; 235|<END>:2; 233|<END>:1,Harappa,0.4,SameFillerAcrossFrames
+090,5,3,5,001|<END>:2; <START>|001:2; <START>|390:1,Failaka,0.2,SameFillerAcrossFrames
+175,5,3,4,<START>|520:3; 002|740:1; <START>|741:1,Mohenjo-daro,0.4,SameFillerAcrossFrames
+555-527,5,3,2,235|<END>:3; 002|<END>:1; 233|<END>:1,Mohenjo-daro,0.8,SameFillerAcrossFrames
+790,5,3,5,<START>|390:3; 032|740:1; 001|<END>:1,Chanhu-daro,0.2,SameFillerAcrossFrames
+821,5,3,1,001|<END>:3; <START>|001:1; <START>|741:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+832,5,3,4,002|<END>:3; 001|<END>:1; <START>|001:1,Dholavira,0.4,SameFillerAcrossFrames
+840-032,5,3,4,002|740:3; 820|740:1; 002|<END>:1,Harappa,0.4,SameFillerAcrossFrames
+861,5,3,3,<START>|741:3; 002|<END>:1; 032|740:1,Harappa,0.4,SameFillerAcrossFrames
+002-415-100-740,4,3,1,861|<END>:2; 820|<END>:1; 817|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+003-423,4,3,3,001|<END>:2; 060|<END>:1; 031|<END>:1,Dholavira,0.5,SameFillerAcrossFrames
+034,4,3,2,<START>|390:2; 031|<END>:1; 002|<END>:1,Harappa,0.75,SameFillerAcrossFrames
+215,4,3,2,001|<END>:2; 031|<END>:1; 002|740:1,Mohenjo-daro,0.75,SameFillerAcrossFrames
+240-636-740,4,3,3,060|<END>:2; 002|<END>:1; 233|<END>:1,Harappa,0.5,SameFillerAcrossFrames
+400,4,3,1,<START>|520:2; 741|<END>:1; 820|<END>:1,Harappa,1.0,SameFillerAcrossFrames
+590-405-740,4,3,3,235|<END>:2; <START>|001:1; 060|<END>:1,Harappa,0.5,SameFillerAcrossFrames
+705,4,3,3,<START>|390:2; 233|<END>:1; 002|<END>:1,Dholavira,0.5,SameFillerAcrossFrames
+706-033,4,3,3,<START>|520:2; <START>|001:1; 233|<END>:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+803-235,4,3,2,<START>|233:2; 002|<END>:1; <START>|240:1,Harappa,0.5,SameFillerAcrossFrames
+820-060,4,3,3,<START>|240:2; <START>|233:1; <START>|001:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+002-031,3,3,2,817|<END>:1; <START>|520:1; 861|<END>:1,Harappa,0.6667,SameFillerAcrossFrames
+002-240,3,3,3,820|<END>:1; 861|<END>:1; 031|<END>:1,Harappa,0.3333,SameFillerAcrossFrames
+002-590-390-740,3,3,3,861|<END>:1; 817|<END>:1; 820|<END>:1,Harappa,0.3333,SameFillerAcrossFrames
+003-900-740,3,3,2,002|<END>:1; 001|<END>:1; 741|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+032-226,3,3,1,060|<END>:1; 741|<END>:1; 002|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+032-590-390-740,3,3,2,002|<END>:1; 060|<END>:1; 741|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+032-904-740,3,3,2,233|<END>:1; 060|<END>:1; 002|<END>:1,Harappa,0.6667,SameFillerAcrossFrames
+111,3,3,3,<START>|390:1; <START>|001:1; 002|<END>:1,Mohenjo-daro,0.3333,SameFillerAcrossFrames
+235-240,3,3,2,<START>|520:1; 002|<END>:1; 002|740:1,Harappa,0.6667,SameFillerAcrossFrames
+240-100-740,3,3,2,235|<END>:1; 741|<END>:1; 031|<END>:1,Harappa,0.6667,SameFillerAcrossFrames
+240-220-520,3,3,2,002|<END>:1; 741|<END>:1; 235|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+335-760-740,3,3,2,235|<END>:1; 002|<END>:1; 741|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+388,3,3,3,233|<END>:1; 031|<END>:1; 002|740:1,Bala-kot,0.3333,SameFillerAcrossFrames
+554-527,3,3,2,031|<END>:1; 001|<END>:1; 060|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+565,3,3,2,741|<END>:1; 031|<END>:1; 235|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+806-798,3,3,2,820|<END>:1; <START>|233:1; 002|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+861-002-220,3,3,1,<START>|240:1; <START>|233:1; <START>|520:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+861-002-803,3,3,2,<START>|390:1; <START>|233:1; <START>|240:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+920-060,39,2,7,<START>|741:38; <START>|001:1,Mohenjo-daro,0.6154,SameFillerAcrossFrames
+003-390,16,2,5,002|<END>:14; 060|<END>:2,Mohenjo-daro,0.625,SameFillerAcrossFrames
+048-740,16,2,3,002|<END>:11; 741|<END>:5,Lothal,0.625,SameFillerAcrossFrames
+817-002,16,2,5,<START>|240:9; <START>|233:7,Mohenjo-daro,0.5,SameFillerAcrossFrames
+820,16,2,2,<START>|001:15; 031|<END>:1,Mohenjo-daro,0.75,SameFillerAcrossFrames
+048,12,2,2,002|740:11; 002|<END>:1,Lothal,0.9167,SameFillerAcrossFrames
+415-100-740,7,2,1,002|<END>:6; 741|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+904,7,2,2,032|740:5; 002|740:2,Mohenjo-daro,0.5714,SameFillerAcrossFrames
+016-220,6,2,3,<START>|520:4; 002|740:2,Harappa,0.6667,SameFillerAcrossFrames
+136,6,2,3,031|<END>:4; 002|<END>:2,Kanmer,0.5,SameFillerAcrossFrames
+255-435-690,6,2,3,002|740:4; 060|740:2,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+384,6,2,4,032|740:3; 002|740:3,Harappa,0.3333,SameFillerAcrossFrames
+690-740,6,2,1,060|<END>:5; 233|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+700,6,2,2,031|<END>:5; <START>|741:1,Harappa,0.8333,SameFillerAcrossFrames
+740-400,6,2,1,817|<END>:5; 861|<END>:1,Harappa,1.0,SameFillerAcrossFrames
+004,5,2,3,<START>|390:4; 002|<END>:1,Mohenjo-daro,0.6,SameFillerAcrossFrames
+016-390,5,2,2,002|<END>:4; 060|<END>:1,Mohenjo-daro,0.6,SameFillerAcrossFrames
+017-585-740,5,2,3,002|<END>:4; 741|<END>:1,Kalibangan,0.4,SameFillerAcrossFrames
+033-033,5,2,2,<START>|520:4; 060|<END>:1,Harappa,0.8,SameFillerAcrossFrames
+692,5,2,2,<START>|001:4; <START>|390:1,Mohenjo-daro,0.6,SameFillerAcrossFrames
+002-236,4,2,2,861|<END>:3; 820|<END>:1,Lothal,0.75,SameFillerAcrossFrames
+031-740,4,2,2,001|<END>:3; 820|<END>:1,Harappa,0.75,SameFillerAcrossFrames
+100,4,2,3,001|<END>:2; 002|740:2,Mohenjo-daro,0.5,SameFillerAcrossFrames
+220-923,4,2,2,032|740:3; 002|740:1,Mohenjo-daro,0.75,SameFillerAcrossFrames
+231-520,4,2,2,002|<END>:3; 235|<END>:1,Mohenjo-daro,0.75,SameFillerAcrossFrames
+240-642-740,4,2,1,060|<END>:2; 001|<END>:2,Harappa,1.0,SameFillerAcrossFrames
+240-904-740,4,2,2,002|<END>:3; 235|<END>:1,Harappa,0.75,SameFillerAcrossFrames
+354,4,2,3,001|<END>:3; 002|740:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+519-740,4,2,3,002|<END>:3; 741|<END>:1,Harappa,0.5,SameFillerAcrossFrames
+555-526,4,2,3,235|<END>:3; 060|<END>:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+590-390-151,4,2,2,741|<END>:3; 002|<END>:1,Harappa,0.5,SameFillerAcrossFrames
+592,4,2,2,031|<END>:2; 741|<END>:2,Mohenjo-daro,0.75,SameFillerAcrossFrames
+740-090,4,2,3,235|<END>:2; 233|<END>:2,Harappa,0.5,SameFillerAcrossFrames
+803-233-520,4,2,4,002|<END>:2; 060|<END>:2,Chanhu-daro,0.25,SameFillerAcrossFrames
+920-060-741,4,2,3,<START>|240:3; <START>|233:1,Mohenjo-daro,0.5,SameFillerAcrossFrames
+002-004-407,3,2,2,861|<END>:2; 820|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+002-005-390,3,2,1,817|<END>:2; 861|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+002-032-220,3,2,2,817|<END>:2; 820|<END>:1,Harappa,0.6667,SameFillerAcrossFrames
+002-176-740,3,2,1,861|<END>:2; 817|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+002-740,3,2,2,820|<END>:2; 861|<END>:1,Kalibangan,0.6667,SameFillerAcrossFrames
+002-832,3,2,3,817|<END>:2; 861|<END>:1,Harappa,0.3333,SameFillerAcrossFrames
+004-405,3,2,2,002|<END>:2; 001|<END>:1,Harappa,0.6667,SameFillerAcrossFrames
+005,3,2,1,<START>|390:2; 002|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+005-900-740,3,2,2,002|<END>:2; 741|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+016-220-740-090,3,2,2,002|<END>:2; 031|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+017,3,2,2,<START>|390:2; 741|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+017-575,3,2,1,002|740:2; 060|740:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+031-002,3,2,3,<START>|240:2; 820|<END>:1,Mohenjo-daro,0.3333,SameFillerAcrossFrames
+032-590,3,2,3,<START>|390:2; <START>|741:1,Harappa,0.3333,SameFillerAcrossFrames
+061-142-740,3,2,1,002|<END>:2; 031|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+176-100-740,3,2,1,002|<END>:2; 741|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+231-798,3,2,1,002|740:2; 060|740:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+231-798-740,3,2,1,002|<END>:2; 060|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+240-255-435-690-740,3,2,1,235|<END>:2; 741|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+240-415-100-740-090,3,2,2,002|<END>:2; 820|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+240-636,3,2,2,060|740:2; 002|740:1,Harappa,0.6667,SameFillerAcrossFrames
+240-642,3,2,2,060|740:2; 031|<END>:1,Harappa,0.6667,SameFillerAcrossFrames
+240-773-740,3,2,1,002|<END>:2; 235|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+240-923-740,3,2,1,235|<END>:2; 002|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+320-920-740,3,2,2,233|<END>:2; 235|<END>:1,Harappa,0.6667,SameFillerAcrossFrames
+335,3,2,3,002|740:2; 235|<END>:1,Harappa,0.3333,SameFillerAcrossFrames
+350-400-520,3,2,2,031|<END>:2; 002|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+361,3,2,2,<START>|741:2; 002|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+391,3,2,3,002|<END>:2; 741|<END>:1,Kalibangan,0.3333,SameFillerAcrossFrames
+440-760,3,2,1,002|740:2; 060|740:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+440-760-740,3,2,1,002|<END>:2; 060|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+460,3,2,3,<START>|520:2; 002|740:1,Dholavira,0.3333,SameFillerAcrossFrames
+482,3,2,2,060|740:2; 002|740:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+503-460,3,2,1,002|740:2; 741|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+503-460-740,3,2,1,002|<END>:2; 031|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+550-526,3,2,1,233|<END>:2; 060|<END>:1,Harappa,1.0,SameFillerAcrossFrames
+575,3,2,2,<START>|741:2; 031|<END>:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+630,3,2,3,<START>|741:2; <START>|233:1,Harappa,0.3333,SameFillerAcrossFrames
+705-255,3,2,2,002|740:2; 060|740:1,Mohenjo-daro,0.6667,SameFillerAcrossFrames
+772,3,2,1,002|740:2; 002|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+772-740,3,2,1,002|<END>:2; 235|<END>:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+817-002-803,3,2,3,<START>|233:2; <START>|240:1,Chanhu-daro,0.3333,SameFillerAcrossFrames
+820-060-235,3,2,1,<START>|240:2; <START>|233:1,Mohenjo-daro,1.0,SameFillerAcrossFrames
+861-002-798,3,2,1,<START>|240:2; <START>|233:1,Mohenjo-daro,1.0,SameFillerAcrossFrames

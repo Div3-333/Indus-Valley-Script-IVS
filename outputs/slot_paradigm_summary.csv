@@ -1,0 +1,9 @@
+Metric,Value,Note
+Productive frames modeled,20,slot score >= 0.91
+Slot occurrences extracted,4279,fillers up to 5 signs
+Distinct frame/filler pairs,3060,Unique fillers per selected frame.
+Final-sign leads,335,Final sign behavior across slot fillers.
+Initial-sign leads,377,Initial sign behavior across slot fillers.
+Alternating stem/final paradigms,100,Same stem with multiple final signs.
+Cross-frame reused fillers,189,Same filler seen in multiple productive frames.
+Minimal filler pairs,1043,One-edit alternations within the same frame.

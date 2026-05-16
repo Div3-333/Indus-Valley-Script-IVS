@@ -1,0 +1,137 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\begin{document}
+\section*{Slot Paradigm Model}
+This report extracts concrete paradigms from productive frames. It searches for repeated fillers, reusable final signs, cross-frame reuse, and one-edit alternations that could become future phonetic or grammatical constraints.
+\subsection*{Summary}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Productive frames modeled & 20 \\
+Slot occurrences extracted & 4279 \\
+Distinct frame/filler pairs & 3060 \\
+Final-sign leads & 335 \\
+Initial-sign leads & 377 \\
+Alternating stem/final paradigms & 100 \\
+Cross-frame reused fillers & 189 \\
+Minimal filler pairs & 1043 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Top Productive Frames}
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Frame} & \textbf{Occ.} & \textbf{Fillers} & \textbf{Mean len.} & \textbf{Top filler} \\
+\midrule
+002|740 & 345 & 247 & 2.2667 & 048 \\
+060|$<$END$>$ & 193 & 176 & 2.9845 & 690-740 \\
+$<$START$>$|390 & 236 & 163 & 2.411 & 590 \\
+002|$<$END$>$ & 705 & 508 & 2.766 & 240-520 \\
+741|$<$END$>$ & 198 & 163 & 3.0051 & 001-055-220-740-090 \\
+060|740 & 101 & 85 & 2.2475 & 690 \\
+001|$<$END$>$ & 177 & 131 & 2.5424 & 055-220-740-090 \\
+820|$<$END$>$ & 170 & 147 & 3.0412 & 002 \\
+820|740 & 74 & 72 & 3.0676 & 002 \\
+235|$<$END$>$ & 206 & 128 & 2.8301 & 240-740-090 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Final-Sign Leads Inside Slots}
+\begin{center}
+\begin{tabular}{lrrrl}
+\toprule
+\textbf{Final} & \textbf{Count} & \textbf{Stems} & \textbf{Frames} & \textbf{Role lead} \\
+\midrule
+740 & 870 & 512 & 14 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+520 & 242 & 114 & 13 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+220 & 133 & 69 & 15 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+390 & 151 & 67 & 16 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+090 & 118 & 56 & 12 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+760 & 59 & 43 & 9 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+590 & 78 & 42 & 8 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+400 & 70 & 42 & 12 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+100 & 57 & 39 & 9 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+002 & 165 & 38 & 12 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+033 & 60 & 38 & 12 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+151 & 47 & 37 & 9 & HIGH\_REUSE\_FINAL\_MODIFIER \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Initial-Sign Leads Inside Slots}
+\begin{center}
+\begin{tabular}{lrrrl}
+\toprule
+\textbf{Initial} & \textbf{Count} & \textbf{Remainders} & \textbf{Frames} & \textbf{Role lead} \\
+\midrule
+002 & 444 & 306 & 13 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+240 & 255 & 110 & 15 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+032 & 162 & 96 & 18 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+235 & 125 & 75 & 14 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+220 & 119 & 75 & 16 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+741 & 73 & 66 & 9 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+031 & 88 & 62 & 16 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+233 & 84 & 58 & 10 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+803 & 87 & 50 & 15 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+820 & 84 & 49 & 10 & HIGH\_REUSE\_INITIAL\_MODIFIER \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Cross-Frame Reused Fillers}
+\begin{center}
+\begin{tabular}{lrrp{0.42\textwidth}}
+\toprule
+\textbf{Filler} & \textbf{Count} & \textbf{Frames} & \textbf{Frame distribution} \\
+\midrule
+002 & 55 & 11 & 861|$<$END$>$:20; 817|$<$END$>$:13; 820|$<$END$>$:10; $<$START$>$|240:3; 820|740:3; 002|$<$END$>$:1; 741|$<$END$>$:1; $<$START$>$|233:1; $<$START$>$|520:1; 031|$<$END$>$:1; $<$START$>$|390:1 \\
+240 & 31 & 10 & $<$START$>$|233:9; $<$START$>$|520:8; 002|$<$END$>$:4; 060|740:2; 741|$<$END$>$:2; 002|740:2; 031|$<$END$>$:1; 235|$<$END$>$:1; 060|$<$END$>$:1; 032|740:1 \\
+003 & 21 & 10 & $<$START$>$|390:9; 741|$<$END$>$:2; 001|$<$END$>$:2; 002|$<$END$>$:2; $<$START$>$|741:1; 861|$<$END$>$:1; $<$START$>$|233:1; $<$START$>$|001:1; 817|$<$END$>$:1; 031|$<$END$>$:1 \\
+220 & 23 & 9 & $<$START$>$|520:7; 002|$<$END$>$:5; 032|740:4; $<$START$>$|240:2; 002|740:1; 233|$<$END$>$:1; $<$START$>$|233:1; 060|740:1; $<$START$>$|001:1 \\
+740 & 34 & 8 & 031|$<$END$>$:9; 861|$<$END$>$:9; 817|$<$END$>$:4; 002|$<$END$>$:4; 235|$<$END$>$:3; 233|$<$END$>$:3; $<$START$>$|001:1; 060|$<$END$>$:1 \\
+032 & 25 & 8 & 031|$<$END$>$:8; 820|$<$END$>$:5; 002|$<$END$>$:4; $<$START$>$|001:2; $<$START$>$|240:2; $<$START$>$|390:2; 060|740:1; $<$START$>$|520:1 \\
+176-740 & 20 & 8 & 233|$<$END$>$:7; 002|$<$END$>$:3; 741|$<$END$>$:3; 031|$<$END$>$:2; 001|$<$END$>$:2; 060|$<$END$>$:1; 235|$<$END$>$:1; $<$START$>$|001:1 \\
+031 & 16 & 8 & $<$START$>$|520:4; $<$START$>$|240:3; 002|$<$END$>$:2; 031|$<$END$>$:2; $<$START$>$|001:2; 820|740:1; 817|$<$END$>$:1; 820|$<$END$>$:1 \\
+032-220 & 11 & 7 & $<$START$>$|240:3; 002|$<$END$>$:3; 060|$<$END$>$:1; $<$START$>$|233:1; 002|740:1; 817|$<$END$>$:1; $<$START$>$|520:1 \\
+520 & 42 & 6 & 233|$<$END$>$:20; 235|$<$END$>$:10; 031|$<$END$>$:5; 001|$<$END$>$:3; 002|$<$END$>$:3; $<$START$>$|390:1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Minimal Alternation Leads}
+\begin{center}
+\begin{tabular}{llllr}
+\toprule
+\textbf{Frame} & \textbf{A} & \textbf{B} & \textbf{Relation} & \textbf{Count} \\
+\midrule
+002|$<$END$>$ & 240-520 & 240 & SuffixDeletion:520 & 33 \\
+002|$<$END$>$ & 240-520 & 520 & PrefixDeletion:240 & 32 \\
+002|$<$END$>$ & 240-520 & 220-520 & Substitution@1:240$>$220 & 32 \\
+002|$<$END$>$ & 240-520 & 231-520 & Substitution@1:240$>$231 & 32 \\
+861|$<$END$>$ & 002 & 740 & Substitution@1:002$>$740 & 29 \\
+$<$START$>$|240 & 235 & 798 & Substitution@1:235$>$798 & 27 \\
+$<$START$>$|520 & 415-220 & 220 & PrefixDeletion:415 & 25 \\
+002|$<$END$>$ & 003-390 & 004-390 & Substitution@1:003$>$004 & 24 \\
+233|$<$END$>$ & 520 & 520-400 & SuffixAddition:400 & 24 \\
+861|$<$END$>$ & 002 & 368 & Substitution@1:002$>$368 & 24 \\
+$<$START$>$|240 & 861-002 & 817-002 & Substitution@1:861$>$817 & 24 \\
+233|$<$END$>$ & 520 & 740 & Substitution@1:520$>$740 & 23 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Outputs}
+\begin{itemize}
+\item \texttt{outputs/slot\_paradigm\_summary.csv}
+\item \texttt{outputs/slot\_paradigm\_frames.csv}
+\item \texttt{outputs/slot\_paradigm\_fillers.csv}
+\item \texttt{outputs/slot\_paradigm\_occurrences.csv}
+\item \texttt{outputs/slot\_paradigm\_final\_signs.csv}
+\item \texttt{outputs/slot\_paradigm\_initial\_signs.csv}
+\item \texttt{outputs/slot\_paradigm\_stem\_finals.csv}
+\item \texttt{outputs/slot\_paradigm\_cross\_frame\_reuse.csv}
+\item \texttt{outputs/slot\_paradigm\_minimal\_pairs.csv}
+\end{itemize}
+\end{document}

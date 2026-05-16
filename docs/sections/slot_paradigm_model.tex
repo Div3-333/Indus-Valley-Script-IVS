@@ -1,0 +1,170 @@
+\section{Slot Paradigm Model}
+
+\subsection{Purpose}
+
+The proto-decipherment scaffold identified productive frames such as \texttt{002 \_ 740}. This section asks the next, harder question: do the fillers inside those frames behave like paradigms? If a slot contains many fillers, and those fillers show recurring final signs, initial signs, cross-frame reuse, or one-edit alternations, then the system is beginning to expose grammar-like structure.
+
+This is the first place where we can responsibly write proto-glosses. A proto-gloss is a functional label such as \texttt{TERMINAL MARKER}, \texttt{SLOT INTRODUCER}, \texttt{FINAL MODIFIER}, or \texttt{NAME/TITLE SLOT}. It is not a phonetic value and not a translation.
+
+\subsection{Method}
+
+The script \texttt{scripts/slot-paradigm-model.py} extracts fillers up to five signs long from the highest-scoring productive frames. For each frame and filler it records artifact metadata, site spread, object type, first sign, final sign, stem-minus-final, and examples. It then computes:
+
+\begin{itemize}
+  \item frame-level filler diversity;
+  \item high-reuse final signs inside slot fillers;
+  \item high-reuse initial signs inside slot fillers;
+  \item stems that occur with multiple final signs;
+  \item fillers reused across multiple frames;
+  \item minimal one-edit alternations within the same frame.
+\end{itemize}
+
+\subsection{Corpus-Wide Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Productive frames modeled & 20 \\
+Slot occurrences extracted & 4279 \\
+Distinct frame/filler pairs & 3060 \\
+Final-sign leads & 335 \\
+Initial-sign leads & 377 \\
+Alternating stem/final paradigms & 100 \\
+Cross-frame reused fillers & 189 \\
+Minimal filler pairs & 1043 \\
+\bottomrule
+\end{tabular}
+\caption{Slot-paradigm extraction results.}
+\label{tab:slot-paradigm-summary}
+\end{table}
+
+\subsection{Productive Frames}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrl}
+\toprule
+\textbf{Frame} & \textbf{Occurrences} & \textbf{Fillers} & \textbf{Mean length} & \textbf{Top filler} \\
+\midrule
+\texttt{002 \_ 740} & 345 & 247 & 2.267 & \texttt{048} \\
+\texttt{060 \_ END} & 193 & 176 & 2.985 & \texttt{690-740} \\
+\texttt{START \_ 390} & 236 & 163 & 2.411 & \texttt{590} \\
+\texttt{002 \_ END} & 705 & 508 & 2.766 & \texttt{240-520} \\
+\texttt{741 \_ END} & 198 & 163 & 3.005 & \texttt{001-055-220-740-090} \\
+\texttt{060 \_ 740} & 101 & 85 & 2.248 & \texttt{690} \\
+\texttt{820 \_ END} & 170 & 147 & 3.041 & \texttt{002} \\
+\bottomrule
+\end{tabular}
+\caption{Highest-priority productive frames.}
+\label{tab:slot-productive-frames}
+\end{table}
+
+The frame \texttt{002 \_ 740} remains the fastest route toward concrete decipherment. It is frequent, has 247 distinct fillers, and the fillers average just over two signs. This is compatible with a compact name/title/place/commodity slot rather than a long sentence-like field.
+
+\subsection{First Proto-Gloss Constraints}
+
+The following functional labels are now strong enough to use as working constraints:
+
+\begin{itemize}
+  \item \texttt{740}: terminal-heavy marker and high-reuse final sign inside slots. Proto-gloss: \textbf{terminal/formula final}.
+  \item \texttt{520}: terminal-heavy marker and high-reuse final sign. Proto-gloss: \textbf{terminal title/suffix candidate}.
+  \item \texttt{820}, \texttt{817}, \texttt{861}: initial-heavy markers. Proto-gloss: \textbf{initial title/classifier candidates}.
+  \item \texttt{002}: frequent initial element inside productive slot fillers and the left boundary of major frames. Proto-gloss: \textbf{slot introducer or internal classifier candidate}.
+  \item \texttt{002 X 740}: productive formula. Proto-gloss: \textbf{X in a name/title/place/commodity slot}, with \texttt{X} still undeciphered.
+\end{itemize}
+
+These are not readings in the phonetic sense. They are constraints that any future phonetic reading must satisfy.
+
+\subsection{Final-Sign Leads}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrl}
+\toprule
+\textbf{Final sign} & \textbf{Count} & \textbf{Stems} & \textbf{Frames} & \textbf{Role lead} \\
+\midrule
+740 & 870 & 512 & 14 & High-reuse final modifier \\
+520 & 242 & 114 & 13 & High-reuse final modifier \\
+220 & 133 & 69 & 15 & High-reuse final modifier \\
+390 & 151 & 67 & 16 & High-reuse final modifier \\
+090 & 118 & 56 & 12 & High-reuse final modifier \\
+760 & 59 & 43 & 9 & High-reuse final modifier \\
+590 & 78 & 42 & 8 & High-reuse final modifier \\
+400 & 70 & 42 & 12 & High-reuse final modifier \\
+100 & 57 & 39 & 9 & High-reuse final modifier \\
+\bottomrule
+\end{tabular}
+\caption{Final signs that recur after many different stems inside productive slots.}
+\label{tab:slot-final-sign-leads}
+\end{table}
+
+This is one of the strongest grammar signals so far. Signs such as \texttt{740}, \texttt{520}, \texttt{220}, \texttt{390}, and \texttt{090} are not merely frequent; they close many different fillers across many frames. That is compatible with suffixes, classifiers, titles, formula closers, or final modifiers.
+
+\subsection{Initial-Sign Leads}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrl}
+\toprule
+\textbf{Initial sign} & \textbf{Count} & \textbf{Remainders} & \textbf{Frames} & \textbf{Role lead} \\
+\midrule
+002 & 444 & 306 & 13 & High-reuse initial modifier \\
+240 & 255 & 110 & 15 & High-reuse initial modifier \\
+032 & 162 & 96 & 18 & High-reuse initial modifier \\
+235 & 125 & 75 & 14 & High-reuse initial modifier \\
+220 & 119 & 75 & 16 & High-reuse initial modifier \\
+741 & 73 & 66 & 9 & High-reuse initial modifier \\
+031 & 88 & 62 & 16 & High-reuse initial modifier \\
+233 & 84 & 58 & 10 & High-reuse initial modifier \\
+820 & 84 & 49 & 10 & High-reuse initial modifier \\
+\bottomrule
+\end{tabular}
+\caption{Initial signs that introduce many different remainders inside productive slots.}
+\label{tab:slot-initial-sign-leads}
+\end{table}
+
+Initial signs such as \texttt{002}, \texttt{240}, \texttt{032}, and \texttt{235} may be operating as classifiers, prefixes, stem initials, or formula-internal introducers. The critical point is that they govern many different following remainders and therefore should not be read only as isolated icons.
+
+\subsection{Paradigms and Alternations}
+
+The script found 100 cases where the same stem occurs with multiple final signs. Examples include:
+
+\begin{itemize}
+  \item in frame \texttt{002 \_ 740}, stem \texttt{240} occurs with twelve different final signs;
+  \item in frame \texttt{032 \_ 740}, stem \texttt{220} occurs with ten different final signs;
+  \item in frame \texttt{START \_ 390}, stem \texttt{861-002} occurs with eight different final signs.
+\end{itemize}
+
+The script also found 189 fillers reused across multiple frames. Some are single signs, but longer forms such as \texttt{176-740}, \texttt{590-390-740}, \texttt{240-520}, and \texttt{705-033-520} are more interesting because they can be tracked as possible reusable formula pieces or name/title blocks.
+
+\subsection{Interpretation}
+
+The stones are not speaking phonetically yet, but they are beginning to speak grammatically. The present evidence supports a working model with:
+
+\begin{itemize}
+  \item initial classifier/title-like signs;
+  \item terminal final/title/suffix-like signs;
+  \item productive internal slots;
+  \item repeated slot fillers;
+  \item stems that take alternate final signs.
+\end{itemize}
+
+The next fastest path is to pair the paradigm tables with seal images and iconography. If a filler family such as \texttt{002 X 740} correlates with a symbol, object type, or site pattern, then \texttt{X} can be tested as owner, office, lineage, place, commodity, or formulaic title. That is the bridge from functional proto-glosses toward decipherment.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/slot\_paradigm\_summary.csv}
+  \item \texttt{outputs/slot\_paradigm\_frames.csv}
+  \item \texttt{outputs/slot\_paradigm\_fillers.csv}
+  \item \texttt{outputs/slot\_paradigm\_occurrences.csv}
+  \item \texttt{outputs/slot\_paradigm\_final\_signs.csv}
+  \item \texttt{outputs/slot\_paradigm\_initial\_signs.csv}
+  \item \texttt{outputs/slot\_paradigm\_stem\_finals.csv}
+  \item \texttt{outputs/slot\_paradigm\_cross\_frame\_reuse.csv}
+  \item \texttt{outputs/slot\_paradigm\_minimal\_pairs.csv}
+  \item \texttt{outputs/slot\_paradigm\_model.tex}
+\end{itemize}
