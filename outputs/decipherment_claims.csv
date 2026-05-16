@@ -1,0 +1,5 @@
+ClaimType,Claim,Confidence,Status,Caveat
+Current script model,Restricted Administrative/Onomastic Script,0.731,Strongly supported,A large unresolved sequence class remains and may hide multiple mechanisms.
+Best language-family-compatible model,Dravidian-Compatible Linguistic Layer,0.605,Supported,Compatibility is not identification; phonetic anchors remain abstract.
+Most concrete partial decipherment target,The 002 X 740 prime-entity formula,0.654,Structurally and semantically testable,"X may be name, title, office, lineage, place, institution, or commodity."
+Best immediate language test,"Validate strong anchors against images, then test controlled lexical classes only.",0.583,Ready for supervised testing,A language claim before image validation is premature.

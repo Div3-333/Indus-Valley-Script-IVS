@@ -1,0 +1,10 @@
+Feature,Score,Interpretation
+Formula restriction,0.898,"Short, repeated, structured inscriptions rather than free prose."
+Suffix/final structure,0.734,Terminal signs and final formulae behave productively.
+Classifier/title structure,0.517,Initial classifier/title-like signs are stable and productive.
+Prime entity structure,0.654,Name/title/place-like fillers occupy productive entity slots.
+Context association,0.89,"Units correlate with site, object, material, or iconography."
+Phonetic readiness,0.583,Minimal-pair and cross-frame evidence exists for controlled testing.
+Regional differentiation,0.733,Site/region context explains some unit distributions.
+Usable iconography,0.794,Iconographic labels are present for many ready reconstructions.
+Unresolved mass,0.687,Large unresolved portion limits language claims.

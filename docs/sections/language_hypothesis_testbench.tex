@@ -1,0 +1,130 @@
+\section{Language Hypothesis Testbench}
+
+\subsection{Purpose}
+
+This section tests language and script hypotheses against the current structural, abstract phonetic, and semantic models. It does not claim decipherment. Its job is to separate three levels of claim:
+
+\begin{itemize}
+  \item a script-function claim, such as restricted administrative or onomastic writing;
+  \item a language-family compatibility claim, such as Dravidian-compatible suffixing structure;
+  \item a true language identification claim, which would require validated phonetic readings.
+\end{itemize}
+
+The project is now strong enough to score the first two levels. It is not yet strong enough to make the third.
+
+\subsection{Method}
+
+The script \texttt{scripts/language-hypothesis-testbench.py} converts each hypothesis into explicit diagnostics and scores those diagnostics against existing outputs:
+
+\begin{itemize}
+  \item structural formulae and semantic frames;
+  \item abstract phonetic variables and minimal-pair evidence;
+  \item semantic context associations with site, region, artifact type, material, and iconography;
+  \item strong onomastic anchors in the \texttt{002 X 740} prime-entity frame.
+\end{itemize}
+
+The model penalizes all language-family hypotheses because no sign has yet received a validated sound value. This is intentional. Compatibility is not identification.
+
+\subsection{Current Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lp{0.46\textwidth}l}
+\toprule
+\textbf{Rank} & \textbf{Hypothesis} & \textbf{Score} \\
+\midrule
+1 & Restricted administrative/onomastic script & 0.731 \\
+2 & Multilingual administrative ecology & 0.689 \\
+3 & Primarily non-linguistic emblem system & 0.621 \\
+4 & Dravidian-compatible linguistic layer & 0.605 \\
+5 & Logo-syllabic or logo-phonetic writing & 0.585 \\
+6 & Indo-Iranian/Indo-Aryan linguistic layer & 0.541 \\
+7 & Munda/Para-Munda linguistic layer & 0.527 \\
+\bottomrule
+\end{tabular}
+\caption{Hypothesis ranking. Scores are compatibility scores, not proof.}
+\label{tab:language-hypothesis-ranking}
+\end{table}
+
+The best overall model is currently a restricted administrative/onomastic script. The best language-family-compatible model is Dravidian-compatible, mostly because the corpus now shows strong suffix/final behavior and productive name/title-like slots. However, this is not enough to identify the language. Indo-Iranian/Indo-Aryan and Munda/Para-Munda remain plausible but less strongly supported by the current structural evidence.
+
+\subsection{Diagnostic Features}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Feature} & \textbf{Score} \\
+\midrule
+Formula restriction & 0.898 \\
+Context association & 0.890 \\
+Usable iconography & 0.794 \\
+Suffix/final structure & 0.734 \\
+Regional differentiation & 0.733 \\
+Prime entity structure & 0.654 \\
+Phonetic readiness & 0.583 \\
+Classifier/title structure & 0.517 \\
+\bottomrule
+\end{tabular}
+\caption{Diagnostic evidence features.}
+\label{tab:language-diagnostic-features}
+\end{table}
+
+The suffix/final score is the strongest reason Dravidian remains interesting. The classifier/title and context-association scores are the strongest reasons a language-neutral or multilingual administrative model remains stronger than any single-language claim.
+
+\subsection{What We Can Claim Now}
+
+\begin{itemize}
+  \item The inscriptions are highly compatible with restricted formulaic writing.
+  \item The \texttt{002 X 740} frame is the best current partial-decipherment target.
+  \item \texttt{X} is likely an entity slot: name, title, office, lineage, place, institution, commodity, or authority formula.
+  \item Dravidian-compatible suffixing is currently the strongest language-family-compatible pattern.
+  \item No language-family identification is justified until at least one phonetic or lexical value predicts all occurrences of a strong anchor.
+\end{itemize}
+
+\subsection{Lexical Reading Gate}
+
+The file \texttt{outputs/lexical\_reading\_gate.csv} defines what kinds of lexical searches are allowed for each unit. For the strongest prime-entity anchors, lexical searches are limited to proper names, offices, titles, lineages, places, institutions, and emblem-linked identities. The model explicitly blocks shortcuts such as equating a sign with an animal name just because the seal has that animal.
+
+The immediate reading gate for the top anchors is:
+
+\begin{itemize}
+  \item \texttt{176}: search only after all Mohenjo-daro and Lothal occurrences are image-checked.
+  \item \texttt{235-222}: test bull-linked name/title readings, but only if the Chanhu-daro cluster holds visually.
+  \item \texttt{032-220}: test cross-site emblem/name readings across bull-seal contexts.
+  \item \texttt{240-482}: test Harappa administrative or institutional readings before personal-name readings.
+  \item \texttt{590-390}: test steatite seal name/title/place readings after image validation.
+\end{itemize}
+
+\subsection{Interpretation}
+
+The project has not cracked the language yet, but it has narrowed the problem. The current best model is:
+
+\begin{center}
+\texttt{RESTRICTED ADMINISTRATIVE/ONOMASTIC SCRIPT}
+\end{center}
+
+with a probable formula:
+
+\begin{center}
+\texttt{CLASSIFIER/TITLE + ENTITY + TERMINAL/SUFFIX}
+\end{center}
+
+and a prime target:
+
+\begin{center}
+\texttt{002 + ENTITY + 740}
+\end{center}
+
+The strongest next decipherment route is therefore not a global alphabet or syllabary. It is controlled proper-name and title testing, using image-grounded semantic anchors and minimal alternations.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/language\_evidence\_features.csv}
+  \item \texttt{outputs/language\_hypothesis\_scores.csv}
+  \item \texttt{outputs/lexical\_reading\_gate.csv}
+  \item \texttt{outputs/decipherment\_claims.csv}
+  \item \texttt{outputs/language\_hypothesis\_summary.csv}
+  \item \texttt{outputs/language\_hypothesis\_testbench.tex}
+\end{itemize}
