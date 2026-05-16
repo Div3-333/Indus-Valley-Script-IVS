@@ -1,0 +1,9 @@
+Metric,Value,Note
+Candidate anchor skeletons,11,Anchor-level reading skeletons tested.
+Accepted/promising skeletons,6,Tier A or B skeletons.
+Exploratory skeletons,5,Pass hard constraints but need more evidence.
+Hard-constraint holds,0,Rejected or held because a hard constraint failed.
+Best skeleton,240-482,QUALIFIER_TITLE_PREFIX + ENTITY_STEM
+Best skeleton score,0.966,Accepted pre-phonetic skeleton
+Clause reconstructions exported,59,Occurrence-level structural/semantic skeletons.
+Phonetic readings assigned,0,The solver is intentionally pre-phonetic.

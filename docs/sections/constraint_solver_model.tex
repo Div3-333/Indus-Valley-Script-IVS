@@ -1,0 +1,125 @@
+\section{Constraint-Solver Reading Layer}
+
+\subsection{Purpose}
+
+The project has reached the point where speed depends on automatic rejection. This section adds a constraint-solver layer that converts anchor dossiers into ranked reading skeletons. The solver is deliberately pre-phonetic: it can accept a structural reading such as \texttt{QUALIFIER/TITLE + ENTITY STEM}, but it cannot assign a sound value, language-family value, or lexical translation.
+
+This is the safest fast path toward decipherment. It lets us scale from a few promising anchors to many hypotheses while keeping each proposal falsifiable.
+
+\subsection{Method}
+
+The script \texttt{scripts/constraint-solver-reading-layer.py} combines:
+
+\begin{itemize}
+  \item anchor dossiers and component roles;
+  \item occurrence-level context rows;
+  \item minimal-pair and component-alternation evidence;
+  \item lexical reading gates;
+  \item structural frames and semantic frame labels.
+\end{itemize}
+
+Each candidate is tested against seven constraints: component order, context support, minimal-pair support, frame stability, lexical-gate compliance, phonetic restraint, and functional-role availability. The output is a ranked list of skeleton readings, not deciphered sentences.
+
+\subsection{Solver Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Candidate anchor skeletons & 11 \\
+Accepted/promising skeletons & 6 \\
+Exploratory skeletons & 5 \\
+Hard-constraint holds & 0 \\
+Clause reconstructions exported & 59 \\
+Phonetic readings assigned & 0 \\
+\bottomrule
+\end{tabular}
+\caption{Constraint-solver summary.}
+\label{tab:constraint-solver-summary}
+\end{table}
+
+The strongest accepted skeleton is:
+
+\begin{center}
+\texttt{240-482 = QUALIFIER/TITLE PREFIX + ENTITY STEM}
+\end{center}
+
+The most important supporting chain is:
+
+\begin{center}
+\texttt{176 = ENTITY STEM}
+\qquad
+\texttt{240-176 = QUALIFIER/TITLE PREFIX + ENTITY STEM}
+\end{center}
+
+This is not a translation. It is a controlled structural claim: \texttt{240} behaves like a reusable qualifier/title/classifier-like component, while \texttt{176} behaves like a reusable root-like entity component.
+
+\subsection{Highest-Ranked Reading Skeletons}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lp{0.48\textwidth}lr}
+\toprule
+\textbf{Unit} & \textbf{Skeleton} & \textbf{Tier} & \textbf{Score} \\
+\midrule
+\texttt{240-482} & \texttt{QUALIFIER\_TITLE\_PREFIX + ENTITY\_STEM} & A & 0.966 \\
+\texttt{240-740-090} & \texttt{ADMINISTRATIVE\_OBJECT\_FORMULA} & A & 0.951 \\
+\texttt{032} & \texttt{TERMINAL\_TITLE\_OR\_OBJECT\_ENDING} & A & 0.882 \\
+\texttt{176} & \texttt{ENTITY\_STEM} & B & 0.849 \\
+\texttt{240-176} & \texttt{QUALIFIER\_TITLE\_PREFIX + ENTITY\_STEM} & B & 0.783 \\
+\texttt{590-390} & \texttt{QUALIFIER\_TITLE\_PREFIX + FINAL\_QUALIFIER} & B & 0.757 \\
+\bottomrule
+\end{tabular}
+\caption{Highest-ranked pre-phonetic reading skeletons.}
+\label{tab:constraint-solver-top-skeletons}
+\end{table}
+
+\subsection{Approximate Distance to Full Decipherment}
+
+Full decipherment remains far. The project is no longer at zero: we have corpus control, structural frames, abstract variables, semantic context scores, anchor dossiers, and now constrained reading skeletons. But a strict decipherment requires validated sound values and a language identification, and those remain mostly unearned.
+
+As an approximate evidence-maturity estimate:
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Subproblem} & \textbf{Maturity} \\
+\midrule
+Corpus and provenance control & 0.70 \\
+Structural grammar & 0.48 \\
+Morpheme segmentation & 0.27 \\
+Semantic anchoring & 0.30 \\
+Phonetic values & 0.03 \\
+Language identification & 0.06 \\
+Strict full decipherment & 0.10 \\
+\bottomrule
+\end{tabular}
+\caption{Heuristic maturity estimates. These are not probabilities of final success.}
+\label{tab:decipherment-distance}
+\end{table}
+
+The honest answer is therefore: we may be roughly halfway toward a serious structural decipherment testbench, but only around a tenth of the way toward strict full decipherment. The fastest safe path is not to guess a language now, but to build a falsifiable chain:
+
+\begin{center}
+\texttt{ANCHORS -> COMPONENTS -> PROPER NAMES/TITLES -> PHONETIC TESTS}
+\end{center}
+
+\subsection{Next Research Decision}
+
+The next milestone should expand the solver from the eleven anchor units to their nearest minimal-pair neighbors. This directly attacks the phonetic problem: if \texttt{240-176}, \texttt{240-482}, and related alternants preserve frame identity while substituting only one component, then the project can begin testing whether the contrast behaves like a title, stem, suffix, numeral, allograph, or phonetic alternation.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/constraint\_solver\_summary.csv}
+  \item \texttt{outputs/constrained\_reading\_candidates.csv}
+  \item \texttt{outputs/constraint\_violations.csv}
+  \item \texttt{outputs/morpheme\_slot\_assignments.csv}
+  \item \texttt{outputs/reconstructed\_clause\_frames.csv}
+  \item \texttt{outputs/decipherment\_progress\_estimate.csv}
+  \item \texttt{outputs/constraint\_solver\_model.tex}
+\end{itemize}

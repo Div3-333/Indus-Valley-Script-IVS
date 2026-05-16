@@ -1,0 +1,78 @@
+Unit,ConstraintId,Constraint,Severity,Result,Evidence
+240-482,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+240-482,C2,Reading skeleton must be context-supported.,Hard,PASS,Strong context; 8 occurrence(s).
+240-482,C3,Minimal-pair or component alternation evidence should exist.,Soft,PASS,Minimal support score 0.875.
+240-482,C4,Anchor should stay stable in a dominant frame.,Soft,PASS,Frame purity 1.000.
+240-482,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,animal-name equation from icon alone; isolated Sanskrit/Dravidian lookalike without frame prediction
+240-482,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+240-482,C7,At least one component must have a functional role.,Hard,PASS,"QUALIFIER_TITLE_CLASSIFIER, ENTITY_STEM"
+176,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+176,C2,Reading skeleton must be context-supported.,Hard,PASS,Moderate context; 5 occurrence(s).
+176,C3,Minimal-pair or component alternation evidence should exist.,Soft,PASS,Minimal support score 1.000.
+176,C4,Anchor should stay stable in a dominant frame.,Soft,PASS,Frame purity 0.800.
+176,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,animal-name equation from icon alone; isolated Sanskrit/Dravidian lookalike without frame prediction
+176,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+176,C7,At least one component must have a functional role.,Hard,PASS,ENTITY_STEM_OR_SUBTYPE
+590-390,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+590-390,C2,Reading skeleton must be context-supported.,Soft,WARN,Moderate context; 3 occurrence(s).
+590-390,C3,Minimal-pair or component alternation evidence should exist.,Soft,PASS,Minimal support score 0.646.
+590-390,C4,Anchor should stay stable in a dominant frame.,Soft,PASS,Frame purity 1.000.
+590-390,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,animal-name equation from icon alone; isolated Sanskrit/Dravidian lookalike without frame prediction
+590-390,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+590-390,C7,At least one component must have a functional role.,Hard,PASS,"QUALIFIER_TITLE_CLASSIFIER, FINAL_QUALIFIER"
+235-222,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+235-222,C2,Reading skeleton must be context-supported.,Soft,WARN,Moderate context; 3 occurrence(s).
+235-222,C3,Minimal-pair or component alternation evidence should exist.,Soft,PASS,Minimal support score 0.562.
+235-222,C4,Anchor should stay stable in a dominant frame.,Soft,PASS,Frame purity 1.000.
+235-222,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,animal-name equation from icon alone; isolated Sanskrit/Dravidian lookalike without frame prediction
+235-222,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+235-222,C7,At least one component must have a functional role.,Hard,PASS,"QUALIFIER_TITLE_CLASSIFIER, ENTITY_STEM"
+032-220,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+032-220,C2,Reading skeleton must be context-supported.,Soft,WARN,Moderate context; 2 occurrence(s).
+032-220,C3,Minimal-pair or component alternation evidence should exist.,Soft,PASS,Minimal support score 0.667.
+032-220,C4,Anchor should stay stable in a dominant frame.,Soft,WARN,Frame purity 0.500.
+032-220,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,animal-name equation from icon alone; isolated Sanskrit/Dravidian lookalike without frame prediction
+032-220,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+032-220,C7,At least one component must have a functional role.,Hard,PASS,"ENTITY_STEM_OR_SUBTYPE, FINAL_QUALIFIER"
+240-176,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+240-176,C2,Reading skeleton must be context-supported.,Soft,WARN,Moderate context; 2 occurrence(s).
+240-176,C3,Minimal-pair or component alternation evidence should exist.,Soft,PASS,Minimal support score 0.958.
+240-176,C4,Anchor should stay stable in a dominant frame.,Soft,PASS,Frame purity 1.000.
+240-176,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,animal-name equation from icon alone; isolated Sanskrit/Dravidian lookalike without frame prediction
+240-176,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+240-176,C7,At least one component must have a functional role.,Hard,PASS,"QUALIFIER_TITLE_CLASSIFIER, ENTITY_STEM_OR_SUBTYPE"
+235-840-032,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+235-840-032,C2,Reading skeleton must be context-supported.,Soft,WARN,Moderate context; 2 occurrence(s).
+235-840-032,C3,Minimal-pair or component alternation evidence should exist.,Soft,WARN,No direct minimal tests.
+235-840-032,C4,Anchor should stay stable in a dominant frame.,Soft,PASS,Frame purity 1.000.
+235-840-032,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,animal-name equation from icon alone; isolated Sanskrit/Dravidian lookalike without frame prediction
+235-840-032,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+235-840-032,C7,At least one component must have a functional role.,Hard,PASS,"QUALIFIER_TITLE_CLASSIFIER, ENTITY_STEM, ENTITY_STEM_OR_SUBTYPE"
+032,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+032,C2,Reading skeleton must be context-supported.,Hard,PASS,Strong context; 10 occurrence(s).
+032,C3,Minimal-pair or component alternation evidence should exist.,Soft,PASS,Minimal support score 1.000.
+032,C4,Anchor should stay stable in a dominant frame.,Soft,WARN,Frame purity 0.500.
+032,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,free-standing nouns unless the same unit appears independently
+032,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+032,C7,At least one component must have a functional role.,Hard,PASS,ENTITY_STEM_OR_SUBTYPE
+240-740-090,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+240-740-090,C2,Reading skeleton must be context-supported.,Hard,PASS,Strong context; 13 occurrence(s).
+240-740-090,C3,Minimal-pair or component alternation evidence should exist.,Soft,PASS,Minimal support score 1.000.
+240-740-090,C4,Anchor should stay stable in a dominant frame.,Soft,PASS,Frame purity 0.846.
+240-740-090,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,free-standing nouns unless the same unit appears independently
+240-740-090,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+240-740-090,C7,At least one component must have a functional role.,Hard,PASS,"QUALIFIER_TITLE_CLASSIFIER, TERMINAL_TITLE_SUFFIX, FINAL_QUALIFIER"
+140,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+140,C2,Reading skeleton must be context-supported.,Hard,PASS,Strong context; 7 occurrence(s).
+140,C3,Minimal-pair or component alternation evidence should exist.,Soft,WARN,Direct tests: 3.
+140,C4,Anchor should stay stable in a dominant frame.,Soft,WARN,Frame purity 0.429.
+140,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,root nouns unless context and alternations require it
+140,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+140,C7,At least one component must have a functional role.,Hard,PASS,FORMULA_MARKER
+820-060,C1,Component order must match prefix/root/suffix behavior.,Hard,PASS,No ordering contradiction detected.
+820-060,C2,Reading skeleton must be context-supported.,Hard,PASS,Strong context; 4 occurrence(s).
+820-060,C3,Minimal-pair or component alternation evidence should exist.,Soft,WARN,Direct tests: 1.
+820-060,C4,Anchor should stay stable in a dominant frame.,Soft,WARN,Frame purity 0.500.
+820-060,C5,Lexical shortcuts must remain blocked until predictive.,Hard,PASS,root nouns unless context and alternations require it
+820-060,C6,No phonetic value may be assigned by this solver.,Hard,PASS,All outputs are semantic/structural skeletons only.
+820-060,C7,At least one component must have a functional role.,Hard,PASS,"CLASSIFIER_TITLE, FINAL_QUALIFIER"

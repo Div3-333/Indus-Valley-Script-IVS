@@ -1,0 +1,8 @@
+Goal,MaturityEstimate,Meaning,FastestSafeMove
+Corpus and provenance control,0.70,"The corpus is usable for modeling, though visual adjudication remains incomplete.",Continue image-backed adjudication for high-value anchors only.
+Structural grammar,0.48,"Productive frames and slots are strong, but not yet a complete grammar.",Use the solver to reject readings that violate frame behavior.
+Morpheme segmentation,0.27,6 of 11 anchor skeletons now pass or mostly pass constraints.,Expand from anchor units to their nearest minimal-pair neighbors.
+Semantic anchoring,0.30,"Some contexts are strong, but most readings remain broad classes rather than meanings.","Prioritize anchors with strong site, object, or iconographic concentration."
+Phonetic values,0.03,No sign has a validated sound value; current variables are abstract only.,Search for proper-name clusters and cross-frame alternations before any phonetic proposal.
+Language identification,0.06,"Dravidian-compatible structure is interesting, but compatibility is not identification.",Require any language claim to predict all occurrences of at least one strong anchor.
+Strict full decipherment,0.10,Full decipherment is not guaranteed from the public corpus without bilingual or securely identified names.,Build a falsifiable chain: anchors -> components -> proper names/titles -> phonetic tests.

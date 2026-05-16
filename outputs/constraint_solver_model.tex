@@ -1,0 +1,69 @@
+\section{Constraint-Solver Reading Layer}
+
+\subsection{Purpose}
+
+This generated note ranks pre-phonetic reading skeletons from the anchor dossiers. It is a constraint solver, not a decipherment claim engine. A skeleton may pass only if it respects component order, context support, minimal-pair evidence, frame stability, lexical gates, and phonetic restraint.
+
+\subsection{Solver Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.58\textwidth}r}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Candidate anchor skeletons & 11 \\
+Accepted/promising skeletons & 6 \\
+Exploratory skeletons & 5 \\
+Hard-constraint holds & 0 \\
+Best skeleton & 240-482 \\
+Best skeleton score & 0.966 \\
+Clause reconstructions exported & 59 \\
+Phonetic readings assigned & 0 \\
+\bottomrule
+\end{tabular}
+\caption{Constraint-solver summary.}
+\end{table}
+
+\subsection{Highest-Ranked Skeletons}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lp{0.48\textwidth}lr}
+\toprule
+\textbf{Unit} & \textbf{Skeleton} & \textbf{Tier} & \textbf{Score} \\
+\midrule
+240-482 & QUALIFIER\_TITLE\_PREFIX + ENTITY\_STEM & A & 0.966 \\
+240-740-090 & ADMINISTRATIVE\_OBJECT\_FORMULA & A & 0.951 \\
+032 & TERMINAL\_TITLE\_OR\_OBJECT\_ENDING & A & 0.882 \\
+176 & ENTITY\_STEM & B & 0.849 \\
+240-176 & QUALIFIER\_TITLE\_PREFIX + ENTITY\_STEM & B & 0.783 \\
+590-390 & QUALIFIER\_TITLE\_PREFIX + FINAL\_QUALIFIER & B & 0.757 \\
+235-222 & QUALIFIER\_TITLE\_PREFIX + ENTITY\_STEM & C & 0.739 \\
+235-840-032 & QUALIFIER\_TITLE\_PREFIX + ENTITY\_STEM + SUBTYPE\_OR\_SECOND\_STEM & C & 0.681 \\
+\bottomrule
+\end{tabular}
+\caption{Top constrained reading skeletons. These are not phonetic readings.}
+\end{table}
+
+\subsection{Progress Estimate}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{p{0.62\textwidth}r}
+\toprule
+\textbf{Goal} & \textbf{Maturity} \\
+\midrule
+Corpus and provenance control & 0.70 \\
+Structural grammar & 0.48 \\
+Morpheme segmentation & 0.27 \\
+Semantic anchoring & 0.30 \\
+Phonetic values & 0.03 \\
+Language identification & 0.06 \\
+Strict full decipherment & 0.10 \\
+\bottomrule
+\end{tabular}
+\caption{Approximate maturity by decipherment subproblem. Values are heuristic maturity scores, not probabilities of success.}
+\end{table}
