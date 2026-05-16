@@ -1,0 +1,91 @@
+\section{Contrastive Probe Validation}
+
+\subsection{Purpose}
+
+This generated note validates the minimal-pair probe queue. It asks which probes can already be promoted to grammar constraints, which ones are plausible future phonetic probes, and which ones must remain controls.
+
+\subsection{Summary}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.58\textwidth}r}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Probe validations & 30 \\
+Morphology constraints & 11 \\
+Terminal constraints & 1 \\
+Phonetic-ready after image check & 1 \\
+Stem-semantic probes & 3 \\
+Role-boundary controls & 0 \\
+Full-neighborhood role-boundary controls & 108 \\
+Stem lattice edges & 7 \\
+Top validated probe & 240-740-090 :: 520 \\
+Dominant contrast class & classifier/title contrast \\
+\bottomrule
+\end{tabular}
+\caption{Contrastive probe validation summary.}
+\end{table}
+
+\subsection{Top Validated Probes}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{p{0.32\textwidth}p{0.42\textwidth}r}
+\toprule
+\textbf{Probe} & \textbf{Status} & \textbf{Score} \\
+\midrule
+240-740-090 :: 520 & Morphology constraint & 0.873 \\
+240-740-090 :: 520 & Terminal constraint & 0.863 \\
+240-176 :: 048 & Stem-semantic probe & 0.822 \\
+240-482 :: 240-904 & Phonetic-ready after image check & 0.819 \\
+176 :: 048 & Stem-semantic probe & 0.788 \\
+240-482 :: 520 & Morphology constraint & 0.764 \\
+176 :: 061 & Stem-semantic probe & 0.750 \\
+240-740-090 :: 235 & Morphology constraint & 0.749 \\
+\bottomrule
+\end{tabular}
+\caption{Highest-scoring validated probes.}
+\end{table}
+
+\subsection{Stem Lattice}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lp{0.30\textwidth}p{0.34\textwidth}r}
+\toprule
+\textbf{Edge} & \textbf{Probe} & \textbf{Status} & \textbf{Score} \\
+\midrule
+176:048 & 240-176 :: 048 & Stem-semantic probe & 0.822 \\
+482:904 & 240-482 :: 240-904 & Phonetic-ready after image check & 0.819 \\
+176:048 & 176 :: 048 & Stem-semantic probe & 0.788 \\
+176:061 & 176 :: 061 & Stem-semantic probe & 0.750 \\
+176:482 & 240-176 :: 240-482 & Hold for more occurrences & 0.698 \\
+482:773 & 240-482 :: 240-773 & Hold for more occurrences & 0.696 \\
+482:176 & 240-482 :: 240-176 & Hold for more occurrences & 0.690 \\
+\bottomrule
+\end{tabular}
+\caption{Top entity-stem contrast edges. These remain pre-phonetic.}
+\end{table}
+
+\subsection{Claim Ledger}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{p{0.36\textwidth}p{0.46\textwidth}}
+\toprule
+\textbf{Claim} & \textbf{Status} \\
+\midrule
+C-240-QUALIFIER & Supported morphology constraint \\
+C-176-STEM & Stem-semantic probe \\
+C-482-STEM-SLOT & Emerging stem lattice \\
+C-740-520-TERMINAL & Terminal constraint \\
+C-032-CONTROL & Blocked for phonetics \\
+C-LANGUAGE-GATE & Not deciphered \\
+\bottomrule
+\end{tabular}
+\caption{Controlled claims after contrastive validation.}
+\end{table}

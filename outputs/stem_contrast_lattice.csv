@@ -1,0 +1,8 @@
+LeftStem,RightStem,Probe,Frame,Status,ValidationScore,AnchorFrameOccurrences,NeighborFrameOccurrences,Constraint
+176,048,240-176 :: 048,002|740,Stem-semantic probe,0.822,2,1,same frame and stem-like slot; may become phonetic only after image validation
+482,904,240-482 :: 240-904,002|740,Phonetic-ready after image check,0.819,8,3,same frame and stem-like slot; may become phonetic only after image validation
+176,048,176 :: 048,002|740,Stem-semantic probe,0.788,4,1,same frame and stem-like slot; may become phonetic only after image validation
+176,061,176 :: 061,002|740,Stem-semantic probe,0.750,4,1,same frame and stem-like slot; may become phonetic only after image validation
+176,482,240-176 :: 240-482,002|740,Hold for more occurrences,0.698,2,8,same frame and stem-like slot; may become phonetic only after image validation
+482,773,240-482 :: 240-773,002|740,Hold for more occurrences,0.696,8,2,same frame and stem-like slot; may become phonetic only after image validation
+482,176,240-482 :: 240-176,002|740,Hold for more occurrences,0.690,8,2,same frame and stem-like slot; may become phonetic only after image validation

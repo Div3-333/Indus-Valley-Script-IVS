@@ -1,0 +1,11 @@
+Metric,Value,Note
+Probe validations,30,Top probe-queue rows evaluated.
+Morphology constraints,11,Accepted as grammar constraints before phonetics.
+Terminal constraints,1,Accepted terminal/suffix constraints.
+Phonetic-ready after image check,1,Could become phonetic tests after visual validation.
+Stem-semantic probes,3,"Good stem probes, but occurrence-limited."
+Role-boundary controls,0,"Useful negative controls, blocked for phonetics."
+Full-neighborhood role-boundary controls,108,"Controls in the full neighbor expansion, not just top queue."
+Stem lattice edges,7,Entity-stem contrast edges exported.
+Top validated probe,240-740-090 :: 520,Morphology constraint; score=0.873
+Dominant contrast class,classifier/title contrast,classifier/title contrast:13; prefix/title/classifier test:7; entity-stem contrast:7

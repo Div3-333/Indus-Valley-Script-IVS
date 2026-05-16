@@ -1,0 +1,144 @@
+\section{Contrastive Probe Validation}
+
+\subsection{Purpose}
+
+This section moves from a probe queue to controlled decipherment constraints. The previous model listed promising minimal-pair neighborhoods. This validation layer asks which probes can already be promoted to grammar constraints, which can become phonetic probes after image checking, and which must remain controls.
+
+The key rule remains strict: no sound value, lexical translation, or language-family claim is allowed unless the proposed value predicts all occurrences of the relevant contrast.
+
+\subsection{Method}
+
+The script \texttt{scripts/contrastive-probe-validation.py} combines:
+
+\begin{itemize}
+  \item the top thirty minimal-pair probes;
+  \item exact occurrence profiles from structural reconstructions;
+  \item same-frame minimal-pair counts;
+  \item component roles from the morpheme assignment table;
+  \item site, object, material, symbol, and semantic-frame distributions.
+\end{itemize}
+
+The validator separates three levels of result:
+
+\begin{itemize}
+  \item grammar constraints, which can be used now;
+  \item stem-semantic probes, which are promising but occurrence-limited;
+  \item phonetic-ready probes, which still require image checking before any abstract sound contrast is proposed.
+\end{itemize}
+
+\subsection{Validation Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Probe validations & 30 \\
+Morphology constraints & 11 \\
+Terminal constraints & 1 \\
+Phonetic-ready after image check & 1 \\
+Stem-semantic probes & 3 \\
+Full-neighborhood role-boundary controls & 108 \\
+Stem lattice edges & 7 \\
+\bottomrule
+\end{tabular}
+\caption{Contrastive probe validation summary.}
+\label{tab:contrastive-probe-validation-summary}
+\end{table}
+
+\subsection{First Phonetic-Ready Edge}
+
+The first probe to reach phonetic-ready status after image checking is:
+
+\begin{center}
+\texttt{240-482 :: 240-904}
+\end{center}
+
+in the frame:
+
+\begin{center}
+\texttt{002|740}
+\end{center}
+
+The controlled interpretation is:
+
+\begin{center}
+\texttt{240 + STEM}
+\end{center}
+
+where \texttt{482} and \texttt{904} occupy the same second-position stem slot. The current evidence is still pre-phonetic: it licenses a future contrast test, not a sound value.
+
+\subsection{Stem Lattice}
+
+The strongest stem-lattice edges are:
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lp{0.36\textwidth}lr}
+\toprule
+\textbf{Edge} & \textbf{Probe} & \textbf{Status} & \textbf{Score} \\
+\midrule
+\texttt{176:048} & \texttt{240-176 :: 048} & Stem-semantic probe & 0.822 \\
+\texttt{482:904} & \texttt{240-482 :: 240-904} & Phonetic-ready after image check & 0.819 \\
+\texttt{176:048} & \texttt{176 :: 048} & Stem-semantic probe & 0.788 \\
+\texttt{176:061} & \texttt{176 :: 061} & Stem-semantic probe & 0.750 \\
+\texttt{176:482} & \texttt{240-176 :: 240-482} & Hold for more occurrences & 0.698 \\
+\texttt{482:773} & \texttt{240-482 :: 240-773} & Hold for more occurrences & 0.696 \\
+\bottomrule
+\end{tabular}
+\caption{Top stem-lattice contrasts.}
+\label{tab:stem-lattice-contrasts}
+\end{table}
+
+\subsection{Grammar Constraints Now Licensed}
+
+The validation layer licenses the following grammar constraints:
+
+\begin{itemize}
+  \item \texttt{240} behaves as a qualifier/title/classifier-like component in several neighborhoods.
+  \item \texttt{240} and \texttt{235} compete in title/classifier/formula-opener environments.
+  \item \texttt{740} and \texttt{520} form a terminal/suffix contrast family.
+  \item \texttt{032} must remain blocked for phonetics because it creates many role-boundary controls.
+\end{itemize}
+
+\subsection{Controlled Claim Ledger}
+
+The current claim ledger now contains six controlled claims:
+
+\begin{itemize}
+  \item \texttt{C-240-QUALIFIER}: supported morphology constraint.
+  \item \texttt{C-176-STEM}: stem-semantic probe.
+  \item \texttt{C-482-STEM-SLOT}: emerging stem lattice.
+  \item \texttt{C-740-520-TERMINAL}: terminal constraint.
+  \item \texttt{C-032-CONTROL}: blocked for phonetics.
+  \item \texttt{C-LANGUAGE-GATE}: language identification remains blocked.
+\end{itemize}
+
+\subsection{Interpretation}
+
+This is a meaningful step closer to decipherment because the project now has its first phonetic-ready contrast candidate:
+
+\begin{center}
+\texttt{482 :: 904}
+\end{center}
+
+inside:
+
+\begin{center}
+\texttt{240 + STEM}
+\end{center}
+
+The next safe step is visual validation of every \texttt{240-482} and \texttt{240-904} occurrence. If the visual and contextual evidence holds, the project can begin testing an abstract contrast between two stem values. That would still not be a language reading, but it would be the first responsible opening toward phonetic decipherment.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/contrastive\_probe\_validation\_summary.csv}
+  \item \texttt{outputs/validated\_probe\_results.csv}
+  \item \texttt{outputs/probe\_occurrence\_contexts.csv}
+  \item \texttt{outputs/stem\_contrast\_lattice.csv}
+  \item \texttt{outputs/controlled\_decipherment\_claims.csv}
+  \item \texttt{outputs/contrastive\_probe\_validation.tex}
+\end{itemize}
