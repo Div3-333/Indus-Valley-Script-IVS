@@ -1,0 +1,5 @@
+TemplateId,Template,StructuralReading,Evidence,Use
+T-STEM-01,002 OP240 STEM 740,prime entity frame with OP240-qualified stem,240 model plus controlled stem lanes.,"Main lane for 482, 904, and 176 before phonetic assignment."
+T-STEM-02,002 STEM 740,bare prime entity stem,"048, 061, and 176 occur as bare controls in the same prime frame.",Tests whether OP240 preserves stem identity or changes function.
+T-STEM-03,OP240 + 482 :: OP240 + 904,first phonetic-grade contrast lane after image review,Phonetic-ready after image check,Do not assign sound; use as the first controlled contrast to image-check.
+T-STEM-04,176 :: 048 :: 061,bare/bridge semantic stem controls,Stem-semantic probe:4; Hold for more occurrences:3; Morphology constraint:2; Morphology probe:2,Semantic and iconographic controls for the prime entity slot.

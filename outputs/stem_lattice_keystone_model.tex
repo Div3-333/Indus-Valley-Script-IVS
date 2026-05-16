@@ -1,0 +1,111 @@
+\section{Stem Lattice Keystone Model}
+
+\subsection{Purpose}
+
+The \texttt{240} grammar model gives us a controlled environment. This section turns that environment into a stem lattice: a ranked space of stem signs and stem contrasts in the prime entity frame. The result is not a decipherment, but it is a move toward one: it identifies which contrasts can now be tested repeatedly without changing the surrounding grammar.
+
+\subsection{Summary}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{p{0.30\textwidth}p{0.18\textwidth}p{0.38\textwidth}}
+\toprule
+\textbf{Metric} & \textbf{Value} & \textbf{Note} \\
+\midrule
+Stem profiles & 103 & low-evidence stem:71; bare prime control:15; OP240/bare bridge:14; phonetic-ready OP240 stem:2; OP240/bare bridge stem:1 \\
+Pairwise contrasts & 120 & occurrence-limited contrast:89; phonetic-lane neighbor:26; bridge stem control:3; primary phonetic lane:1; stem-semantic control:1 \\
+Top stem & 482 & phonetic-ready OP240 stem; score=1.000 \\
+Top pair & 482::904 & primary phonetic lane; score=1.000 \\
+Primary phonetic lane & 482::904 & Only after image/context validation; no sound value assigned. \\
+Bridge controls & 176; 048; 061 & Tests whether OP240 preserves identity across bare and prefixed forms. \\
+\bottomrule
+\end{tabular}
+\caption{Stem lattice keystone summary.}
+\label{tab:stem-lattice-keystone-summary}
+\end{table}
+
+\subsection{Stem Profiles}
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{tabular}{lp{0.42\textwidth}rrr}
+\toprule
+\textbf{Stem} & \textbf{Role} & \textbf{Score} & \textbf{OP240} & \textbf{Bare} \\
+\midrule
+482 & phonetic-ready OP240 stem & 1.000 & 16 & 2 \\
+904 & phonetic-ready OP240 stem & 1.000 & 6 & 5 \\
+176 & OP240/bare bridge stem & 0.898 & 4 & 34 \\
+415 & OP240/bare bridge & 0.620 & 8 & 23 \\
+017 & OP240/bare bridge & 0.508 & 2 & 16 \\
+231 & OP240/bare bridge & 0.489 & 1 & 21 \\
+840 & OP240/bare bridge & 0.458 & 2 & 10 \\
+048 & bare prime control & 0.443 & 0 & 23 \\
+061 & bare prime control & 0.432 & 0 & 30 \\
+350 & OP240/bare bridge & 0.426 & 1 & 10 \\
+\bottomrule
+\end{tabular}
+\caption{Highest-ranked stem signs in the prime entity environment.}
+\label{tab:stem-lattice-keystone-stems}
+\end{table}
+
+\subsection{Contrast Matrix}
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{tabular}{lp{0.48\textwidth}rr}
+\toprule
+\textbf{Pair} & \textbf{Class} & \textbf{Score} & \textbf{Validation} \\
+\midrule
+482::904 & primary phonetic lane & 1.000 & 0.819 \\
+482::176 & bridge stem control & 0.898 & 0.698 \\
+176::048 & stem-semantic control & 0.807 & 0.822 \\
+176::061 & bridge stem control & 0.708 & 0.750 \\
+904::350 & phonetic-lane neighbor & 0.667 & 0.000 \\
+904::415 & phonetic-lane neighbor & 0.666 & 0.000 \\
+482::350 & phonetic-lane neighbor & 0.663 & 0.000 \\
+482::415 & phonetic-lane neighbor & 0.663 & 0.000 \\
+482::772 & phonetic-lane neighbor & 0.663 & 0.000 \\
+904::017 & phonetic-lane neighbor & 0.661 & 0.000 \\
+\bottomrule
+\end{tabular}
+\caption{Highest-ranked stem contrasts.}
+\label{tab:stem-lattice-keystone-pairs}
+\end{table}
+
+\subsection{Structural Templates}
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\begin{tabular}{p{0.24\textwidth}p{0.28\textwidth}p{0.34\textwidth}}
+\toprule
+\textbf{Template} & \textbf{Reading} & \textbf{Use} \\
+\midrule
+002 OP240 STEM 740 & prime entity frame with OP240-qualified stem & Main lane for 482, 904, and 176 before phonetic assignment. \\
+002 STEM 740 & bare prime entity stem & Tests whether OP240 preserves stem identity or changes function. \\
+OP240 + 482 :: OP240 + 904 & first phonetic-grade contrast lane after image review & Do not assign sound; use as the first controlled contrast to image-check. \\
+176 :: 048 :: 061 & bare/bridge semantic stem controls & Semantic and iconographic controls for the prime entity slot. \\
+\bottomrule
+\end{tabular}
+\caption{Reusable structural templates produced by the stem lattice.}
+\label{tab:stem-lattice-keystone-templates}
+\end{table}
+
+\subsection{Decision}
+
+The current fastest lane is \texttt{240-482 :: 240-904}. It is the first contrast that is both structurally controlled by \texttt{OP240} and already marked as phonetic-ready after image checking. The bridge-control lane is \texttt{176 :: 048 :: 061}, because \texttt{176} has both bare and \texttt{OP240}-prefixed evidence while \texttt{048} and \texttt{061} are strong bare controls in the same prime entity frame.
+
+The reading discipline remains strict: \texttt{OP240} is a grammatical operator, \texttt{STEM} is an abstract stem slot, and no Dravidian, Indo-Aryan, Munda, or other phonetic value is assigned yet.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/stem\_lattice\_keystone\_summary.csv}
+  \item \texttt{outputs/stem\_lattice\_keystone\_profiles.csv}
+  \item \texttt{outputs/stem\_lattice\_keystone\_pair\_matrix.csv}
+  \item \texttt{outputs/stem\_lattice\_keystone\_templates.csv}
+  \item \texttt{outputs/stem\_lattice\_keystone\_model.tex}
+\end{itemize}
