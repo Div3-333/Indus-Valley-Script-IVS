@@ -1,0 +1,11 @@
+Metric,Value,Note
+Anchor dossiers,11,Strong onomastic plus strong-context cross-frame anchors.
+Strong onomastic dossiers,7,Prime-entity fillers closest to proper-name tests.
+Cross-frame dossiers,4,Non-prime anchors with strong context associations.
+Anchor occurrence rows,59,Ready inscriptions gathered into case files.
+Direct minimal tests,49,Minimal alternations where the anchor is directly present.
+Component minimal tests,277,Minimal alternations involving anchor components.
+Anchor components,15,Unique signs inside the dossier anchor units.
+Root-like components,2,Components that appear independently and inside compounds.
+Prefix-like components,3,Initial modifier/formula components in anchor units.
+Suffix-like components,4,Final qualifier candidates in anchor units.

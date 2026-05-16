@@ -1,0 +1,16 @@
+Sign,Variable,FunctionalClass,AnchorUnitCount,AnchorUnits,Positions,Neighbors,ComponentInterpretation,ReadingConstraint
+032,A07,SLOT_MODIFIER,3,032; 032-220; 235-840-032,final:1; initial:1; standalone:1,235:1; 840:1; 220:1,root-like component; appears independently and inside compounds,must explain slot alternations without breaking frame identity
+240,A02,SLOT_MODIFIER,3,240-176; 240-482; 240-740-090,initial:3,482:1; 176:1; 740:1; 090:1,prefix/title/classifier-like component,must explain slot alternations without breaking frame identity
+176,R02,ROOT_OR_UNRESOLVED,2,176; 240-176,standalone:1; final:1,240:1,root-like component; appears independently and inside compounds,must be tested as a possible lexical root or unresolved sign
+235,M01,FORMULA_MARKER,2,235-222; 235-840-032,initial:2,840:1; 032:1; 222:1,prefix/title/classifier-like component,must remain formulaic across repeated contexts before phonetic value is proposed
+060,A06,SLOT_MODIFIER,1,820-060,final:1,820:1,suffix/final qualifier candidate,must explain slot alternations without breaking frame identity
+090,A10,SLOT_MODIFIER,1,240-740-090,final:1,240:1; 740:1,suffix/final qualifier candidate,must explain slot alternations without breaking frame identity
+140,M07,FORMULA_MARKER,1,140,standalone:1,,unresolved component,must remain formulaic across repeated contexts before phonetic value is proposed
+220,A09,SLOT_MODIFIER,1,032-220,final:1,032:1,suffix/final qualifier candidate,must explain slot alternations without breaking frame identity
+222,R31,ROOT_OR_UNRESOLVED,1,235-222,final:1,235:1,lexical root candidate,must be tested as a possible lexical root or unresolved sign
+390,M02,FORMULA_MARKER,1,590-390,final:1,590:1,suffix/final qualifier candidate,must remain formulaic across repeated contexts before phonetic value is proposed
+482,R16,ROOT_OR_UNRESOLVED,1,240-482,final:1,240:1,lexical root candidate,must be tested as a possible lexical root or unresolved sign
+590,A08,SLOT_MODIFIER,1,590-390,initial:1,390:1,prefix/title/classifier-like component,must explain slot alternations without breaking frame identity
+740,T01,TERMINAL,1,240-740-090,internal:1,240:1; 090:1,unresolved component,"must behave like a terminal title, suffix, or formula ending across seals"
+820,C01,CLASSIFIER,1,820-060,initial:1,060:1,unresolved component,"must behave like an initial title, classifier, or determinative in matching frames"
+840,R10,ROOT_OR_UNRESOLVED,1,235-840-032,internal:1,235:1; 032:1,lexical root candidate,must be tested as a possible lexical root or unresolved sign

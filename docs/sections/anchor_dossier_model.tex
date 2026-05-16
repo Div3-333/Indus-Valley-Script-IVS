@@ -1,0 +1,104 @@
+\section{Anchor Dossier Model}
+
+\subsection{Purpose}
+
+The project now needs case files rather than broader rankings. This section turns the strongest candidate units into anchor dossiers: each dossier gathers occurrence rows, context, minimal alternations, component reuse, and allowed lexical search classes. The goal is controlled partial decipherment.
+
+This remains pre-phonetic. The output proposes reading classes such as ``emblem-linked name/title candidate'' or ``administrative label candidate'', not sound values.
+
+\subsection{Method}
+
+The script \texttt{scripts/anchor-dossier-model.py} combines:
+
+\begin{itemize}
+  \item semantic reconstruction candidates;
+  \item lexical reading gates;
+  \item structural reconstructions and slot fillers;
+  \item phonetic minimal-pair tests;
+  \item abstract sign variables.
+\end{itemize}
+
+The model keeps all strong onomastic anchors and strong-context cross-frame anchors. It then asks whether each anchor is a stable unit, a compound, or a sequence of reusable morpheme-like components.
+
+\subsection{Corpus-Wide Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Anchor dossiers & 11 \\
+Strong onomastic dossiers & 7 \\
+Cross-frame dossiers & 4 \\
+Anchor occurrence rows & 59 \\
+Direct minimal tests & 49 \\
+Component minimal tests & 277 \\
+Anchor components & 15 \\
+Root-like components & 2 \\
+Prefix-like components & 3 \\
+Suffix-like components & 4 \\
+\bottomrule
+\end{tabular}
+\caption{Anchor dossier summary.}
+\label{tab:anchor-dossier-summary}
+\end{table}
+
+\subsection{Highest-Priority Dossiers}
+
+\begin{itemize}
+  \item \texttt{240-482}: institutional/admin label candidate; Harappa-heavy; mostly tablet context.
+  \item \texttt{176}: emblem-linked name/title candidate; appears as \texttt{176} and in \texttt{240-176}.
+  \item \texttt{235-222}: emblem-linked name/title candidate; bull context and Chanhu-daro concentration.
+  \item \texttt{032-220}: emblem-linked name/title candidate; bull context across Mohenjo-daro and Harappa.
+  \item \texttt{590-390}: emblem-linked name/title candidate; steatite seal context across three sites.
+  \item \texttt{240-176}: controlled lexical candidate; may contain the same root-like \texttt{176} with \texttt{240} as a qualifier.
+  \item \texttt{235-840-032}: controlled lexical candidate; shares \texttt{235} and \texttt{032} with other anchors.
+\end{itemize}
+
+\subsection{Morpheme-Like Component Probe}
+
+The most important new result is component reuse inside the strongest anchors:
+
+\begin{itemize}
+  \item \texttt{176} appears as a standalone prime-entity filler and as the final component in \texttt{240-176}. This is the cleanest root-like entity component so far.
+  \item \texttt{032} appears as a standalone cross-frame unit and inside \texttt{032-220} and \texttt{235-840-032}. This makes it root-like or subtype-marking, not merely decorative.
+  \item \texttt{240} appears initially in \texttt{240-482}, \texttt{240-176}, and \texttt{240-740-090}. It is currently the strongest prefix/title/classifier-like component in the anchor set.
+  \item \texttt{235} appears initially in \texttt{235-222} and \texttt{235-840-032}; it remains formula-marker or title-prefix-like.
+  \item \texttt{220}, \texttt{222}, \texttt{390}, \texttt{482}, and \texttt{840} are lexical-root or final-qualifier candidates that need image-grounded validation.
+\end{itemize}
+
+\subsection{Working Partial-Reading Classes}
+
+The strongest controlled reading classes are now:
+
+\begin{center}
+\texttt{240 + ENTITY} \quad and \quad \texttt{235 + ENTITY}
+\end{center}
+
+This does not mean \texttt{240} or \texttt{235} has a phonetic value. It means they behave like reusable entity qualifiers in the prime-entity zone. If future image review confirms that \texttt{176} and \texttt{240-176} share a semantic context, then \texttt{240} becomes a serious prefix/title/classifier candidate and \texttt{176} becomes a serious root-like candidate.
+
+\subsection{Interpretation}
+
+This is the first stage where the project can make a morpheme-like statement:
+
+\begin{center}
+\texttt{QUALIFIER / TITLE / CLASSIFIER + ENTITY STEM}
+\end{center}
+
+For example, \texttt{240-176} is no longer just a two-sign filler. It is a testable compound: \texttt{240} may qualify or classify the root-like \texttt{176}. The same logic applies to \texttt{235-222} and \texttt{235-840-032}.
+
+This is a meaningful step toward language, because language identification will require reusable segments that behave predictably across compounds. We now have a small set of such segments, but they remain abstract until image context and minimal-pair constraints validate them.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/anchor\_dossier\_summary.csv}
+  \item \texttt{outputs/anchor\_dossiers.csv}
+  \item \texttt{outputs/anchor\_occurrence\_evidence.csv}
+  \item \texttt{outputs/anchor\_minimal\_evidence.csv}
+  \item \texttt{outputs/anchor\_component\_roles.csv}
+  \item \texttt{outputs/anchor\_component\_edges.csv}
+  \item \texttt{outputs/anchor\_reading\_hypotheses.csv}
+  \item \texttt{outputs/anchor\_dossier\_model.tex}
+\end{itemize}
