@@ -1,0 +1,9 @@
+Metric,Value,Note
+Title/classifier markers used,17,threshold >= 0.78
+Name-like blocks used,52,"name score >= 0.9, formula risk <= 0.66"
+Productive slots used,20,slot score >= 0.91
+Texts templated,5531,Analyzable non-empty inscriptions.
+Texts with any anchor,3621,"Title marker, name block, or selected slot filler present."
+Template families,608,Distinct collapsed anchor templates.
+Review queue rows,1287,Artifact-level checks for concrete follow-up.
+Constraint rows,53,Explicit rules future readings must satisfy.

@@ -1,0 +1,141 @@
+\section{Proto-Decipherment Scaffold}
+
+\subsection{Purpose}
+
+The project can now move from distributional description toward controlled decipherment. The goal of this stage is not to pronounce signs phonetically. It is to establish a pre-phonetic scaffold: which signs behave like title/classifier markers, which frames behave like productive slots, which repeated blocks deserve artifact-level review, and which abstract inscription templates recur across the corpus.
+
+This is the practical bridge between statistics and decipherment. A future reading must satisfy these constraints before it can be treated as more than an inspired guess.
+
+\subsection{Method}
+
+The script \texttt{scripts/proto-decipherment-scaffold.py} consumes the onomastic-anchor outputs and the cleaned corpus. It selects:
+
+\begin{itemize}
+  \item title/classifier markers with title-marker score at least 0.78;
+  \item name-like blocks with name-anchor score at least 0.90 and formula-risk score at most 0.66;
+  \item productive slots with slot score at least 0.91.
+\end{itemize}
+
+It then templates every analyzable inscription in normalized reading order. Tokens can receive abstract roles such as \texttt{INITIAL\_TITLE\_OR\_CLASSIFIER}, \texttt{TERMINAL\_TITLE\_OR\_SUFFIX}, \texttt{SLOT\_FILLER}, or \texttt{NAME\_LIKE\_BLOCK}. These are deliberately functional labels, not translations.
+
+\subsection{Corpus-Wide Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Title/classifier markers used & 17 \\
+Name-like blocks used & 52 \\
+Productive slots used & 20 \\
+Texts templated & 5531 \\
+Texts with any anchor & 3621 \\
+Template families & 608 \\
+Artifact review rows & 1287 \\
+Explicit constraint rows & 53 \\
+\bottomrule
+\end{tabular}
+\caption{Proto-decipherment scaffold summary.}
+\label{tab:proto-decipherment-summary}
+\end{table}
+
+\subsection{Concrete Functional Leads}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llrrr}
+\toprule
+\textbf{Candidate} & \textbf{Functional lead} & \textbf{Count} & \textbf{Start pct.} & \textbf{End pct.} \\
+\midrule
+520 & Terminal title/suffix & 321 & 0.044 & 0.822 \\
+820 & Initial title/classifier & 244 & 0.775 & 0.164 \\
+151 & Terminal title/suffix & 94 & 0.075 & 0.883 \\
+817 & Initial title/classifier & 221 & 0.873 & 0.077 \\
+003 & Leading formula marker & 259 & 0.583 & 0.108 \\
+390 & Closing formula marker & 290 & 0.128 & 0.514 \\
+740 & Terminal title/suffix & 1928 & 0.093 & 0.700 \\
+861 & Initial title/classifier & 272 & 0.654 & 0.191 \\
+400 & Terminal title/suffix & 502 & 0.048 & 0.912 \\
+\bottomrule
+\end{tabular}
+\caption{High-confidence functional leads. The label is a role constraint, not a semantic translation.}
+\label{tab:functional-leads}
+\end{table}
+
+These signs give the first concrete grammar-like skeleton. Signs \texttt{820}, \texttt{817}, and \texttt{861} repeatedly appear at the beginning of inscriptions. Signs \texttt{520}, \texttt{151}, \texttt{400}, and \texttt{740} repeatedly appear at the end. Any proposed reading that treats these signs as ordinary interchangeable phonetic letters must explain this positional behavior.
+
+\subsection{Productive Slots}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrr}
+\toprule
+\textbf{Frame} & \textbf{Occurrences} & \textbf{Distinct fillers} \\
+\midrule
+\texttt{002 \_ 740} & 345 & 247 \\
+\texttt{060 \_ END} & 193 & 176 \\
+\texttt{START \_ 390} & 236 & 163 \\
+\texttt{002 \_ END} & 705 & 508 \\
+\texttt{741 \_ END} & 198 & 163 \\
+\texttt{060 \_ 740} & 101 & 85 \\
+\texttt{820 \_ END} & 170 & 147 \\
+\bottomrule
+\end{tabular}
+\caption{Productive slots with many different fillers in a stable immediate frame.}
+\label{tab:productive-slots}
+\end{table}
+
+The frame \texttt{002 \_ 740} is now one of the project’s most important decipherment targets. It is productive enough that the filler is unlikely to be random ornament. If the script records names, offices, places, commodities, or grammatical phrases, this frame is a prime hunting ground.
+
+\subsection{First Abstract Template Families}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.58\textwidth}rr}
+\toprule
+\textbf{Template} & \textbf{Count} & \textbf{Sites} \\
+\midrule
+\texttt{SIGN SIGN} & 827 & 29 \\
+\texttt{SIGN} & 773 & 31 \\
+\texttt{SIGN TERMINAL\_TITLE\_OR\_SUFFIX} & 345 & 12 \\
+\texttt{SIGN SIGN TERMINAL\_TITLE\_OR\_SUFFIX} & 266 & 20 \\
+\texttt{TERMINAL\_TITLE\_OR\_SUFFIX} & 164 & 14 \\
+\texttt{NAME\_LIKE\_BLOCK[3] TERMINAL\_TITLE\_OR\_SUFFIX} & 58 & 3 \\
+\texttt{LEADING\_FORMULA\_MARKER TERMINAL\_TITLE\_OR\_SUFFIX} & 57 & 7 \\
+\bottomrule
+\end{tabular}
+\caption{Top abstract template families after collapsing selected anchor blocks.}
+\label{tab:abstract-template-families}
+\end{table}
+
+The important point is not that the most common templates are already deciphered. The important point is that the corpus can now be sorted into recurrent functional shapes. This lets us test readings across template families rather than one inscription at a time.
+
+\subsection{Concrete Constraints for Future Readings}
+
+The file \texttt{outputs/proto\_decipherment\_constraints.csv} records explicit rules that future decipherment attempts must satisfy. Examples:
+
+\begin{itemize}
+  \item A reading of \texttt{520} must explain why it is terminal in 82.2 percent of occurrences.
+  \item A reading of \texttt{820} must explain why it is initial in 77.5 percent of occurrences.
+  \item A reading of \texttt{740} must explain why it is extremely common and terminal-heavy.
+  \item A reading of \texttt{002 \_ 740} must explain why the frame has 345 occurrences but 247 distinct fillers.
+  \item A reading of a repeated block such as \texttt{820-060} must survive every occurrence in the review queue, not merely one attractive artifact.
+\end{itemize}
+
+\subsection{Interpretation}
+
+This is the first stage where the project can responsibly talk about a proto-decipherment. The current result suggests a formulaic system with identifiable initial markers, terminal markers, and productive internal slots. That is compatible with owner names, titles, offices, places, commodities, lineage labels, grammatical endings, or some mixture of these. It is not yet a phonetic decipherment.
+
+The next hard push should pair this scaffold with images from the CISI/Marshall corpus. If a productive slot repeatedly occurs on seals with similar iconography or artifact function, we can begin testing whether the slot encodes owner, authority, commodity, place, or title. This is also where external onomastic evidence from Mesopotamian references to Meluhha should eventually be brought in, but only as a test set, not as a source of free guesses.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/proto\_decipherment\_text\_templates.csv}
+  \item \texttt{outputs/proto\_decipherment\_template\_families.csv}
+  \item \texttt{outputs/proto\_decipherment\_anchor\_review\_queue.csv}
+  \item \texttt{outputs/proto\_decipherment\_constraints.csv}
+  \item \texttt{outputs/proto\_decipherment\_summary.csv}
+  \item \texttt{outputs/proto\_decipherment\_scaffold.tex}
+\end{itemize}
