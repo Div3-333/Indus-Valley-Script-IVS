@@ -1,0 +1,157 @@
+AnchorComponent,NeighborComponent,ContrastClass,EvidenceRows,MaxCombinedCount,MaxScore,Frames,Anchors,EvidenceScopes,DominantGate
+240,,prefix/title/classifier test,15,32,0.888,002|740:6; 002|<END>:3; <START>|390:3; 235|<END>:3,240-482:5; 240-740-090:5; 240-176:5,ComponentNeighbor:13; ExactAnchorNeighbor:2,Morphology probe before phonetics
+176,048,entity-stem contrast,4,20,0.862,002|740:2; 002|<END>:2,176:2; 240-176:2,ComponentNeighbor:3; ExactAnchorNeighbor:1,High-priority stem semantics before phonetics
+740,520,terminal/suffix contrast,3,23,0.856,233|<END>:1; 031|<END>:1; 235|<END>:1,240-740-090:3,ComponentNeighbor:3,Suffix/numeral/allograph probe before phonetics
+240,235,classifier/title contrast,6,18,0.842,<START>|233:3; <START>|520:3,240-482:2; 240-740-090:2; 240-176:2,ComponentNeighbor:6,Morphology probe before phonetics
+032,235,role-boundary control,6,17,0.837,<START>|240:3; 002|<END>:3,032:2; 235-840-032:2; 032-220:2,ComponentNeighbor:4; ExactAnchorNeighbor:2,Role-boundary control before phonetics
+032,740,role-boundary control,6,17,0.837,031|<END>:3; 002|<END>:3,032:2; 235-840-032:2; 032-220:2,ComponentNeighbor:4; ExactAnchorNeighbor:2,Role-boundary control before phonetics
+032,820,role-boundary control,3,17,0.837,<START>|001:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+090,820,classifier/title contrast,1,17,0.826,<START>|001:1,240-740-090:1,ComponentNeighbor:1,Morphology probe before phonetics
+176,061,entity-stem contrast,4,17,0.823,002|740:2; 002|<END>:2,176:2; 240-176:2,ComponentNeighbor:3; ExactAnchorNeighbor:1,Structural neighbor only
+482,904,entity-stem contrast,2,11,0.815,002|740:1; 002|<END>:1,240-482:2,ExactAnchorNeighbor:1; ComponentNeighbor:1,Phonetic probe after image/context validation
+140,820,classifier/title contrast,1,18,0.809,<START>|001:1,140:1,ExactAnchorNeighbor:1,Morphology probe before phonetics
+176,482,entity-stem contrast,4,10,0.808,002|740:2; 002|<END>:2,240-176:2; 176:2,ComponentNeighbor:3; ExactAnchorNeighbor:1,Structural neighbor only
+590,003,classifier/title contrast,1,23,0.807,<START>|390:1,590-390:1,ComponentNeighbor:1,Morphology probe before phonetics
+590,520,classifier/title contrast,1,22,0.807,233|<END>:1,590-390:1,ComponentNeighbor:1,Morphology probe before phonetics
+240,233,classifier/title contrast,3,15,0.803,<START>|520:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Morphology probe before phonetics
+032,590,role-boundary control,3,16,0.799,<START>|390:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+032,798,classifier/title contrast,3,14,0.797,<START>|240:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Morphology probe before phonetics
+032,,prefix/title/classifier test,6,16,0.796,<START>|390:3; 002|<END>:3,032:2; 235-840-032:2; 032-220:2,ComponentNeighbor:5; ExactAnchorNeighbor:1,Morphology probe before phonetics
+482,,suffix/terminal/numeral-or-allograph test,1,10,0.795,002|740:1,240-482:1,ExactAnchorNeighbor:1,Suffix/numeral/allograph probe before phonetics
+482,176,entity-stem contrast,2,10,0.789,002|740:1; 002|<END>:1,240-482:2,ExactAnchorNeighbor:1; ComponentNeighbor:1,Phonetic probe after image/context validation
+482,773,entity-stem contrast,2,10,0.789,002|740:1; 002|<END>:1,240-482:2,ExactAnchorNeighbor:1; ComponentNeighbor:1,Phonetic probe after image/context validation
+032,520,role-boundary control,3,13,0.785,031|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+240,220,classifier/title contrast,9,32,0.781,002|<END>:6; <START>|520:3,240-482:3; 240-740-090:3; 240-176:3,ComponentNeighbor:9,Morphology probe before phonetics
+740,002,terminal/suffix contrast,2,29,0.781,861|<END>:1; 817|<END>:1,240-740-090:2,ComponentNeighbor:2,Suffix/numeral/allograph probe before phonetics
+240,803,classifier/title contrast,3,15,0.778,<START>|233:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Morphology probe before phonetics
+240,806,classifier/title contrast,3,15,0.778,<START>|233:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Morphology probe before phonetics
+740,032,role-boundary control,2,17,0.777,031|<END>:1; 002|<END>:1,240-740-090:2,ComponentNeighbor:2,Role-boundary control before phonetics
+032,002,terminal/suffix contrast,3,15,0.775,820|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Suffix/numeral/allograph probe before phonetics
+820,861,classifier/title contrast,1,20,0.766,<START>|240:1,820-060:1,ComponentNeighbor:1,Morphology probe before phonetics
+390,,suffix/terminal/numeral-or-allograph test,1,16,0.765,002|<END>:1,590-390:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+240,031,classifier/title contrast,3,12,0.764,<START>|520:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Morphology probe before phonetics
+032,156,role-boundary control,3,19,0.763,031|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+220,240,classifier/title contrast,3,32,0.762,002|<END>:2; <START>|520:1,032-220:3,ComponentNeighbor:3,Morphology probe before phonetics
+032,003,role-boundary control,3,11,0.759,<START>|390:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+140,590,classifier/title contrast,1,16,0.758,<START>|390:1,140:1,ExactAnchorNeighbor:1,Morphology probe before phonetics
+176,384,entity-stem contrast,4,12,0.758,002|740:2; 233|<END>:2,176:2; 240-176:2,ComponentNeighbor:3; ExactAnchorNeighbor:1,High-priority stem semantics before phonetics
+090,,suffix/terminal/numeral-or-allograph test,1,11,0.758,741|<END>:1,240-740-090:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+740,156,terminal/suffix contrast,1,20,0.756,031|<END>:1,240-740-090:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+235,031,classifier/title contrast,4,18,0.752,<START>|240:2; <START>|520:2,235-222:2; 235-840-032:2,ComponentNeighbor:4,Morphology probe before phonetics
+176,222,entity-stem contrast,4,12,0.746,002|740:2; 233|<END>:2,176:2; 240-176:2,ComponentNeighbor:3; ExactAnchorNeighbor:1,Structural neighbor only
+176,519,entity-stem contrast,2,12,0.746,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,High-priority stem semantics before phonetics
+032,031,role-boundary control,3,10,0.746,031|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+176,101,entity-stem contrast,2,11,0.745,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,High-priority stem semantics before phonetics
+390,590,classifier/title contrast,1,17,0.743,<START>|390:1,590-390:1,ComponentNeighbor:1,Morphology probe before phonetics
+590,140,classifier/title contrast,1,16,0.743,<START>|390:1,590-390:1,ComponentNeighbor:1,Morphology probe before phonetics
+740,031,terminal/suffix contrast,1,11,0.739,031|<END>:1,240-740-090:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+032,001,terminal/suffix contrast,3,10,0.736,031|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Suffix/numeral/allograph probe before phonetics
+176,016,entity-stem contrast,2,11,0.733,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,High-priority stem semantics before phonetics
+176,335,entity-stem contrast,2,11,0.733,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,High-priority stem semantics before phonetics
+176,540,entity-stem contrast,2,11,0.733,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,High-priority stem semantics before phonetics
+176,772,entity-stem contrast,2,11,0.733,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,High-priority stem semantics before phonetics
+176,904,entity-stem contrast,2,11,0.733,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,High-priority stem semantics before phonetics
+235,798,classifier/title contrast,2,27,0.728,<START>|240:2,235-222:1; 235-840-032:1,ComponentNeighbor:2,Morphology probe before phonetics
+820,140,classifier/title contrast,1,18,0.728,<START>|001:1,820-060:1,ComponentNeighbor:1,Morphology probe before phonetics
+222,176,entity-stem contrast,2,12,0.728,233|<END>:1; 002|740:1,235-222:2,ComponentNeighbor:2,High-priority stem semantics before phonetics
+235,240,classifier/title contrast,4,18,0.727,<START>|233:2; <START>|520:2,235-222:2; 235-840-032:2,ComponentNeighbor:4,Morphology probe before phonetics
+235,803,classifier/title contrast,4,18,0.727,<START>|240:2; <START>|233:2,235-222:2; 235-840-032:2,ComponentNeighbor:4,Morphology probe before phonetics
+820,031,classifier/title contrast,1,17,0.727,<START>|001:1,820-060:1,ComponentNeighbor:1,Morphology probe before phonetics
+176,,prefix/title/classifier test,4,11,0.727,031|<END>:2; 233|<END>:2,176:2; 240-176:2,ComponentNeighbor:4,Morphology probe before phonetics
+176,240,prefix/title/classifier test,1,11,0.724,002|740:1,176:1,ExactAnchorNeighbor:1,Morphology probe before phonetics
+220,235,classifier/title contrast,3,17,0.723,<START>|240:1; <START>|520:1; 002|<END>:1,032-220:3,ComponentNeighbor:3,Morphology probe before phonetics
+235,,prefix/title/classifier test,2,16,0.721,<START>|390:2,235-222:1; 235-840-032:1,ComponentNeighbor:2,Morphology probe before phonetics
+240,231,role-boundary control,3,32,0.719,002|<END>:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Role-boundary control before phonetics
+140,003,classifier/title contrast,1,11,0.719,<START>|390:1,140:1,ExactAnchorNeighbor:1,Morphology probe before phonetics
+222,048,entity-stem contrast,2,14,0.717,002|<END>:1; 002|740:1,235-222:2,ComponentNeighbor:2,High-priority stem semantics before phonetics
+235,,suffix/terminal/numeral-or-allograph test,6,22,0.713,861|<END>:2; <START>|233:2; <START>|240:2,235-222:3; 235-840-032:3,ComponentNeighbor:6,Suffix/numeral/allograph probe before phonetics
+032,136,terminal/suffix contrast,3,12,0.711,031|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Suffix/numeral/allograph probe before phonetics
+590,032,role-boundary control,1,16,0.706,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+176,240,role-boundary control,2,11,0.705,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,Role-boundary control before phonetics
+390,003,classifier/title contrast,1,12,0.703,<START>|390:1,590-390:1,ComponentNeighbor:1,Morphology probe before phonetics
+032,700,role-boundary control,1,13,0.698,031|<END>:1,032:1,ExactAnchorNeighbor:1,Role-boundary control before phonetics
+740,,suffix/terminal/numeral-or-allograph test,1,12,0.696,820|<END>:1,240-740-090:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+032,240,role-boundary control,3,8,0.695,002|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+235,032,role-boundary control,2,17,0.690,<START>|240:1; 002|<END>:1,235-222:2,ComponentNeighbor:2,Role-boundary control before phonetics
+176,798,slot-modifier or allograph test,2,11,0.690,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,Structural neighbor only
+176,100,suffix/terminal/numeral-or-allograph test,1,11,0.689,002|740:1,176:1,ExactAnchorNeighbor:1,Suffix/numeral/allograph probe before phonetics
+740,001,terminal/suffix contrast,1,11,0.689,031|<END>:1,240-740-090:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+235,806,classifier/title contrast,2,15,0.688,<START>|233:2,235-222:1; 235-840-032:1,ComponentNeighbor:2,Morphology probe before phonetics
+820,817,classifier/title contrast,1,14,0.688,<START>|240:1,820-060:1,ComponentNeighbor:1,Morphology probe before phonetics
+240,001,classifier/title contrast,3,10,0.688,<START>|520:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Morphology probe before phonetics
+220,233,classifier/title contrast,1,14,0.684,<START>|520:1,032-220:1,ComponentNeighbor:1,Morphology probe before phonetics
+032,,suffix/terminal/numeral-or-allograph test,3,12,0.684,820|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:3,Suffix/numeral/allograph probe before phonetics
+590,705,classifier/title contrast,1,16,0.680,<START>|390:1,590-390:1,ComponentNeighbor:1,Morphology probe before phonetics
+820,032,role-boundary control,1,17,0.678,<START>|001:1,820-060:1,ComponentNeighbor:1,Role-boundary control before phonetics
+235,002,classifier/title contrast,2,18,0.677,<START>|240:2,235-222:1; 235-840-032:1,ComponentNeighbor:2,Morphology probe before phonetics
+235,233,classifier/title contrast,2,12,0.674,<START>|520:2,235-222:1; 235-840-032:1,ComponentNeighbor:2,Morphology probe before phonetics
+032,151,role-boundary control,3,11,0.672,031|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+740,136,terminal/suffix contrast,1,13,0.665,031|<END>:1,240-740-090:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+240,176,role-boundary control,2,11,0.665,002|740:2,240-482:1; 240-740-090:1,ComponentNeighbor:2,Role-boundary control before phonetics
+740,151,terminal/suffix contrast,1,12,0.664,031|<END>:1,240-740-090:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+240,032,role-boundary control,3,8,0.664,002|<END>:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Role-boundary control before phonetics
+032,236,role-boundary control,1,10,0.659,002|<END>:1,032:1,ExactAnchorNeighbor:1,Role-boundary control before phonetics
+590,016,role-boundary control,1,20,0.658,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+590,125,role-boundary control,1,17,0.657,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+235,220,classifier/title contrast,6,17,0.652,<START>|240:2; <START>|520:2; 002|<END>:2,235-222:3; 235-840-032:3,ComponentNeighbor:6,Morphology probe before phonetics
+820,920,classifier/title contrast,1,17,0.652,<START>|001:1,820-060:1,ComponentNeighbor:1,Morphology probe before phonetics
+740,700,role-boundary control,1,14,0.651,031|<END>:1,240-740-090:1,ComponentNeighbor:1,Role-boundary control before phonetics
+240,400,classifier/title contrast,3,10,0.651,<START>|520:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Morphology probe before phonetics
+176,717,entity-stem contrast,2,9,0.647,233|<END>:2,176:1; 240-176:1,ComponentNeighbor:2,Structural neighbor only
+032,592,role-boundary control,1,10,0.646,031|<END>:1,032:1,ExactAnchorNeighbor:1,Role-boundary control before phonetics
+032,220,role-boundary control,3,9,0.646,002|<END>:3,032:1; 235-840-032:1; 032-220:1,ComponentNeighbor:2; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+220,031,classifier/title contrast,1,11,0.645,<START>|520:1,032-220:1,ComponentNeighbor:1,Morphology probe before phonetics
+032,700,entity-stem contrast,2,13,0.643,031|<END>:2,235-840-032:1; 032-220:1,ComponentNeighbor:2,Structural neighbor only
+240,048,role-boundary control,3,13,0.641,002|740:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Role-boundary control before phonetics
+590,347,role-boundary control,1,11,0.641,<START>|741:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+176,100,slot-modifier or allograph test,2,11,0.640,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,Structural neighbor only
+176,760,slot-modifier or allograph test,2,11,0.640,002|740:2,176:1; 240-176:1,ExactAnchorNeighbor:1; ComponentNeighbor:1,Structural neighbor only
+222,061,entity-stem contrast,2,11,0.640,002|<END>:1; 002|740:1,235-222:2,ComponentNeighbor:2,Structural neighbor only
+222,384,entity-stem contrast,1,9,0.639,233|<END>:1,235-222:1,ComponentNeighbor:1,Structural neighbor only
+740,368,role-boundary control,1,13,0.638,861|<END>:1,240-740-090:1,ComponentNeighbor:1,Role-boundary control before phonetics
+176,415,entity-stem contrast,2,9,0.635,002|740:2,176:1; 240-176:1,ComponentNeighbor:2,Structural neighbor only
+220,798,classifier/title contrast,1,14,0.634,<START>|240:1,032-220:1,ComponentNeighbor:1,Morphology probe before phonetics
+590,004,role-boundary control,1,18,0.632,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+390,407,role-boundary control,1,14,0.630,002|<END>:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+820,692,role-boundary control,2,19,0.629,<START>|001:1; <START>|240:1,820-060:2,ComponentNeighbor:1; ExactAnchorNeighbor:1,Role-boundary control before phonetics
+820,090,classifier/title contrast,1,17,0.627,<START>|001:1,820-060:1,ComponentNeighbor:1,Morphology probe before phonetics
+740,220,terminal/suffix contrast,1,9,0.625,002|<END>:1,240-740-090:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+176,803,terminal/suffix contrast,2,10,0.622,233|<END>:2,176:1; 240-176:1,ComponentNeighbor:2,Suffix/numeral/allograph probe before phonetics
+590,790,role-boundary control,1,17,0.619,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+590,095,role-boundary control,1,16,0.619,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+820,480,role-boundary control,1,19,0.617,<START>|001:1,820-060:1,ComponentNeighbor:1,Role-boundary control before phonetics
+220,740,terminal/suffix contrast,1,9,0.609,002|<END>:1,032-220:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+590,005,role-boundary control,1,16,0.606,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+590,017,role-boundary control,1,16,0.606,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+590,034,role-boundary control,1,16,0.606,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+590,370,role-boundary control,1,16,0.606,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+590,371,role-boundary control,1,16,0.606,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+590,844,role-boundary control,1,16,0.606,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+032,236,entity-stem contrast,2,10,0.604,002|<END>:2,235-840-032:1; 032-220:1,ComponentNeighbor:2,Structural neighbor only
+240,175,role-boundary control,3,11,0.602,<START>|520:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Role-boundary control before phonetics
+240,061,role-boundary control,3,10,0.602,002|740:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Role-boundary control before phonetics
+240,095,role-boundary control,3,10,0.602,<START>|520:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Role-boundary control before phonetics
+240,236,role-boundary control,3,10,0.602,002|<END>:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Role-boundary control before phonetics
+740,592,role-boundary control,1,11,0.600,031|<END>:1,240-740-090:1,ComponentNeighbor:1,Role-boundary control before phonetics
+740,236,role-boundary control,1,10,0.599,002|<END>:1,240-740-090:1,ComponentNeighbor:1,Role-boundary control before phonetics
+176,798,terminal/suffix contrast,2,10,0.597,233|<END>:2,176:1; 240-176:1,ComponentNeighbor:2,Suffix/numeral/allograph probe before phonetics
+220,520,terminal/suffix contrast,1,8,0.596,002|<END>:1,032-220:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+032,592,entity-stem contrast,2,10,0.592,031|<END>:2,235-840-032:1; 032-220:1,ComponentNeighbor:2,Structural neighbor only
+240,460,role-boundary control,3,10,0.589,<START>|520:3,240-482:1; 240-740-090:1; 240-176:1,ComponentNeighbor:3,Role-boundary control before phonetics
+176,100,terminal/suffix contrast,2,9,0.584,233|<END>:2,176:1; 240-176:1,ComponentNeighbor:2,Suffix/numeral/allograph probe before phonetics
+220,806,classifier/title contrast,1,8,0.581,002|<END>:1,032-220:1,ComponentNeighbor:1,Morphology probe before phonetics
+220,001,classifier/title contrast,1,9,0.569,<START>|520:1,032-220:1,ComponentNeighbor:1,Morphology probe before phonetics
+390,405,role-boundary control,1,12,0.567,002|<END>:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+060,001,classifier/title contrast,1,10,0.536,<START>|240:1,820-060:1,ComponentNeighbor:1,Morphology probe before phonetics
+220,400,terminal/suffix contrast,1,9,0.522,<START>|520:1,032-220:1,ComponentNeighbor:1,Suffix/numeral/allograph probe before phonetics
+390,016,role-boundary control,1,9,0.516,<START>|390:1,590-390:1,ComponentNeighbor:1,Role-boundary control before phonetics
+235,236,role-boundary control,2,10,0.512,002|<END>:2,235-222:1; 235-840-032:1,ComponentNeighbor:2,Role-boundary control before phonetics
+220,236,role-boundary control,1,11,0.508,002|<END>:1,032-220:1,ComponentNeighbor:1,Role-boundary control before phonetics
+220,877,role-boundary control,1,11,0.508,032|740:1,032-220:1,ComponentNeighbor:1,Role-boundary control before phonetics
+220,175,role-boundary control,1,10,0.483,<START>|520:1,032-220:1,ComponentNeighbor:1,Role-boundary control before phonetics
+220,231,role-boundary control,1,10,0.483,<START>|520:1,032-220:1,ComponentNeighbor:1,Role-boundary control before phonetics
+220,095,role-boundary control,1,9,0.483,<START>|520:1,032-220:1,ComponentNeighbor:1,Role-boundary control before phonetics
+220,760,slot-modifier or allograph test,1,9,0.480,032|740:1,032-220:1,ComponentNeighbor:1,Structural neighbor only
+220,460,role-boundary control,1,9,0.470,<START>|520:1,032-220:1,ComponentNeighbor:1,Role-boundary control before phonetics
+220,904,role-boundary control,1,9,0.470,032|740:1,032-220:1,ComponentNeighbor:1,Role-boundary control before phonetics
+220,832,role-boundary control,1,8,0.470,002|<END>:1,032-220:1,ComponentNeighbor:1,Role-boundary control before phonetics

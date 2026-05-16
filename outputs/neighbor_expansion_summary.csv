@@ -1,0 +1,10 @@
+Metric,Value,Note
+Anchor neighborhoods expanded,11,Anchors with at least one neighbor test.
+Neighbor tests,333,Exact-anchor plus component-level tests.
+Exact anchor-neighbor tests,49,Whole anchor unit participates directly.
+Component neighbor tests,284,Reusable anchor component participates in a contrast.
+Component contrast groups,156,Aggregated component-to-component tests.
+Probe queue items,30,Highest-priority next tests.
+Top contrast class,role-boundary control,role-boundary control:108; classifier/title contrast:90; entity-stem contrast:57
+Top gate,Morphology probe before phonetics,Morphology probe before phonetics:118; Role-boundary control before phonetics:108; Suffix/numeral/allograph probe before phonetics:43
+Best neighbor probe,240-482 :: 520,prefix/title/classifier test

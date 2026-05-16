@@ -1,0 +1,71 @@
+\section{Minimal-Pair Neighbor Expansion}
+
+\subsection{Purpose}
+
+This generated note expands the constrained anchor skeletons into their nearest same-frame minimal-pair neighborhoods. Its purpose is to find the contrasts most likely to separate titles, stems, suffixes, numerals, allographs, and eventual phonetic values.
+
+\subsection{Summary}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.58\textwidth}r}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Anchor neighborhoods expanded & 11 \\
+Neighbor tests & 333 \\
+Exact anchor-neighbor tests & 49 \\
+Component neighbor tests & 284 \\
+Component contrast groups & 156 \\
+Probe queue items & 30 \\
+Top contrast class & role-boundary control \\
+Top gate & Morphology probe before phonetics \\
+Best neighbor probe & 240-482 :: 520 \\
+\bottomrule
+\end{tabular}
+\caption{Minimal-pair neighbor expansion summary.}
+\end{table}
+
+\subsection{Top Anchor Neighborhoods}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lrp{0.42\textwidth}r}
+\toprule
+\textbf{Anchor} & \textbf{Tests} & \textbf{Top contrast} & \textbf{Score} \\
+\midrule
+240-482 & 32 & prefix/title/classifier test & 0.888 \\
+240-740-090 & 45 & prefix/title/classifier test & 0.885 \\
+176 & 30 & entity-stem contrast & 0.862 \\
+032 & 23 & role-boundary control & 0.837 \\
+240-176 & 52 & prefix/title/classifier test & 0.831 \\
+140 & 3 & classifier/title contrast & 0.809 \\
+590-390 & 23 & classifier/title contrast & 0.807 \\
+820-060 & 11 & classifier/title contrast & 0.766 \\
+\bottomrule
+\end{tabular}
+\caption{Anchor neighborhoods with highest-scoring neighbor tests.}
+\end{table}
+
+\subsection{Probe Queue}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{p{0.26\textwidth}lp{0.34\textwidth}r}
+\toprule
+\textbf{Probe} & \textbf{Frame} & \textbf{Class} & \textbf{Score} \\
+\midrule
+240-482 :: 520 & 002|<END> & prefix/title/classifier test & 0.888 \\
+240-740-090 :: 520 & 002|<END> & prefix/title/classifier test & 0.885 \\
+176 :: 048 & 002|740 & entity-stem contrast & 0.862 \\
+240-740-090 :: 520 & 233|<END> & terminal/suffix contrast & 0.856 \\
+240-482 :: 235 & <START>|233 & classifier/title contrast & 0.842 \\
+240-740-090 :: 235 & <START>|233 & classifier/title contrast & 0.839 \\
+240-176 :: 520 & 002|<END> & prefix/title/classifier test & 0.831 \\
+240-740-090 :: 820 & <START>|001 & classifier/title contrast & 0.826 \\
+\bottomrule
+\end{tabular}
+\caption{Top next tests. These probes remain pre-phonetic until image and context checks pass.}
+\end{table}

@@ -1,0 +1,92 @@
+\section{Minimal-Pair Neighbor Expansion}
+
+\subsection{Purpose}
+
+The constraint solver gave us a small set of accepted reading skeletons. This section expands those anchors into their nearest same-frame neighbors. The aim is to identify which contrasts are likely to be title/classifier differences, entity-stem differences, terminal/suffix differences, numeral/allograph differences, or merely role-boundary controls.
+
+This is the fastest safe route toward phonetics because it asks where a sound value could eventually be forced by contrast. It also prevents false progress: if two signs do not yet occupy the same functional role, the model blocks them from being used as phonetic evidence.
+
+\subsection{Method}
+
+The script \texttt{scripts/minimal-pair-neighbor-expansion.py} combines:
+
+\begin{itemize}
+  \item constrained anchor skeletons;
+  \item morpheme slot assignments;
+  \item full same-frame minimal-pair tests;
+  \item structural occurrence profiles for neighboring fillers;
+  \item abstract sign roles from the phonetic variable map.
+\end{itemize}
+
+It separates exact anchor-neighbor tests from component-neighbor tests. Exact tests involve the whole anchor unit, such as \texttt{240-482} versus \texttt{240-176}. Component tests involve a reusable component inside the anchor, such as \texttt{240} alternating with another initial component.
+
+\subsection{Corpus-Wide Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Anchor neighborhoods expanded & 11 \\
+Neighbor tests & 333 \\
+Exact anchor-neighbor tests & 49 \\
+Component neighbor tests & 284 \\
+Component contrast groups & 156 \\
+Probe queue items & 30 \\
+\bottomrule
+\end{tabular}
+\caption{Minimal-pair neighbor expansion summary.}
+\label{tab:minimal-pair-neighbor-summary}
+\end{table}
+
+The largest class is not phonetic evidence but role-boundary control. This is important: the model found many comparisons that look tempting but are not safe for phonetic inference because the signs may be serving different roles.
+
+\subsection{Best Current Morphology Probes}
+
+The strongest morphology probes are:
+
+\begin{itemize}
+  \item \texttt{240} deletion/addition in \texttt{002|<END>} contexts, especially through the neighborhoods of \texttt{240-482}, \texttt{240-176}, and \texttt{240-740-090}. This keeps \texttt{240} as the leading qualifier/title/classifier candidate.
+  \item \texttt{240} versus \texttt{235} in initial-slot contexts such as \texttt{<START>|233}. This tests whether the two are competing title/classifier/formula openers.
+  \item \texttt{740} versus \texttt{520} in terminal frames such as \texttt{233|<END>}. This tests a terminal/suffix or numeral/allograph contrast.
+\end{itemize}
+
+\subsection{Best Current Stem and Phonetic Probes}
+
+The cleanest exact stem probes are:
+
+\begin{itemize}
+  \item \texttt{176} versus \texttt{048} in \texttt{002|740}, combined count 20.
+  \item \texttt{176} versus \texttt{061} in \texttt{002|740}, combined count 17.
+  \item \texttt{240-482} versus \texttt{240-904} in \texttt{002|740}, combined count 11.
+  \item \texttt{240-176} versus \texttt{240-482} in \texttt{002|740}, combined count 10.
+  \item \texttt{240-482} versus \texttt{240-773} in \texttt{002|740}, combined count 10.
+\end{itemize}
+
+These are still not readings. They are phonetic-probe candidates. Before any sound value is proposed, each pair must survive image review and context comparison: the changed component must explain the difference without breaking the frame.
+
+\subsection{Important Negative Result}
+
+\texttt{032} produces many high-count same-frame contrasts, but the solver now treats most of them as role-boundary controls. This is a useful restraint. \texttt{032} appears in terminal, initial, and compound contexts, so it cannot yet be used as direct phonetic evidence. Its first job is to help us understand slot function, not sound.
+
+\subsection{Interpretation}
+
+We now have a concrete bridge from structural decipherment toward phonetic decipherment:
+
+\begin{center}
+\texttt{ANCHOR SKELETON -> MINIMAL NEIGHBORHOOD -> CONTROLLED CONTRAST -> PHONETIC PROBE}
+\end{center}
+
+The best immediate route is to image-check the \texttt{176} stem neighborhood and the \texttt{240 + STEM} neighborhood. If those contexts separate cleanly, the project can begin testing whether \texttt{176}, \texttt{048}, \texttt{061}, \texttt{482}, \texttt{904}, and \texttt{773} behave like names, titles, places, institutions, or other entity stems.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/neighbor\_expansion\_summary.csv}
+  \item \texttt{outputs/expanded\_anchor\_neighborhoods.csv}
+  \item \texttt{outputs/neighbor\_reading\_tests.csv}
+  \item \texttt{outputs/component\_contrast\_tests.csv}
+  \item \texttt{outputs/phonetic\_probe\_queue.csv}
+  \item \texttt{outputs/minimal\_pair\_neighbor\_expansion.tex}
+\end{itemize}
