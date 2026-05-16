@@ -1,0 +1,150 @@
+\section{Structural Reconstruction Model}
+
+\subsection{Purpose}
+
+The project can now begin reconstructing sentence-like structure. Because most Indus inscriptions are short, the safer term is formula reconstruction rather than full sentence translation. The goal is to assign functional roles to signs and slots, propose competing semantic frames, and identify the rows where phonetic testing can begin.
+
+This section remains pre-phonetic. A structural reconstruction such as \texttt{INITIAL CLASSIFIER + 002 X 740 + TERMINAL} is not a translation. It is a constrained parse that future semantic and phonetic hypotheses must satisfy.
+
+\subsection{Method}
+
+The script \texttt{scripts/structural-reconstruction-model.py} combines the previous models:
+
+\begin{itemize}
+  \item title/classifier candidates from the onomastic model;
+  \item productive slots and fillers from the slot-paradigm model;
+  \item name-like n-grams from the onomastic anchor model;
+  \item high-reuse initial and final signs from the paradigm model;
+  \item cross-frame filler reuse and minimal-pair evidence for phonetic readiness.
+\end{itemize}
+
+For each analyzable inscription, the script emits a structural parse, a compressed structural template, a semantic frame, semantic alternatives, and a phonetic-readiness score. Productive slots are given priority over broader name-like blocks so that a long attractive n-gram cannot hide a more informative internal paradigm.
+
+\subsection{Corpus-Wide Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Texts reconstructed & 5531 \\
+Structural templates & 563 \\
+Semantic frame families & 8 \\
+Medium/high phonetic-readiness texts & 607 \\
+Functional sign proto-glosses & 32 \\
+Productive frames used & 20 \\
+Name-like blocks used & 52 \\
+Cross-frame filler leads & 41 \\
+\bottomrule
+\end{tabular}
+\caption{Structural reconstruction summary.}
+\label{tab:structural-reconstruction-summary}
+\end{table}
+
+\subsection{Semantic Frame Families}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Semantic frame} & \textbf{Count} \\
+\midrule
+LowEvidenceSequence & 2534 \\
+TerminalFormula & 1892 \\
+InitialClassifierFormula & 368 \\
+PrimeEntitySealFormula & 279 \\
+NameLikeTerminalFormula & 238 \\
+ClassifierSlotTerminalFormula & 156 \\
+PrimeEntityAdministrativeFormula & 61 \\
+ClassifierTerminalFormula & 3 \\
+\bottomrule
+\end{tabular}
+\caption{High-level semantic frame assignments. These are competing frame hypotheses, not translations.}
+\label{tab:semantic-frame-families}
+\end{table}
+
+The strongest semantic target is \texttt{PrimeEntitySealFormula}. These are mostly seal inscriptions containing the productive \texttt{002 X 740} frame. The current semantic alternatives for \texttt{X} are owner/name, office/title, lineage, place, commodity, or authority formula.
+
+\subsection{Functional Proto-Glosses}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lp{0.62\textwidth}}
+\toprule
+\textbf{Sign} & \textbf{Functional proto-gloss} \\
+\midrule
+740 & Terminal title/suffix; slot final modifier \\
+520 & Terminal title/suffix; slot final modifier \\
+400 & Terminal title/suffix; slot final modifier \\
+151 & Terminal title/suffix; slot final modifier \\
+820 & Initial title/classifier \\
+817 & Initial title/classifier \\
+861 & Initial title/classifier \\
+002 & Slot initial/final modifier; major slot boundary partner \\
+390 & Closing formula marker; slot final modifier \\
+235 & Leading formula marker; slot initial/final modifier \\
+240 & Slot initial modifier \\
+032 & Slot initial modifier \\
+\bottomrule
+\end{tabular}
+\caption{Functional proto-glosses now strong enough to guide reconstruction. No phonetic value is assigned.}
+\label{tab:functional-proto-glosses}
+\end{table}
+
+\subsection{Example Structural Reconstructions}
+
+The following high-confidence examples show inscription-level formula reconstruction.
+Bracketed material is the slot filler.
+
+\begin{itemize}
+  \item \textbf{L-41, Lothal} (\texttt{PrimeEntitySealFormula}):\\
+  {\footnotesize\texttt{START\_233[817-002]} + \texttt{002\_740[233]} + \texttt{233\_END[740-090]}}
+  \item \textbf{M-708, Mohenjo-daro} (\texttt{PrimeEntitySealFormula}):\\
+  {\footnotesize\texttt{START\_390[140]} + \texttt{390} + \texttt{002\_740[061]} + \texttt{740}}
+  \item \textbf{M-246, Mohenjo-daro} (\texttt{PrimeEntitySealFormula}):\\
+  {\footnotesize\texttt{START\_240[817-002]} + \texttt{002\_740[240-415-100]} + \texttt{740}}
+  \item \textbf{C-53, Chanhu-daro} (\texttt{PrimeEntitySealFormula}):\\
+  {\footnotesize\texttt{861} + \texttt{002\_740[235-222]} + \texttt{740} + \texttt{031\_END[032]}}
+  \item \textbf{K-16, Kalibangan} (\texttt{ClassifierSlotTerminalFormula}):\\
+  {\footnotesize\texttt{START\_240[820-060]} + \texttt{060\_END[240-740-090]}}
+\end{itemize}
+
+The important advance is that the model can now reconstruct inscriptions as linked formulae, not merely as sign strings. For example, \texttt{817-002-233-740-090} is not just five signs. It can be parsed as an initial frame, a prime \texttt{002 X 740} entity slot, and a terminal frame.
+
+\subsection{Phonetic Bootstrapping}
+
+The file \texttt{outputs/phonetic\_bootstrap\_candidates.csv} contains 120 prioritized rows for the next stage. A row becomes phonetic-ready when it combines several kinds of evidence:
+
+\begin{itemize}
+  \item complete or seal context;
+  \item productive slot membership;
+  \item cross-frame reused filler;
+  \item minimal-pair or one-edit alternation evidence;
+  \item clear structural parse.
+\end{itemize}
+
+The next phonetic move should not be a global assignment like ``sign 740 equals sound X''. It should be a controlled test: pick a reused filler, inspect all artifacts where it appears, compare its frames, and ask whether a proposed sound or morpheme predicts every occurrence. This is especially promising for fillers reused across \texttt{002\_740}, \texttt{060\_END}, \texttt{START\_240}, and related productive frames.
+
+\subsection{Interpretation}
+
+We can now say that the project has reached structural proto-decipherment. The inscriptions are not translated, but many can be parsed into functional formulae with semantic alternatives. The best current working model is:
+
+\begin{center}
+\texttt{CLASSIFIER/TITLE + SLOT INTRODUCER + ENTITY FILLER + TERMINAL/FINAL}
+\end{center}
+
+The semantic identity of the entity filler remains open: personal name, title, office, lineage, place, commodity, or administrative phrase. The fastest route forward is to connect these reconstructions to the seal images and iconography. If a structural frame correlates with a symbol, object type, or site-specific artifact class, then semantic reconstruction can begin in earnest; if the same filler holds across frames, phonetic testing becomes possible.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/structural\_reconstruction\_summary.csv}
+  \item \texttt{outputs/structural\_reconstructions.csv}
+  \item \texttt{outputs/structural\_reconstruction\_templates.csv}
+  \item \texttt{outputs/structural\_semantic\_frames.csv}
+  \item \texttt{outputs/phonetic\_bootstrap\_candidates.csv}
+  \item \texttt{outputs/sign\_proto\_glosses.csv}
+  \item \texttt{outputs/structural\_frame\_usage.csv}
+  \item \texttt{outputs/structural\_reconstruction\_model.tex}
+\end{itemize}

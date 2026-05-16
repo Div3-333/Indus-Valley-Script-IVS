@@ -1,0 +1,118 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\begin{document}
+\section*{Structural Reconstruction Model}
+This report reconstructs inscription-level formulae as structural parses, semantic frame hypotheses, and phonetic-readiness test beds. It stays pre-phonetic: all glosses are functional constraints.
+\subsection*{Summary}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Texts reconstructed & 5531 \\
+Structural templates & 563 \\
+Semantic frames & 8 \\
+Medium/high phonetic-readiness texts & 607 \\
+Sign proto-glosses & 32 \\
+Productive frames used & 20 \\
+Name-like blocks used & 52 \\
+Cross-frame filler leads & 41 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Semantic Frame Counts}
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+\textbf{Frame} & \textbf{Count} \\
+\midrule
+LowEvidenceSequence & 2534 \\
+TerminalFormula & 2015 \\
+InitialClassifierFormula & 368 \\
+PrimeEntitySealFormula & 279 \\
+ClassifierSlotTerminalFormula & 156 \\
+NameLikeTerminalFormula & 115 \\
+PrimeEntityAdministrativeFormula & 61 \\
+ClassifierTerminalFormula & 3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Top Structural Templates}
+\begin{center}
+\begin{tabular}{p{0.64\textwidth}r}
+\toprule
+\textbf{Template} & \textbf{Count} \\
+\midrule
+SIGN & 542 \\
+SIGN SIGN & 372 \\
+SIGN TERMINAL\_TITLE\_OR\_SUFFIX & 249 \\
+PRODUCTIVE\_SLOT SLOT\_INITIAL\_MODIFIER PRODUCTIVE\_SLOT & 240 \\
+PRODUCTIVE\_SLOT PRODUCTIVE\_SLOT & 230 \\
+TERMINAL\_TITLE\_OR\_SUFFIX & 164 \\
+SLOT\_FINAL\_MODIFIER SIGN & 158 \\
+SLOT\_FINAL\_MODIFIER & 133 \\
+SLOT\_INITIAL\_MODIFIER SIGN & 130 \\
+INITIAL\_TITLE\_OR\_CLASSIFIER SLOT\_FINAL\_MODIFIER PRODUCTIVE\_SLOT & 128 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Example Proto-Glosses}
+\begin{center}
+\begin{tabular}{lp{0.70\textwidth}}
+\toprule
+\textbf{Sign} & \textbf{Functional proto-gloss} \\
+\midrule
+001 & SLOT\_INITIAL\_MODIFIER \\
+002 & SLOT\_FINAL\_MODIFIER / SLOT\_INITIAL\_MODIFIER \\
+003 & LEADING\_FORMULA\_MARKER / SLOT\_INITIAL\_MODIFIER \\
+031 & LEADING\_FORMULA\_MARKER / SLOT\_INITIAL\_MODIFIER \\
+032 & SLOT\_INITIAL\_MODIFIER \\
+033 & SLOT\_FINAL\_MODIFIER \\
+060 & SLOT\_INITIAL\_MODIFIER \\
+090 & SLOT\_FINAL\_MODIFIER \\
+100 & SLOT\_FINAL\_MODIFIER \\
+140 & LEADING\_FORMULA\_MARKER \\
+151 & TERMINAL\_TITLE\_OR\_SUFFIX / SLOT\_FINAL\_MODIFIER \\
+156 & TERMINAL\_TITLE\_OR\_SUFFIX \\
+220 & SLOT\_FINAL\_MODIFIER / SLOT\_INITIAL\_MODIFIER \\
+233 & SLOT\_INITIAL\_MODIFIER \\
+235 & LEADING\_FORMULA\_MARKER / SLOT\_FINAL\_MODIFIER / SLOT\_INITIAL\_MODIFIER \\
+240 & SLOT\_INITIAL\_MODIFIER \\
+390 & CLOSING\_FORMULA\_MARKER / SLOT\_FINAL\_MODIFIER \\
+400 & TERMINAL\_TITLE\_OR\_SUFFIX / SLOT\_FINAL\_MODIFIER \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{High-Readiness Reconstruction Examples}
+\begin{center}
+\begin{tabular}{llllp{0.44\textwidth}}
+\toprule
+\textbf{Text} & \textbf{CISI} & \textbf{Site} & \textbf{Frame} & \textbf{Structural parse} \\
+\midrule
+2851.1 & M-355 & Mohenjo-daro & ClassifierSlotTerminalFormula & PRODUCTIVE\_SLOT($<$START$>$\_520)[140-919] | 520:TERMINAL\_TITLE\_OR\_SUFFIX | 360:SIGN | NAME\_LIKE\_BLOCK[861-002-235] | 231:SIGN | 705:SLOT\_INITIAL\_MODIFIER | 033:SLOT\_FINAL\_MODIFIER | 032:SLOT\_INITIAL\_MODIFIER | PRODUCTIVE\_SLOT(032\_740)[877] | 740:TERMINAL\_TITLE\_OR\_SUFFIX \\
+3485.1 & M-1114 & Mohenjo-daro & PrimeEntitySealFormula & PRODUCTIVE\_SLOT($<$START$>$\_741)[920-060] | 741:SLOT\_INITIAL\_MODIFIER | 002:SLOT\_FINAL\_MODIFIER | PRIME\_ENTITY\_SLOT(002\_740)[140] | 740:TERMINAL\_TITLE\_OR\_SUFFIX \\
+1189.1 & H-148 & Harappa & TerminalFormula & PRODUCTIVE\_SLOT($<$START$>$\_240)[235] | PRODUCTIVE\_SLOT(235\_$<$END$>$)[240-520] \\
+1430.1 & H-440 & Harappa & TerminalFormula & PRODUCTIVE\_SLOT($<$START$>$\_240)[031] | PRODUCTIVE\_SLOT(031\_$<$END$>$)[240-740-090] \\
+2013.1 & L-41 & Lothal & PrimeEntitySealFormula & PRODUCTIVE\_SLOT($<$START$>$\_233)[817-002] | PRIME\_ENTITY\_SLOT(002\_740)[233] | PRODUCTIVE\_SLOT(233\_$<$END$>$)[740-090] \\
+3122.1 & M-686 & Mohenjo-daro & TerminalFormula & PRODUCTIVE\_SLOT($<$START$>$\_520)[806-235] | PRODUCTIVE\_SLOT(235\_$<$END$>$)[520] \\
+3134.1 & M-708 & Mohenjo-daro & PrimeEntitySealFormula & PRODUCTIVE\_SLOT($<$START$>$\_390)[140] | 390:CLOSING\_FORMULA\_MARKER | 002:SLOT\_FINAL\_MODIFIER | PRIME\_ENTITY\_SLOT(002\_740)[061] | 740:TERMINAL\_TITLE\_OR\_SUFFIX \\
+4232.1 & - & Dholavira & TerminalFormula & PRODUCTIVE\_SLOT($<$START$>$\_520)[235] | PRODUCTIVE\_SLOT(235\_$<$END$>$)[520] \\
+5269.1 & Rhd-1 & Rahman-deri & TerminalFormula & PRODUCTIVE\_SLOT($<$START$>$\_520)[031] | PRODUCTIVE\_SLOT(031\_$<$END$>$)[520] \\
+5421.1 & - & Kanmer & TerminalFormula & PRODUCTIVE\_SLOT($<$START$>$\_520)[031] | PRODUCTIVE\_SLOT(031\_$<$END$>$)[520] \\
+\bottomrule
+\end{tabular}
+\end{center}
+\subsection*{Outputs}
+\begin{itemize}
+\item \texttt{outputs/structural\_reconstruction\_summary.csv}
+\item \texttt{outputs/structural\_reconstructions.csv}
+\item \texttt{outputs/structural\_reconstruction\_templates.csv}
+\item \texttt{outputs/structural\_semantic\_frames.csv}
+\item \texttt{outputs/phonetic\_bootstrap\_candidates.csv}
+\item \texttt{outputs/sign\_proto\_glosses.csv}
+\item \texttt{outputs/structural\_frame\_usage.csv}
+\end{itemize}
+\end{document}

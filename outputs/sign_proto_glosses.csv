@@ -1,0 +1,33 @@
+Sign,ProtoGloss,Evidence,PhoneticStatus
+001,SLOT_INITIAL_MODIFIER,initial_remainders=38; initial_frames=10,No phonetic value assigned
+002,SLOT_FINAL_MODIFIER / SLOT_INITIAL_MODIFIER,final_stems=38; final_frames=12; initial_remainders=306; initial_frames=13,No phonetic value assigned
+003,LEADING_FORMULA_MARKER / SLOT_INITIAL_MODIFIER,title_score=0.808; start=0.583; end=0.108; initial_remainders=43; initial_frames=15,No phonetic value assigned
+031,LEADING_FORMULA_MARKER / SLOT_INITIAL_MODIFIER,title_score=0.795; start=0.388; end=0.194; initial_remainders=62; initial_frames=16,No phonetic value assigned
+032,SLOT_INITIAL_MODIFIER,initial_remainders=96; initial_frames=18,No phonetic value assigned
+033,SLOT_FINAL_MODIFIER,final_stems=38; final_frames=12,No phonetic value assigned
+060,SLOT_INITIAL_MODIFIER,initial_remainders=39; initial_frames=7,No phonetic value assigned
+090,SLOT_FINAL_MODIFIER,final_stems=56; final_frames=12,No phonetic value assigned
+100,SLOT_FINAL_MODIFIER,final_stems=39; final_frames=9,No phonetic value assigned
+140,LEADING_FORMULA_MARKER,title_score=0.791; start=0.473; end=0.145,No phonetic value assigned
+151,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,title_score=0.819; start=0.074; end=0.883; final_stems=37; final_frames=9,No phonetic value assigned
+156,TERMINAL_TITLE_OR_SUFFIX,title_score=0.784; start=0.112; end=0.804,No phonetic value assigned
+220,SLOT_FINAL_MODIFIER / SLOT_INITIAL_MODIFIER,final_stems=69; final_frames=15; initial_remainders=75; initial_frames=16,No phonetic value assigned
+233,SLOT_INITIAL_MODIFIER,initial_remainders=58; initial_frames=10,No phonetic value assigned
+235,LEADING_FORMULA_MARKER / SLOT_FINAL_MODIFIER / SLOT_INITIAL_MODIFIER,title_score=0.803; start=0.432; end=0.064; final_stems=32; final_frames=7; initial_remainders=75; initial_frames=14,No phonetic value assigned
+240,SLOT_INITIAL_MODIFIER,initial_remainders=110; initial_frames=15,No phonetic value assigned
+390,CLOSING_FORMULA_MARKER / SLOT_FINAL_MODIFIER,title_score=0.806; start=0.128; end=0.514; final_stems=67; final_frames=16,No phonetic value assigned
+400,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,title_score=0.782; start=0.048; end=0.912; final_stems=42; final_frames=12,No phonetic value assigned
+520,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,title_score=0.836; start=0.044; end=0.822; final_stems=114; final_frames=13,No phonetic value assigned
+527,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,title_score=0.790; start=0.048; end=0.825; final_stems=33; final_frames=12,No phonetic value assigned
+590,SLOT_FINAL_MODIFIER,final_stems=42; final_frames=8,No phonetic value assigned
+705,SLOT_INITIAL_MODIFIER,initial_remainders=37; initial_frames=12,No phonetic value assigned
+740,TERMINAL_TITLE_OR_SUFFIX / SLOT_FINAL_MODIFIER,title_score=0.803; start=0.093; end=0.700; final_stems=512; final_frames=14,No phonetic value assigned
+741,SLOT_INITIAL_MODIFIER,initial_remainders=66; initial_frames=9,No phonetic value assigned
+760,SLOT_FINAL_MODIFIER,final_stems=43; final_frames=9,No phonetic value assigned
+798,SLOT_INITIAL_MODIFIER,initial_remainders=33; initial_frames=13,No phonetic value assigned
+803,SLOT_INITIAL_MODIFIER,initial_remainders=50; initial_frames=15,No phonetic value assigned
+806,LEADING_FORMULA_MARKER,title_score=0.781; start=0.481; end=0.067,No phonetic value assigned
+817,INITIAL_TITLE_OR_CLASSIFIER / SLOT_INITIAL_MODIFIER,title_score=0.813; start=0.873; end=0.077; initial_remainders=31; initial_frames=5,No phonetic value assigned
+820,INITIAL_TITLE_OR_CLASSIFIER / SLOT_INITIAL_MODIFIER,title_score=0.828; start=0.775; end=0.164; initial_remainders=49; initial_frames=10,No phonetic value assigned
+861,INITIAL_TITLE_OR_CLASSIFIER / SLOT_INITIAL_MODIFIER,title_score=0.796; start=0.654; end=0.191; initial_remainders=40; initial_frames=11,No phonetic value assigned
+920,LEADING_FORMULA_MARKER,title_score=0.794; start=0.582; end=0.065,No phonetic value assigned

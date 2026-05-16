@@ -1,0 +1,9 @@
+Metric,Value,Note
+Texts reconstructed,5531,All analyzable non-empty inscriptions.
+Structural templates,563,Distinct role templates after slot/name compression.
+Semantic frames,8,Competing high-level semantic interpretations.
+Medium/high phonetic-readiness texts,607,Rows with enough structural evidence for image/context review.
+Sign proto-glosses,32,Functional labels only; no phonetic values assigned.
+Productive frames used,20,slot score >= 0.91.
+Name-like blocks used,52,name score >= 0.9.
+Cross-frame filler leads,41,Reusable fillers for phonetic testing.
