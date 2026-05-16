@@ -1,0 +1,109 @@
+\section{Semantic Context Triangulation}
+
+\subsection{Purpose}
+
+The project can now begin semantic reconstruction in a constrained way. This section connects the structural and abstract phonetic models to corpus metadata: site, region, object type, material, and iconographic symbol labels. The goal is to discover whether a candidate reading unit behaves like a name, title, place, office, commodity, emblem, or administrative formula.
+
+This is not translation. A context association such as ``unit \texttt{176} is often found on bull-associated seals'' does not mean that \texttt{176} reads ``bull''. It means that any future reading of \texttt{176} must explain that context.
+
+\subsection{Method}
+
+The script \texttt{scripts/semantic-context-triangulation.py} uses the 607 medium/high phonetic-readiness reconstructions. For each slot filler and reading unit, it counts contextual distributions across:
+
+\begin{itemize}
+  \item region and site;
+  \item artifact type;
+  \item material;
+  \item iconographic symbol label;
+  \item semantic frame.
+\end{itemize}
+
+For each unit/context pair, the model computes observed count, expected count, lift, log-lift, and an association score. The score rewards repeated support, purity within the unit's occurrences, and lift above corpus baseline. The output prioritizes units already marked as strong onomastic anchors, cross-frame phonetic anchors, or affix/formula anchors.
+
+\subsection{Corpus-Wide Result}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Ready reconstructions tested & 607 \\
+Reading units profiled & 627 \\
+Strong onomastic units profiled & 7 \\
+Usable iconography labels & 482 \\
+Unknown iconography labels & 125 \\
+Strong context associations & 60 \\
+Moderate context associations & 186 \\
+Symbol-linked semantic candidates & 33 \\
+Semantic candidates exported & 113 \\
+\bottomrule
+\end{tabular}
+\caption{Semantic context triangulation summary.}
+\label{tab:semantic-context-summary}
+\end{table}
+
+\subsection{Prime-Entity Semantic Leads}
+
+The first strong semantic target remains the \texttt{002 X 740} prime-entity frame. The current best leads are:
+
+\begin{itemize}
+  \item \texttt{240-482} (\texttt{A02-R16}): Harappa/tablet-heavy; likely administrative or institutional label.
+  \item \texttt{176} (\texttt{R02}): Mohenjo-daro plus Lothal; bull/gaur seal context; possible name, office, lineage, or emblem-linked identity.
+  \item \texttt{235-222} (\texttt{M01-R31}): bull seals with Chanhu-daro concentration; emblem-linked name/title candidate.
+  \item \texttt{032-220} (\texttt{A07-A09}): bull seals across sites; cross-site emblem/name candidate.
+  \item \texttt{590-390} (\texttt{A08-M02}): steatite seals; bull-linked where known; name/title/place candidate.
+  \item \texttt{240-176} (\texttt{A02-R02}): steatite seals; sparse but phonetic-ready candidate.
+  \item \texttt{235-840-032} (\texttt{M01-R10-A07}): elephant/bull seals; sparse prime-entity candidate.
+\end{itemize}
+
+\subsection{Important Non-Onomastic Leads}
+
+Some high-scoring units are not likely to be proper names. They may be titles, suffixes, object labels, or administrative formulae:
+
+\begin{itemize}
+  \item \texttt{240-520} strongly clusters with Harappa tablets and bull-labeled contexts. It may be a terminal administrative expression rather than a personal name.
+  \item \texttt{240-740-090} is associated with tablet contexts and a \texttt{Cros} symbol label. This makes it a strong object-class or administrative-ending candidate.
+  \item \texttt{032} is notably Chanhu-daro-heavy, suggesting a possible regional, scribal, or administrative specialization.
+  \item \texttt{140} has a strong goat-labeled subgroup while also appearing in bull contexts, so it should be treated as a classifier/title/formula marker until image review resolves the context.
+\end{itemize}
+
+\subsection{Interpretation}
+
+The project has now reached semantic proto-reconstruction. The safest current semantic template for many seal inscriptions is:
+
+\begin{center}
+\texttt{CLASSIFIER/TITLE + ENTITY SLOT + TERMINAL/FINAL}
+\end{center}
+
+For the prime frame this is:
+
+\begin{center}
+\texttt{002 + ENTITY + 740}
+\end{center}
+
+The entity may be a personal name, title, lineage, place, institution, commodity, or emblem-linked identity. The context model now lets us choose which possibility to test first for each filler.
+
+\subsection{Next Empirical Test}
+
+The most important next step is image-grounded validation. The corpus symbol labels are useful but not enough. For each strong anchor, we need to inspect the actual seal or inscription images and ask:
+
+\begin{itemize}
+  \item Does the same unit consistently occur with the same iconographic motif?
+  \item Does it remain stable across site, material, and object type?
+  \item Do minimal alternations preserve the same iconographic and structural context?
+  \item Does a proposed semantic reading predict all occurrences, including the awkward ones?
+\end{itemize}
+
+The immediate priority set is \texttt{176}, \texttt{235-222}, \texttt{032-220}, \texttt{590-390}, and \texttt{240-482}. These give us the first real bridge from structure toward meaning.
+
+\subsection{Outputs}
+
+\begin{itemize}
+  \item \texttt{outputs/semantic\_context\_summary.csv}
+  \item \texttt{outputs/anchor\_context\_profiles.csv}
+  \item \texttt{outputs/anchor\_context\_correlations.csv}
+  \item \texttt{outputs/semantic\_reconstruction\_candidates.csv}
+  \item \texttt{outputs/iconography\_semantic\_matrix.csv}
+  \item \texttt{outputs/semantic\_context\_triangulation.tex}
+\end{itemize}

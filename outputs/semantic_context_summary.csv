@@ -1,0 +1,10 @@
+Metric,Value,Note
+Ready reconstructions tested,607,Medium/high phonetic-readiness inscriptions with structural context.
+Reading units profiled,627,Units from the phonetic bootstrap testbench observed in ready rows.
+Strong onomastic units profiled,7,Prime-entity fillers suitable for proper-name style testing.
+Usable iconography labels,482,"Ready reconstructions with non-empty, non-dash symbol labels."
+Unknown iconography labels,125,Rows where iconographic context remains unavailable.
+Strong context associations,60,"Unit/category links with repeated support, high lift, and high score."
+Moderate context associations,186,Promising but less secure unit/category links.
+Symbol-linked semantic candidates,33,Candidate units where iconography should be inspected first.
+Semantic candidates exported,113,Ranked unit-level semantic test plans.

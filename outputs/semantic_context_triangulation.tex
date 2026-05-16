@@ -1,0 +1,73 @@
+\section{Semantic Context Triangulation}
+
+\subsection{Purpose}
+
+This generated note connects the structural and abstract phonetic models to external corpus metadata: site, region, artifact type, material, and iconographic symbol label. It is a semantic testbench, not a translation stage.
+
+\subsection{Summary}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{p{0.56\textwidth}r}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Ready reconstructions tested & 607 \\
+Reading units profiled & 627 \\
+Strong onomastic units profiled & 7 \\
+Usable iconography labels & 482 \\
+Unknown iconography labels & 125 \\
+Strong context associations & 60 \\
+Moderate context associations & 186 \\
+Symbol-linked semantic candidates & 33 \\
+Semantic candidates exported & 113 \\
+\bottomrule
+\end{tabular}
+\caption{Semantic context triangulation summary.}
+\end{table}
+
+\subsection{Top Semantic Candidates}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{lllll}
+\toprule
+\textbf{Unit} & \textbf{Abstract} & \textbf{Role} & \textbf{Best context} & \textbf{Strength} \\
+\midrule
+240-482 & A02-R16 & PrimeEntityFiller & Site=Harappa & Strong \\
+235-840-032 & M01-R10-A07 & PrimeEntityFiller & SemanticFrame=PrimeEntitySealFormula & Moderate \\
+235-222 & M01-R31 & PrimeEntityFiller & Symbol=Bull & Moderate \\
+176 & R02 & PrimeEntityFiller & Site=Mohenjo-daro & Moderate \\
+590-390 & A08-M02 & PrimeEntityFiller & Material=Steatite & Moderate \\
+032-220 & A07-A09 & PrimeEntityFiller & Symbol=Bull & Moderate \\
+240-176 & A02-R02 & PrimeEntityFiller & Material=Steatite & Moderate \\
+820-060 & C01-A06 & InitialFiller & SemanticFrame=ClassifierSlotTerminalFormula & Strong \\
+\bottomrule
+\end{tabular}
+\caption{Highest-priority semantic context tests.}
+\end{table}
+
+\subsection{Strong and Moderate Context Associations}
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\begin{tabular}{llllll}
+\toprule
+\textbf{Unit} & \textbf{Dimension} & \textbf{Category} & \textbf{Count} & \textbf{Lift} & \textbf{Strength} \\
+\midrule
+176-740-090 & Symbol & Composite/Multiple & 8 & 55.182 & Strong \\
+176-740-090 & Type & TAB & 8 & 5.233 & Strong \\
+003 & SemanticFrame & LowEvidenceSequence & 7 & 9.318 & Strong \\
+240-482 & SemanticFrame & PrimeEntityAdministrativeFormula & 7 & 44.26 & Strong \\
+806 & Material & Copper & 5 & 29.755 & Strong \\
+240-520 & Type & TAB & 29 & 4.742 & Strong \\
+240-520 & Material & Unknown & 28 & 4.785 & Strong \\
+240-482 & Type & TAB & 7 & 4.579 & Strong \\
+176-740-090 & Material & Clay & 6 & 16.259 & Strong \\
+176-740-090 & Site & Harappa & 8 & 3.489 & Strong \\
+\bottomrule
+\end{tabular}
+\caption{Context associations that should be checked against artifact images.}
+\end{table}
