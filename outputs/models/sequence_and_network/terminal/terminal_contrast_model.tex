@@ -1,0 +1,46 @@
+\section{Terminal Contrast Model}
+
+Terminal candidates are derived empirically from the corpus, restricted to
+inscriptions with both edges epigraphically intact (\texttt{complete='Y'}
+and both transcription boundaries marked '+'), with the illegible-sign
+placeholder stripped. The top sequence-final signs in this corpus are
+\textbf{not} the signs assumed in earlier analyses: those signs are in fact
+disproportionately \emph{initial}-position signs here, not terminal ones.
+
+\subsection{Initial vs. Final Position Rates (Top 10 by Final Frequency)}
+\begin{tabular}{lll}
+\toprule
+\textbf{Sign} & \textbf{FinalRate} & \textbf{InitialRate} \\
+\midrule
+033 & 0.050 & 0.015 \\
+032 & 0.048 & 0.013 \\
+817 & 0.045 & 0.002 \\
+861 & 0.040 & 0.011 \\
+820 & 0.038 & 0.004 \\
+003 & 0.037 & 0.002 \\
+034 & 0.035 & 0.006 \\
+235 & 0.025 & 0.000 \\
+700 & 0.023 & 0.111 \\
+920 & 0.021 & 0.002 \\
+\bottomrule
+\end{tabular}
+
+\subsection{Diagnostic Findings on the Two Most Frequent Terminal Candidates}
+\begin{tabular}{p{0.3\textwidth}p{0.28\textwidth}p{0.32\textwidth}}
+\toprule
+\textbf{Question} & \textbf{Evidence} & \textbf{Reading} \\
+\midrule
+Do 033 and 032 attach to the same preceding stems? & Distributional overlap of preceding sign = 0.605 (1.0 = identical) & High overlap is consistent with EITHER allography OR grammatical alternation on shared stems -- it cannot distinguish them. \\
+Are 033 / 032 biased toward particular sites? & Cramer's V = 0.275, chi-squared p = 0.017 & Low V / high p argues against a purely regional-dialect explanation; high V / low p would support one. \\
+Are 033 / 032 biased toward particular icons/seal symbols? & Cramer's V = 0.337, chi-squared p = 0.098 & Low V / high p argues against a clan/title-marking explanation; high V / low p would support one. \\
+Do 033 and 032 ever terminate / appear within the SAME inscription? & Co-occurrence rate (texts containing 033 that also contain 032) = 0.006 & Near-zero co-occurrence is consistent with allography (one underlying sign, two glyphs, never doubled); non-trivial co-occurrence is INCONSISTENT with simple allography and favors distinct lexical/grammatical signs. \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Why this stops short of a verdict}
+Distributional overlap in preceding stems cannot, on its own, distinguish
+graphic allography from grammatical alternation: both predict the same
+overlap pattern. The co-occurrence-within-one-text check narrows the
+question without fully resolving it. We report this explicitly rather than
+assign a confident Supported/Rejected verdict that the evidence does not
+support.

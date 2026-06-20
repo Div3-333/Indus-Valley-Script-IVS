@@ -1,0 +1,61 @@
+Filler,Test,Result,PassFail,Detail
+000,Material Independence,Top material is Steatite (35.4%),PASS,Should not be exclusively tied to one material type
+000,Classifier Variation,44 classifiers,PASS,Should appear in multiple roles
+000,Site Independence,Top site is Harappa (31.2%),PASS,Names should travel or be shared
+817-000,Material Independence,Top material is Steatite (66.7%),PASS,Should not be exclusively tied to one material type
+817-000,Classifier Variation,3 classifiers,PASS,Should appear in multiple roles
+817-000,Site Independence,Top site is Harappa (33.3%),PASS,Names should travel or be shared
+000-000,Material Independence,Top material is Steatite (33.3%),PASS,Should not be exclusively tied to one material type
+000-000,Classifier Variation,3 classifiers,PASS,Should appear in multiple roles
+000-000,Site Independence,Top site is Kalibangan (33.3%),PASS,Names should travel or be shared
+920-317,Material Independence,Top material is Steatite (66.7%),PASS,Should not be exclusively tied to one material type
+920-317,Classifier Variation,3 classifiers,PASS,Should appear in multiple roles
+920-317,Site Independence,Top site is Chanhu-daro (33.3%),PASS,Names should travel or be shared
+824,Material Independence,Top material is Steatite (55.6%),PASS,Should not be exclusively tied to one material type
+824,Classifier Variation,9 classifiers,PASS,Should appear in multiple roles
+824,Site Independence,Top site is Mohenjo-daro (66.7%),PASS,Names should travel or be shared
+861-000,Material Independence,Top material is Clay (100.0%),FAIL,Should not be exclusively tied to one material type
+861-000,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+861-000,Site Independence,Top site is Allahdino (50.0%),PASS,Names should travel or be shared
+298-741,Material Independence,Top material is Steatite (50.0%),PASS,Should not be exclusively tied to one material type
+298-741,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+298-741,Site Independence,Top site is Chanhu-daro (50.0%),PASS,Names should travel or be shared
+031-892,Material Independence,Top material is Steatite (100.0%),FAIL,Should not be exclusively tied to one material type
+031-892,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+031-892,Site Independence,Top site is Harappa (50.0%),PASS,Names should travel or be shared
+610-125-032,Material Independence,Top material is Steatite (100.0%),FAIL,Should not be exclusively tied to one material type
+610-125-032,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+610-125-032,Site Independence,Top site is Harappa (50.0%),PASS,Names should travel or be shared
+820-000,Material Independence,Top material is - (50.0%),PASS,Should not be exclusively tied to one material type
+820-000,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+820-000,Site Independence,Top site is Harappa (50.0%),PASS,Names should travel or be shared
+741-060-920,Material Independence,Top material is Steatite (100.0%),FAIL,Should not be exclusively tied to one material type
+741-060-920,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+741-060-920,Site Independence,Top site is Kalibangan (50.0%),PASS,Names should travel or be shared
+031-000,Material Independence,Top material is Steatite (50.0%),PASS,Should not be exclusively tied to one material type
+031-000,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+031-000,Site Independence,Top site is Mohenjo-daro (50.0%),PASS,Names should travel or be shared
+031-575,Material Independence,Top material is Steatite (100.0%),FAIL,Should not be exclusively tied to one material type
+031-575,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+031-575,Site Independence,Top site is Mohenjo-daro (50.0%),PASS,Names should travel or be shared
+880,Material Independence,Top material is Steatite (60.0%),PASS,Should not be exclusively tied to one material type
+880,Classifier Variation,5 classifiers,PASS,Should appear in multiple roles
+880,Site Independence,Top site is Lothal (40.0%),PASS,Names should travel or be shared
+817,Material Independence,Top material is Steatite (69.1%),PASS,Should not be exclusively tied to one material type
+817,Classifier Variation,115 classifiers,PASS,Should appear in multiple roles
+817,Site Independence,Top site is Mohenjo-daro (55.4%),PASS,Names should travel or be shared
+151,Material Independence,Top material is Clay (33.3%),PASS,Should not be exclusively tied to one material type
+151,Classifier Variation,1 classifiers,FAIL,Should appear in multiple roles
+151,Site Independence,Top site is Harappa (50.0%),PASS,Names should travel or be shared
+861-603,Material Independence,Top material is Steatite (100.0%),FAIL,Should not be exclusively tied to one material type
+861-603,Classifier Variation,3 classifiers,PASS,Should appear in multiple roles
+861-603,Site Independence,Top site is Mohenjo-daro (100.0%),FAIL,Names should travel or be shared
+575-000,Material Independence,Top material is Clay (66.7%),PASS,Should not be exclusively tied to one material type
+575-000,Classifier Variation,3 classifiers,PASS,Should appear in multiple roles
+575-000,Site Independence,Top site is Harappa (100.0%),FAIL,Names should travel or be shared
+400-740,Material Independence,Top material is Faience (66.7%),PASS,Should not be exclusively tied to one material type
+400-740,Classifier Variation,1 classifiers,FAIL,Should appear in multiple roles
+400-740,Site Independence,Top site is Harappa (100.0%),FAIL,Names should travel or be shared
+820-741,Material Independence,Top material is Steatite (100.0%),FAIL,Should not be exclusively tied to one material type
+820-741,Classifier Variation,2 classifiers,PASS,Should appear in multiple roles
+820-741,Site Independence,Top site is Mohenjo-daro (100.0%),FAIL,Names should travel or be shared

@@ -1,0 +1,2 @@
+Test,Observed,MeanShuffled,StdShuffled,ZScore,PValue,Significant
+Local Inscription Shuffle,4.353992557579755,5.177713516584211,0.012165793482645687,-67.70795182241758,0.0,True

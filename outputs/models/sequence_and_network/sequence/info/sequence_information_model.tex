@@ -1,0 +1,65 @@
+\section{Sequence Information Model}
+
+We report bias-corrected information-theoretic statistics on the gold
+(complete, edge-intact) subset of the corpus, with the damage placeholder
+sign stripped and ambiguous-reading sign slots resolved to their first listed
+reading. Zipf's law is fit by continuous maximum likelihood rather than a
+bounded grid search. LZ76 complexity is reported only for inscriptions long
+enough for its asymptotic normalization to be meaningful, as a distribution
+rather than a single mean.
+
+\subsection{Metrics}
+\begin{tabular}{p{0.42\textwidth}p{0.28\textwidth}p{0.22\textwidth}}
+\toprule
+\textbf{Metric} & \textbf{Value} & \textbf{Note} \\
+\midrule
+Inscriptions (gold: complete, both edges intact) & 3672 & Primary analysis subset \\
+Inscriptions (full corpus, incl. damaged) & 5529 & Scale reference only; not used for edge statistics \\
+Tokens (gold subset) & 13638 &  \\
+Vocabulary size (gold subset) & 663 &  \\
+Vocabulary size (full corpus) & 712 & Larger only because more inscriptions seen, not because gold subset is missing signs \\
+Hapax legomena (gold subset) & 221 & 33.3\% of vocabulary \\
+Unigram entropy H(X), Miller-Madow corrected & 6.956 bits & max possible = log2(V) = 9.373 bits \\
+Zipf exponent (continuous MLE) & 1.008 & goodness of fit R^2=0.683; natural languages typically ~1.0, but see caveat below \\
+Bigram conditional entropy H(X2|X1) & 3.898 bits & vs H(X)=6.956 \\
+Trigram conditional entropy H(X3|X1,X2) & 1.620 bits & observed \\
+Trigram cond. entropy, length-preserving shuffle (mean of 200) & 1.240 bits & empirical one-sided p=1.0000 (lower 5th pct of null = 1.208) \\
+Bigram-context recurrence rate (observed) & 0.336 & fraction of sign-pairs that recur >=2x in the corpus \\
+Bigram-context recurrence rate, shuffle null (mean of 200) & 0.241 & empirical one-sided p=0.0050 for observed > null \\
+LZ76 normalized complexity, texts >= 8 signs (n=177) & median=1.111 [Q1=1.091, Q3=1.125] & Asymptotic measure; low power at this length, reported as secondary diagnostic only \\
+\bottomrule
+\end{tabular}
+\subsection*{What these numbers do and do not show}
+The corpus is divided into a \emph{gold} subset (inscriptions flagged complete,
+with both edges epigraphically intact) and the \emph{full} corpus (including
+damaged/truncated readings). All sequence-position-sensitive statistics use
+the gold subset only; the damage placeholder ``000'' is stripped throughout,
+since it denotes an illegible sign position rather than a sign value.
+
+Two structure tests give a more complete (and more honest) picture than
+either alone. (1) The trigram conditional entropy of the observed corpus is
+\emph{not} reliably below the length-preserving shuffle baseline -- the third
+sign in a window is about as hard to predict from the first two as it is in
+scrambled data. (2) At the same time, bigram \emph{contexts themselves} recur
+far more than the shuffle baseline predicts: specific sign pairs co-occur
+repeatedly across the corpus more often than chance redistribution of the
+same vocabulary would produce. Read together, this pattern -- recurring
+fixed sign-pairs followed by a comparatively open, hard-to-predict
+continuation -- is exactly what you would expect from a corpus built from
+reusable administrative frames with an open paradigmatic slot (e.g. a
+name or commodity filler) rather than from free word-by-word prose, where
+predictability would typically decay more smoothly across positions. This
+should be treated as a hypothesis the data is consistent with, not a proof:
+the same surface pattern could in principle arise from other generative
+processes.
+
+In general, a low conditional entropy or non-random ordering shows the
+sequence is \emph{rule-governed}; it is necessary but not sufficient evidence
+for spoken language, since the same statistical signature is produced by any
+combinatorially structured non-linguistic system (heraldic blazons,
+inventory/catalog numbering schemes, genomic sequences). The Zipf exponent
+carries the identical caveat: small inventories with a few high-frequency
+``function'' tokens and many rare tokens reliably produce near-Zipfian
+rank-frequency curves with no language behind them at all. These results are
+evidence the script is non-random and structured -- they are not, by
+themselves, evidence that it encodes natural language specifically.

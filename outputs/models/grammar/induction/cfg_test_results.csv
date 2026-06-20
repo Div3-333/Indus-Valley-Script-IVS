@@ -1,0 +1,2 @@
+Test,Result,Evidence,Interpretation
+Center Embedding Depth,1,A..B..A..B,"Linguistic if > 1, regular if 0-1"

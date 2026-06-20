@@ -1,0 +1,6 @@
+Rank,Model,TotalDL,DataCost,StructureCost,ParamCost,SupportSize
+1,Unigram,95764.5,91388.7,0.0,4375.8,640
+2,Bigram (fixed counting bug),96842.5,47018.7,27458.6,22365.2,3267
+3,"Positional template, left-anchored",99384.9,80111.1,6742.2,12531.6,1831
+4,"Positional template, right-anchored",102084.1,82908.7,6719.2,12456.3,1820
+5,Null (uniform over observed vocab),128068.5,123692.7,0.0,4375.8,640

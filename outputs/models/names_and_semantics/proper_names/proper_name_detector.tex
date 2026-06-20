@@ -1,0 +1,48 @@
+\section{Proper Name / Filler Candidate Detector}
+
+Filler candidates are sign sequences extracted between the classifier marker
+``002'' and the next terminal sign (terminal set derived empirically from
+this corpus: 003, 032, 033, 034, 235, 817, 820, 861). This parsing
+convention is inherited from earlier project stages and is NOT independently
+re-derived here; results are conditional on it being correct, and should not
+be used to retroactively argue for the terminal/classifier identification
+itself -- that would be circular.
+
+We report two separate candidate lists rather than one composite score. A
+single multiplicative score that rewards localization and zeroes out
+anything not localized would systematically discard common, widespread
+fillers regardless of how frequent they are -- which is itself a strong,
+unstated assumption about what a name should look like.
+
+\subsection{Localized candidates (low site entropy, $p<0.05$ vs. corpus base rate)}
+Plausible personal names, clan marks, or place-specific toponyms/commodities.
+Localization alone does not distinguish between these three readings.
+\begin{tabular}{lrlrr}
+\toprule
+\textbf{Filler} & \textbf{Frequency} & \textbf{TopSite} & \textbf{SiteEntropy} & \textbf{SiteLocalization\_p} \\
+\midrule
+405-501 & 29 & Harappa & 0.000 & 0.0000 \\
+056-091 & 8 & Kalibangan & 0.000 & 0.0000 \\
+617 & 2 & Lothal & 0.000 & 0.0013 \\
+\bottomrule
+\end{tabular}
+
+\subsection{Frequent, widespread candidates (site entropy $\geq 0.7$)}
+Plausible titles, common nouns, or administrative terms used across many
+sites/communities.
+\begin{tabular}{lrlrr}
+\toprule
+\textbf{Filler} & \textbf{Frequency} & \textbf{TopSite} & \textbf{SiteEntropy} & \textbf{SiteLocalization\_p} \\
+\midrule
+824 & 9 & Mohenjo-daro & 0.723 & 0.0000 \\
+880 & 5 & Lothal & 0.960 & 0.0004 \\
+031 & 4 & Mohenjo-daro & 0.946 & 0.2829 \\
+920-317 & 3 & Chanhu-daro & 1.000 & 0.0044 \\
+416 & 3 & Harappa & 0.918 & 0.7755 \\
+297-350-125-413 & 2 & Bala-kot & 1.000 & 0.1789 \\
+298-741 & 2 & Chanhu-daro & 1.000 & 0.4749 \\
+390-095 & 2 & Harappa & 1.000 & 0.8060 \\
+002 & 2 & Harappa & 1.000 & 0.8060 \\
+031-892 & 2 & Harappa & 1.000 & 0.8060 \\
+\bottomrule
+\end{tabular}

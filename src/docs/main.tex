@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{natbib}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=blue!45!black,
+  urlcolor=blue!45!black
+}
+
+\sisetup{
+  round-mode=places,
+  round-precision=3,
+  group-separator={,},
+  group-minimum-digits=4
+}
+
+\title{Indus Valley Script Research Project\\
+\large Corpus, Positional Grammar, and Hypothesis Control}
+\author{Research Lead: Codex\\Supervisor: Divyanshu}
+\date{Opened 2026-05-15}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document records a disciplined research program for the Indus Valley sign system. The project begins from corpus hygiene, sign distribution, directionality, and rival-model testing rather than from proposed readings. Linguistic hypotheses, including Dravidian, Indo-Aryan/Indo-Iranian, Munda-like, isolate, and mixed administrative models, are admitted only when they produce testable predictions.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{sections/analysis/intro/project_scope}
+\input{sections/analysis/intro/methodology}
+\input{sections/analysis/intro/source_register}
+\input{sections/analysis/corpus/corpus_profile}
+\input{sections/analysis/corpus/hypothesis_ledger}
+\input{sections/analysis/corpus/provenance_directionality}
+\input{sections/analysis/intro/first_findings}
+\input{sections/analysis/corpus/chapters/sign_inventory_compression}
+\input{sections/analysis/corpus/chapters/crosswalk_neighbor_clustering}
+\input{sections/analysis/corpus/visual_catalog_review}
+\input{sections/analysis/corpus/chapters/tier1_visual_adjudication}
+\input{sections/models/sequence_and_network/sequence_information_model}
+\input{sections/models/sequence_and_network/sign_family_hypothesis_model}
+\input{sections/models/sequence_and_network/terminal_contrast_model}
+\input{sections/validation/solvers/core_inventory_model}
+\input{sections/models/names_and_semantics/proper_name_detector}
+\input{sections/models/names_and_semantics/onomastic_anchor_model}
+\input{sections/models/names_and_semantics/proto_decipherment_scaffold}
+\input{sections/models/grammar/grammar_induction_model}
+\input{sections/models/grammar/slot_paradigm_model}
+\input{sections/models/grammar/structural_reconstruction_model}
+\input{sections/validation/probes/phonetic_bootstrap_testbench}
+\input{sections/models/names_and_semantics/semantic_context_triangulation}
+\input{sections/validation/probes/language_hypothesis_testbench}
+\input{sections/models/names_and_semantics/anchor_dossier_model}
+\input{sections/validation/solvers/constraint_solver_model}
+\input{sections/validation/probes/minimal_pair_neighbor_expansion}
+\input{sections/validation/probes/contrastive_probe_validation}
+\input{sections/validation/solvers/breakthrough_target_portfolio}
+\input{sections/models/grammar/grammar_keystone_240_model}
+\input{sections/models/grammar/stem_lattice_keystone_model}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

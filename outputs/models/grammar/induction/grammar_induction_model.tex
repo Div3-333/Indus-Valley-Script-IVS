@@ -1,0 +1,42 @@
+\section{Grammar Induction Model}
+
+Each model is scored with a proper two-part Minimum Description Length code:
+\textbf{StructureCost} (bits to specify which combinations of the model's
+parameter space are actually used -- via $\log_2 \binom{\text{total space}}{\text{support size}}$),
+\textbf{ParamCost} (standard BIC, $\frac{k}{2}\log_2 N$, for estimating the
+probabilities of the parameters that ARE used), and \textbf{DataCost}
+(cross-entropy of the corpus under the fitted model). Charging all
+candidate models on the same two-part basis avoids the artifact where a
+model with a small \emph{observed} support looks free simply because nothing
+was charged for specifying that support in the first place. The Bigram
+row also fixes a counting bug in the previous version, where bigram
+frequencies were silently discarded and every observed transition was
+(incorrectly) treated as equally likely regardless of how often it actually
+occurred.
+
+The positional-template model is fit twice -- anchored from the left edge
+and from the right edge of each inscription -- since variable-length
+optional prefixes make a single fixed anchoring point a substantive,
+testable assumption rather than a free given.
+
+\subsection{Two-part MDL Comparison}
+\begin{tabular}{cp{0.28\textwidth}rrrrr}
+\toprule
+\textbf{Rank} & \textbf{Model} & \textbf{TotalDL} & \textbf{DataCost} & \textbf{StructureCost} & \textbf{ParamCost} & \textbf{SupportSize} \\
+\midrule
+1 & Unigram & 95764.5 & 91388.7 & 0.0 & 4375.8 & 640 \\
+2 & Bigram (fixed counting bug) & 96842.5 & 47018.7 & 27458.6 & 22365.2 & 3267 \\
+3 & Positional template, left-anchored & 99384.9 & 80111.1 & 6742.2 & 12531.6 & 1831 \\
+4 & Positional template, right-anchored & 102084.1 & 82908.7 & 6719.2 & 12456.3 & 1820 \\
+5 & Null (uniform over observed vocab) & 128068.5 & 123692.7 & 0.0 & 4375.8 & 640 \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Reading the result}
+The Unigram model achieves the shortest description length under this
+coding scheme (the left-anchored variant was the stronger of the two template
+anchorings). This is evidence about which generative account compresses
+this specific corpus better under this specific code -- it is not, by
+itself, proof of which process actually produced the script. A corpus this
+size (13269 tokens across 3303 inscriptions) limits how strongly any
+single MDL comparison can discriminate between close competitors.

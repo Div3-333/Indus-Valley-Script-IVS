@@ -1,0 +1,16 @@
+\section{Grammar Induction Model}
+
+\subsection{MDL Comparison}
+\begin{tabular}{clrl}
+\toprule
+\textbf{Rank} & \textbf{Model} & \textbf{DL} & \textbf{Cost} \\
+\midrule
+1 & FSA (4-state) & 40704.3 & $N*H(FSA) + S*V*\log_2(V)$ \\
+2 & Unigram & 100699.3 & $N*H(1) + V*\log_2(N)$ \\
+3 & Null (Random) & 124533.8 & $N * \log_2(V)$ \\
+4 & Bigram & 5691901.6 & $N*H(2) + V^2*\log_2(N)$ \\
+\bottomrule
+\end{tabular}
+
+\subsection{Conclusion}
+The MDL comparison indicates whether the script is better modeled by local bigram dependencies (suggesting free language) or by global FSA structures (suggesting restricted formulae). The lack of deep center embedding supports a regular, finite-state interpretation.

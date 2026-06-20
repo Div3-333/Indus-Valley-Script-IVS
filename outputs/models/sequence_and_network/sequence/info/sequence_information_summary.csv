@@ -1,0 +1,15 @@
+Metric,Value,Note
+"Inscriptions (gold: complete, both edges intact)",3672,Primary analysis subset
+"Inscriptions (full corpus, incl. damaged)",5529,Scale reference only; not used for edge statistics
+Tokens (gold subset),13638,
+Vocabulary size (gold subset),663,
+Vocabulary size (full corpus),712,"Larger only because more inscriptions seen, not because gold subset is missing signs"
+Hapax legomena (gold subset),221,33.3% of vocabulary
+"Unigram entropy H(X), Miller-Madow corrected",6.956 bits,max possible = log2(V) = 9.373 bits
+Zipf exponent (continuous MLE),1.008,"goodness of fit R^2=0.683; natural languages typically ~1.0, but see caveat below"
+Bigram conditional entropy H(X2|X1),3.898 bits,vs H(X)=6.956
+"Trigram conditional entropy H(X3|X1,X2)",1.620 bits,observed
+"Trigram cond. entropy, length-preserving shuffle (mean of 200)",1.240 bits,empirical one-sided p=1.0000 (lower 5th pct of null = 1.208)
+Bigram-context recurrence rate (observed),0.336,fraction of sign-pairs that recur >=2x in the corpus
+"Bigram-context recurrence rate, shuffle null (mean of 200)",0.241,empirical one-sided p=0.0050 for observed > null
+"LZ76 normalized complexity, texts >= 8 signs (n=177)","median=1.111 [Q1=1.091, Q3=1.125]","Asymptotic measure; low power at this length, reported as secondary diagnostic only"

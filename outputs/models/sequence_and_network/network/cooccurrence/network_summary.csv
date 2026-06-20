@@ -1,0 +1,7 @@
+Metric,Value
+Documents (inscriptions) used,4492
+Candidate sign-pairs tested (raw co-occurrence >= 2),3185
+Pairs surviving hypergeometric test + BH-FDR (alpha=0.05),846
+Edges retained after also requiring PMI > 0,846
+Network nodes (signs with >=1 retained edge),318
+Communities detected (Louvain),16

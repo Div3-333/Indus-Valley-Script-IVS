@@ -1,0 +1,8 @@
+[2026-06-20 16:27:29] MOVED: reorganize_log.txt -> src\reorganize_log.txt
+[2026-06-20 16:27:29] DELETED: move_files.py (temp file)
+[2026-06-20 16:27:29] === Running final invariant check ===
+[2026-06-20 16:27:30] [VIOLATION] outputs : 4 subdirs, 1 files
+[2026-06-20 16:27:30] [VIOLATION] outputs\analysis\positional\positional : 0 subdirs, 6 files
+[2026-06-20 16:27:30] [VIOLATION] . (root): 3 subdirs, 6 files
+[2026-06-20 16:27:30] Some violations remain - review above.
+[2026-06-20 16:27:30] === Patch complete ===
