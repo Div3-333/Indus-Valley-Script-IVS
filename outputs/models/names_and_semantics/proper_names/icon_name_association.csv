@@ -1,0 +1,14 @@
+Metric,Value,name_candidate,icon,count,pmi
+"Overall Cramer's V (icon x candidate, pooled rare icons)",0.419,,,,
+Chi-squared p-value,1.61e-50,,,,
+Note,none,,,,
+,,405-501,Bull1:I,24,5.149
+,,861,Bull:i:J,2,3.760
+,,405-501,Bull1:U,2,3.530
+,,820,Bull1:T,2,3.210
+,,817,Bull2,4,2.844
+,,817,Elep,15,2.471
+,,820,Bull1:X,3,2.416
+,,820,Bull1:V,3,2.416
+,,820,CompBull,2,2.210
+,,820,Rhin,7,2.130

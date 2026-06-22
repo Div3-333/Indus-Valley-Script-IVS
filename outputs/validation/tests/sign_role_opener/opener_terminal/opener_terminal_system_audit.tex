@@ -1,0 +1,87 @@
+\section{Opener/Terminal System Audit}
+
+Signs with at least 10 occurrences in the complete, edge-intact corpus
+are labeled OPENER ($\geq 50\%$ initial), TERMINAL ($\geq 30\%$ final),
+MEDIAL\_BODY ($\geq 70\%$ medial), or MIXED, using thresholds declared before
+labeling. This yielded 26 opener signs and 59 terminal signs.
+
+\subsection{Top Signs by Frequency and Role}
+\begin{tabular}{llllll}
+\toprule
+\textbf{sign} & \textbf{total} & \textbf{pct\_initial} & \textbf{pct\_medial} & \textbf{pct\_final} & \textbf{role\_label} \\
+\midrule
+740 & 1354 & 0.693 & 0.303 & 0.004 & OPENER \\
+002 & 612 & 0.062 & 0.922 & 0.016 & MEDIAL\_BODY \\
+700 & 477 & 0.790 & 0.048 & 0.161 & OPENER \\
+032 & 456 & 0.197 & 0.456 & 0.346 & TERMINAL \\
+033 & 407 & 0.182 & 0.410 & 0.408 & TERMINAL \\
+400 & 359 & 0.911 & 0.086 & 0.003 & OPENER \\
+220 & 321 & 0.087 & 0.794 & 0.118 & MEDIAL\_BODY \\
+240 & 280 & 0.011 & 0.750 & 0.239 & MEDIAL\_BODY \\
+520 & 253 & 0.846 & 0.146 & 0.008 & OPENER \\
+390 & 225 & 0.524 & 0.436 & 0.040 & OPENER \\
+861 & 216 & 0.171 & 0.218 & 0.611 & TERMINAL \\
+003 & 214 & 0.056 & 0.369 & 0.575 & TERMINAL \\
+235 & 196 & 0.010 & 0.571 & 0.418 & TERMINAL \\
+031 & 188 & 0.181 & 0.473 & 0.346 & TERMINAL \\
+060 & 180 & 0.011 & 0.978 & 0.011 & MEDIAL\_BODY \\
+\bottomrule
+\end{tabular}
+
+\subsection{Opener $\times$ Terminal Pairing}
+Overall matrix: Cramer's V = 0.390, chi-squared p = <1e-300 (dropped 1 all-zero row(s), 0 all-zero col(s) before testing). Of 307 opener-terminal pairs with nonzero co-occurrence,
+47 survive exact hypergeometric testing with Benjamini-Hochberg FDR
+correction (top pairs by PMI shown below).
+\begin{tabular}{llllll}
+\toprule
+\textbf{opener} & \textbf{terminal} & \textbf{co\_count} & \textbf{pmi} & \textbf{p\_value} & \textbf{bh\_significant} \\
+\midrule
+697 & 510 & 2 & 7.228 & 6.51e-05 & True \\
+824 & 413 & 11 & 6.170 & 5.74e-20 & True \\
+565 & 632 & 1 & 6.087 & 0.0146 & False \\
+161 & 097 & 1 & 5.935 & 0.0162 & False \\
+617 & 905 & 6 & 5.783 & 2.3e-10 & True \\
+167 & 706 & 5 & 5.499 & 4.08e-08 & True \\
+161 & 831 & 1 & 5.350 & 0.0243 & False \\
+565 & 231 & 2 & 5.213 & 0.0012 & True \\
+527 & 190 & 2 & 5.163 & 0.00119 & True \\
+241 & 491 & 1 & 4.972 & 0.0314 & False \\
+151 & 097 & 2 & 4.303 & 0.00403 & True \\
+151 & 243 & 1 & 4.303 & 0.0498 & False \\
+407 & 231 & 8 & 4.295 & 2.37e-09 & True \\
+824 & 415 & 4 & 4.200 & 4.97e-05 & True \\
+090 & 104 & 7 & 4.198 & 2.64e-08 & True \\
+\bottomrule
+\end{tabular}
+
+\subsection{740 vs. 520 as Openers}
+\begin{tabular}{lllll}
+\toprule
+\textbf{Dimension} & \textbf{CramersV} & \textbf{P} & \textbf{N\_740} & \textbf{N\_520} \\
+\midrule
+Terminal sign & 0.611 & 6.23e-16 & 938 & 214 \\
+Site & 0.195 & 0.118 & 938 & 214 \\
+Icon & 0.291 & 2.84e-06 & 938 & 214 \\
+Material & 0.186 & 3.86e-05 & 938 & 214 \\
+\bottomrule
+\end{tabular}
+
+\subsection{033 vs. 032 vs. 235 as Terminals (opener distributions behind them)}
+\begin{tabular}{llllll}
+\toprule
+\textbf{terminal\_pair} & \textbf{n\_a} & \textbf{n\_b} & \textbf{js\_opener\_divergence} & \textbf{site\_cramers\_v} & \textbf{icon\_cramers\_v} \\
+\midrule
+033 vs 032 & 191 & 206 & 0.332 & 0.244 & 0.312 \\
+033 vs 235 & 191 & 83 & 0.838 & 0.684 & 0.678 \\
+032 vs 235 & 206 & 83 & 0.602 & 0.544 & 0.585 \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Reading the result}
+A nonzero overall Cramer's V on the opener$\times$terminal matrix, with a
+meaningful share of individual pairs surviving multiple-testing correction,
+indicates openers and terminals are NOT chosen independently of one another
+-- there is some pairing structure, even if it falls short of a rigid
+one-to-one grammar. The size of that effect (Cramer's V above) should be
+read against standard small/medium/large conventions (0.1/0.3/0.5) before
+concluding the pairing is strong.

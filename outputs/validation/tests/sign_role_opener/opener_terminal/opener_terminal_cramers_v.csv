@@ -1,0 +1,2 @@
+Comparison,CramersV,ChiSquaredP,OpenerCount,TerminalCount,Note
+Full opener x terminal matrix,0.390,<1e-300,26,59,"dropped 1 all-zero row(s), 0 all-zero col(s) before testing"

@@ -1,0 +1,84 @@
+\section{Name-Triad Classifier System}
+
+Candidates 817, 861, 820 (Mohenjo-daro concentrated) and the compound
+405-501 (Harappa, icon Bull1:I concentrated) are tested for classifier-system
+structure: a consistent opener per candidate, and divergence (or
+convergence) of that opener across candidates. Opener/terminal labels use
+only complete, edge-intact inscriptions (truncated texts cannot reliably
+supply a true opener or terminal); frequency, site, icon, and material
+counts use the full corpus.
+
+\subsection{Opener Consistency and Classifier Score}
+Raw opener consistency can be misleadingly high simply because a sign is
+the single most common opener in the entire corpus (740 opens 25.5%
+of \emph{all} complete inscriptions corpus-wide). The \texttt{opener\_lift\_vs\_baseline}
+column divides each candidate's observed opener consistency by that
+sign's corpus-wide base rate as an opener, so a lift near 1.0 means "no more
+consistent than chance given how common that opener already is," while a
+high lift means the pairing is specific to this name candidate.
+\begin{tabular}{llrrrrrrl}
+\toprule
+\textbf{name\_candidate} & \textbf{top\_opener} & \textbf{opener\_consistency} & \textbf{corpus\_wide\_opener\_rate} & \textbf{opener\_lift\_vs\_baseline} & \textbf{site\_pmi} & \textbf{icon\_pmi} & \textbf{classifier\_score} & \textbf{verdict} \\
+\midrule
+817 & 740 & 0.420 & 0.255 & 1.64 & 0.400 & 0.000 & 0.184 & WEAK \\
+861 & 740 & 0.306 & 0.255 & 1.20 & 0.345 & 0.000 & 0.140 & WEAK \\
+820 & 740 & 0.363 & 0.255 & 1.42 & 0.591 & 0.000 & 0.187 & WEAK \\
+405-501 & 520 & 1.000 & 0.058 & 17.16 & 1.075 & 5.149 & 0.786 & STRONG \\
+\bottomrule
+\end{tabular}
+
+\subsection{Terminal Sign Consistency}
+\begin{tabular}{llll}
+\toprule
+\textbf{name\_candidate} & \textbf{top\_terminal} & \textbf{terminal\_consistency} & \textbf{n\_gold\_occurrences} \\
+\midrule
+817 & 817 & 0.876 & 169 \\
+861 & 861 & 0.611 & 216 \\
+820 & 820 & 0.780 & 168 \\
+405-501 & 501 & 1.000 & 29 \\
+\bottomrule
+\end{tabular}
+
+\subsection{Cross-Candidate Opener Overlap (Jaccard of top-5 openers)}
+\begin{tabular}{lrp{0.3\textwidth}}
+\toprule
+\textbf{pair} & \textbf{jaccard\_top5\_openers} & \textbf{shared\_openers} \\
+\midrule
+817 vs 861 & 0.667 & 002; 390; 520; 740 \\
+817 vs 820 & 0.429 & 390; 520; 740 \\
+817 vs 405-501 & 0.200 & 520 \\
+861 vs 820 & 0.429 & 390; 520; 740 \\
+861 vs 405-501 & 0.200 & 520 \\
+820 vs 405-501 & 0.200 & 520 \\
+\bottomrule
+\end{tabular}
+
+Overall opener distribution across the 4 candidates: Cramer's V = 0.546,
+p = 1.08e-21. Overall terminal distribution: Cramer's V = 0.979,
+p = 8.55e-225.
+
+\subsection{Icon $\times$ Name-Candidate Association (top PMI cells)}
+Overall matrix Cramer's V = 0.419, p = 1.61e-50.
+\begin{tabular}{llll}
+\toprule
+\textbf{name\_candidate} & \textbf{icon} & \textbf{count} & \textbf{pmi} \\
+\midrule
+405-501 & Bull1:I & 24 & 5.149 \\
+861 & Bull:i:J & 2 & 3.760 \\
+405-501 & Bull1:U & 2 & 3.530 \\
+820 & Bull1:T & 2 & 3.210 \\
+817 & Bull2 & 4 & 2.844 \\
+817 & Elep & 15 & 2.471 \\
+820 & Bull1:X & 3 & 2.416 \\
+820 & Bull1:V & 3 & 2.416 \\
+820 & CompBull & 2 & 2.210 \\
+820 & Rhin & 7 & 2.130 \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Reading the result}
+3 of 4 name candidates clear the opener-consistency threshold (35%) for a single dominant opener. A meaningfully nonzero Cramer's V on the cross-candidate opener and
+icon matrices indicates these four candidates are not interchangeable with
+respect to who introduces them or what icon accompanies them, which is
+consistent with -- but does not on its own prove -- a classifier system
+distinguishing categories of named entity.

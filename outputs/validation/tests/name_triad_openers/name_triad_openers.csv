@@ -1,0 +1,5 @@
+name_candidate,top_opener,opener_freq,opener_consistency,corpus_wide_opener_rate,opener_lift_vs_baseline,site_pmi,icon_pmi,classifier_score,verdict,n_gold_occurrences
+817,740,71,0.420,0.255,1.64,0.400,0.000,0.184,WEAK,169
+861,740,66,0.306,0.255,1.20,0.345,0.000,0.140,WEAK,216
+820,740,61,0.363,0.255,1.42,0.591,0.000,0.187,WEAK,168
+405-501,520,29,1.000,0.058,17.16,1.075,5.149,0.786,STRONG,29

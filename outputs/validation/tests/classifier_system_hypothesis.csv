@@ -1,0 +1,5 @@
+name_candidate,opener,classifier_score,verdict,site_pmi,icon_pmi
+405-501,520,0.786,STRONG,1.075,5.149
+820,740,0.187,WEAK,0.591,0.000
+817,740,0.184,WEAK,0.400,0.000
+861,740,0.140,WEAK,0.345,0.000

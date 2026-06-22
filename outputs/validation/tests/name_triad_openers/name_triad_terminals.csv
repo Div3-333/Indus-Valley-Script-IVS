@@ -1,0 +1,5 @@
+name_candidate,top_terminal,terminal_freq,terminal_consistency,n_gold_occurrences
+817,817,148,0.876,169
+861,861,132,0.611,216
+820,820,131,0.780,168
+405-501,501,29,1.000,29

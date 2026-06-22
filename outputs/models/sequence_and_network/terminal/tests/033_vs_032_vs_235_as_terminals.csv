@@ -1,0 +1,4 @@
+terminal_pair,n_a,n_b,js_opener_divergence,site_cramers_v,site_p,icon_cramers_v,icon_p
+033 vs 032,191,206,0.332,0.244,0.0228,0.312,0.0675
+033 vs 235,191,83,0.838,0.684,4.13e-22,0.678,1.02e-13
+032 vs 235,206,83,0.602,0.544,3.67e-13,0.585,9.06e-09

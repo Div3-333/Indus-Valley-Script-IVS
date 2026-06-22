@@ -1,0 +1,4 @@
+role_pair,js_preceding,js_following,site_cramers_v,site_p,icon_cramers_v,icon_p,verdict
+INITIAL vs MEDIAL,1.000,0.776,0.460,0.000,0.452,0.000,DISTINCT
+MEDIAL vs FINAL,0.625,1.000,0.438,0.000,0.382,0.000,DISTINCT
+INITIAL vs FINAL,1.000,0.285,0.280,0.003,0.349,0.004,NOT DISTINCT

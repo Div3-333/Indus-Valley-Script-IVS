@@ -1,0 +1,60 @@
+terminal,count,top_openers,top_sites,top_icons
+032,206,700:89; 032:49; 740:23; 520:6; 400:5,Harappa:155; Mohenjo-daro:29; Dholavira:9; Kalibangan:4; Nausharo:3,Unknown:134; Bull1:W:12; Bull1:10; Bult:9; Bull1:J:7
+033,191,700:126; 033:26; 520:4; 740:4; 151:3,Harappa:169; Mohenjo-daro:9; Kalibangan:5; Dholavira:4; Allahdino:1,Unknown:141; Bult:15; -:8; Bull1:W:4; Fish:3
+817,148,740:66; 520:16; 390:12; 002:7; 690:7,Mohenjo-daro:70; Harappa:44; Lothal:14; Chanhu-daro:6; Dholavira:4,Unknown:40; Bull1:W:21; Bull1:S:14; Bull1:J:12; Elep:12
+861,132,740:49; 390:11; 520:10; 151:5; 090:5,Mohenjo-daro:73; Harappa:31; Dholavira:8; Lothal:6; Chanhu-daro:4,Unknown:27; Bull1:W:27; Bull1:J:12; Bull1:S:11; Bull1:10
+820,131,740:56; 390:9; 520:9; 820:5; 090:5,Mohenjo-daro:79; Harappa:31; Lothal:5; Kalibangan:3; Nausharo:3,Unknown:37; Bull1:W:30; Bull1:J:11; Bull1:8; Bull1:S:7
+003,130,156:31; 861:29; 740:18; 390:9; 003:8,Harappa:79; Mohenjo-daro:37; Kalibangan:6; Dholavira:3; Bhirrana:1,Unknown:82; Bull1:6; Bull1:S:6; Bull1:W:4; Zebu:3
+034,128,700:109; 034:13; 390:2; 031:1; 033:1,Harappa:120; Mohenjo-daro:3; Amri:1; Chanhu-daro:1; Kalibangan:1,Unknown:110; Bult:5; -:4; Fish:3; Tri4:2
+235,83,740:36; 407:15; 520:9; 090:5; 400:4,Mohenjo-daro:47; Harappa:25; Lothal:4; Allahdino:2; Chanhu-daro:2,Unknown:26; Hare:12; Bull1:W:7; Bull1:4; Bull1:J:4
+031,75,740:13; 031:11; 520:8; 156:8; 090:3,Harappa:29; Mohenjo-daro:29; Kanmer:5; Nausharo:5; Chanhu-daro:2,Unknown:24; Bull1:9; -:9; Bull1:W:8; Bull1:S:4
+920,69,740:30; 520:4; 400:4; 842:3; 504:3,Mohenjo-daro:41; Harappa:14; Chanhu-daro:4; Lothal:4; Dholavira:3,Bull1:W:13; Unknown:13; Bull1:J:11; Bull1:8; Bull1:S:5
+176,68,400:42; 740:13; 156:5; 064:2; 241:1,Harappa:52; Mohenjo-daro:13; Dholavira:2; Ganweriwala:1,Unknown:43; Bult:11; Bull1:3; Bull1:J:3; Bull:1
+806,53,740:32; 400:8; 407:4; 520:3; 159:1,Mohenjo-daro:39; Harappa:13; Dholavira:1,Unknown:31; Anth:10; Bull1:W:4; Othr:3; Bull1:S:2
+503,52,740:42; 400:7; 368:1; 154:1; 861:1,Mohenjo-daro:43; Harappa:8; Chanhu-daro:1,Othr:28; Unknown:9; Gavi:5; Bull1:W:2; Gaur:2
+415,47,520:19; 740:6; 400:5; 824:4; 407:4,Harappa:29; Mohenjo-daro:14; Altyn Depe:1; Bala-kot:1; Rupar:1,Unknown:21; Bult:6; Loop:4; Phyt:3; Bull1:3
+692,44,740:24; 520:3; 090:3; 407:2; 226:2,Harappa:20; Mohenjo-daro:20; Banawali:1; Chanhu-daro:1; Lothal:1,Unknown:15; Bull1:W:5; Bull1:J:5; Bull1:3; Bull1:I:3
+803,44,740:29; 520:5; 400:2; 156:1; 161:1,Mohenjo-daro:23; Harappa:17; Banawali:1; Kalibangan:1; Dholavira:1,Gavi:11; Bull1:W:9; Unknown:8; Gaur:4; Bull1:S:3
+550,38,740:14; 527:4; 390:3; 550:2; 679:2,Mohenjo-daro:19; Harappa:12; Lothal:4; Dholavira:2; Kalibangan:1,Unknown:15; Bull1:J:5; Bull1:W:4; Bull1:2; Bull1:I:2
+255,37,400:13; 740:10; 422:3; 033:2; 156:2,Harappa:19; Mohenjo-daro:14; Kalibangan:1; Nindowari-damb:1; Dholavira:1,Unknown:19; Bull1:3; Bult:2; Bull1:S:2; Buff:2
+004,34,004:7; 740:5; 400:5; 390:3; 700:3,Harappa:18; Mohenjo-daro:12; Banawali:1; Kalibangan:1; Lothal:1,Unknown:18; Bull1:W:5; Mult:4; Pipal:3; Bull1:J:2
+140,34,740:10; 400:6; 090:3; 595:2; 156:1,Mohenjo-daro:19; Harappa:12; Lothal:2; Kalibangan:1,Unknown:10; Bull1:W:7; Goat:4:3; Bull1:I:3; Bull1:2
+413,33,700:12; 824:11; 413:3; 033:2; 226:1,Harappa:29; Bala-kot:1; Mohenjo-daro:1; Nausharo:1; Kalibangan:1,Unknown:29; Bult:3; Bull1:1
+416,29,740:9; 002:6; 416:6; 400:4; 151:4,Harappa:19; Mohenjo-daro:7; Dholavira:2; Kish:1,Unknown:17; Bull1:W:3; Bull1:S:3; Bull1:J:1; Bull1:L:1
+501,29,520:29,Harappa:29,Bull1:I:24; Bull1:3; Bull1:U:2
+706,29,740:10; 167:5; 001:4; 520:2; 706:2,Mohenjo-daro:20; Harappa:5; Lakhanjo-daro:2; Khirsara:1; Dholavira:1,Elep:11; Unknown:8; Mult:3; Bull1:W:2; Bull1:2
+005,25,740:5; 405:4; 706:3; 156:2; 031:1,Mohenjo-daro:17; Harappa:3; Kalibangan:3; Lothal:1; Gola Dhoro (Bagasra):1,Unknown:13; Bull1:W:3; Bull1:I:2; Bull1:J:2; Bull1:S:2
+231,22,407:8; 740:7; 151:2; 565:2; 400:1,Mohenjo-daro:12; Harappa:9; Kalibangan:1,Unknown:9; Zebu:3; Bull1:I:1; Bull:1; Bult:1
+575,20,740:3; 520:3; 869:1; 368:1; 233:1,Mohenjo-daro:14; Harappa:2; Lothal:2; Kalibangan:1; Dholavira:1,Bull1:4; Unknown:3; Zebu:3; Bull1:W:3; Bull1:I:2
+016,19,390:7; 220:2; 400:2; 850:2; 861:1,Mohenjo-daro:10; Harappa:8; Chanhu-daro:1,Unknown:7; Bull1:S:3; Scene:2; Bull1:W:1; Bull1:I:1
+013,18,740:9; 013:5; 400:2; 072:1; 520:1,Harappa:11; Lothal:2; Mohenjo-daro:2; Allahdino:1; Miri Qalat:1,Unknown:10; Bull1:U:2; Rhin:1; X:1; Bull1:J:1
+091,18,892:8; 368:2; 700:1; 390:1; 831:1,Kalibangan:8; Harappa:4; Karzakan:2; Luristan:1; Dholavira:1,Bull1:7; Unknown:6; Gaur:3; Bull1:V:1; Bull1:W:1
+125,15,740:7; 700:3; 390:1; 520:1; 368:1,Mohenjo-daro:8; Harappa:5; Kalibangan:1; Lohumjo-daro:1,Unknown:4; Bull1:W:4; Bull1:S:2; Bull1:X:1; Buff:1
+104,14,090:7; 405:1; 527:1; 390:1; 400:1,Mohenjo-daro:9; Harappa:3; Dholavira:1; Kalibangan:1,Cros:7; Unknown:4; Bull1:W:1; Bull1:S:1; -:1
+171,13,740:4; 415:3; 400:3; 035:2; 820:1,Harappa:7; Mohenjo-daro:5; Unknown:1,Unknown:8; Bull1:W:2; Bult:1; Mult:1; Zebu:1
+491,13,400:3; 317:2; 740:2; 390:2; 032:1,Harappa:9; Mohenjo-daro:2; Kalibangan:1; Lothal:1,Unknown:8; Gavi:1; Bull1:I:1; Gaur:1; Bull1:J:1
+630,13,740:11; 845:1; 550:1,Mohenjo-daro:11; Kalibangan:1; Dholavira:1,Xcrs:6; -:2; Bull1:J:1; Unknown:1; Bull1:L:1
+717,13,740:4; 400:3; 390:1; 090:1; 409:1,Harappa:6; Mohenjo-daro:5; Chanhu-daro:1; Kalibangan:1,Unknown:5; Bull1:W:3; Bull1:J:1; Fish:1; Anth:1
+495,11,400:3; 740:2; 151:1; 520:1; 776:1,Harappa:4; Mohenjo-daro:3; Chanhu-daro:1; Dholavira:1; Kalibangan:1,Unknown:4; Othr:2; Bull1:I:1; Bull1:S:1; Phyt:1
+905,10,617:6; 405:1; 130:1; 032:1; 041:1,Mohenjo-daro:9; Harappa:1,Othr:5; Unknown:3; Bull1:W:1; -:1
+175,9,400:4; 520:2; 740:2; 705:1,Harappa:5; Mohenjo-daro:3; Dholavira:1,Unknown:4; Scene:1; Bull1:J:1; Bull1:I:1; Bull1:S:1
+831,9,400:2; 161:1; 892:1; 585:1; 617:1,Mohenjo-daro:5; Harappa:4,Unknown:5; Bull1:J:2; Bull1:I:1; Othr:1
+853,9,090:3; 520:2; 298:1; 740:1; 892:1,Mohenjo-daro:8; Unknown:1,Bull1:J:2; Bull1:W:2; Rhin:1; Elep:1; Gaur:1
+137,8,400:7; 137:1,Harappa:8,Unknown:5; Mult:2; Fish:1
+605,8,400:6; 865:1; 740:1,Harappa:6; Mohenjo-daro:2,Gavi:6; Bull1:S:1; Bull1:1
+510,7,697:2; 740:2; 156:1; 255:1; 520:1,Harappa:2; Mohenjo-daro:2; Allahdino:1; Lothal:1; Bhirrana:1,Bull1:3; Unknown:2; -:1; Bull1:II:1
+745,7,700:3; 031:2; 595:1; 400:1,Harappa:4; Mohenjo-daro:3,Bull1:W:3; Unknown:2; -:1; Bull1:1
+877,7,740:3; 400:2; 156:1; 032:1,Mohenjo-daro:6; Harappa:1,Unknown:3; Gaur:2; Bull1:W:2
+097,6,400:3; 151:2; 161:1,Mohenjo-daro:4; Harappa:2,Unknown:2; Bull1:2; Bull1:I:1; Bull1:L:1
+632,6,375:1; 706:1; 565:1; 740:1; 090:1,Mohenjo-daro:5; Chanhu-daro:1,Bull1:W:2; Unknown:2; Buff:1; Bull1:1
+792,6,740:3; 090:2; 158:1,Harappa:3; Mohenjo-daro:3,Unknown:5; Bull1:J:1
+072,5,236:1; 090:1; 407:1; 400:1; 740:1,Harappa:2; Mohenjo-daro:2; Banawali:1,Bull1:W:2; Htgr:1; Bull1:I:1; Mult:1
+190,5,527:2; 390:1; 269:1; 160:1,Mohenjo-daro:4; Qala'at al-Bahrain:1,Gaur:2; Bull1:W:1; Bull1:1; Bull1:J:1
+382,5,400:2; 016:1; 740:1; 382:1,Harappa:4; Lakhanjo-daro:1,Unknown:3; -:1; Swas:1
+821,5,740:4; 090:1,Mohenjo-daro:3; Banawali:1; Harappa:1,Bull1:L:2; Bull1:O:1; Scene:1; Bull1:J:1
+838,5,740:3; 390:2,Mohenjo-daro:4; Gharo Bhiro:1,Unknown:5
+484,4,740:4,Harappa:4,Unknown:3; Bull1:W:1
+906,4,055:1; 590:1; 740:1; 520:1,Mohenjo-daro:3; Kalibangan:1,Gaur:1; Unknown:1; Bull1:L:1; Bull1:1
+921,4,520:2; 740:1; 354:1,Harappa:2; Mohenjo-daro:2,Bull1:W:3; Bull1:L:1
+243,3,400:1; 790:1; 151:1,Mohenjo-daro:3,Gaur:1; Bull1:1; Bull1:S:1
+554,3,740:2; 400:1,Harappa:3,Unknown:3

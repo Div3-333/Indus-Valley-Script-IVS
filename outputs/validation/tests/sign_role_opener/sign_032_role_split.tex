@@ -1,0 +1,49 @@
+\section{Sign 032 Role-Splitter}
+
+Sign 032 occurs in all three structural positions (INITIAL, MEDIAL, FINAL) of
+the inscription. This section tests whether its three positional usages are
+statistically distinguishable -- via Jensen-Shannon divergence of the
+immediate preceding/following sign distributions, declared threshold of
+0.3 bits on \emph{both} directions before the test was run -- or whether they
+behave as one undifferentiated sign.
+
+\subsection{Role Profiles}
+\begin{tabular}{llll}
+\toprule
+\textbf{Role} & \textbf{Count} & \textbf{Pct} & \textbf{DistinctFrom} \\
+\midrule
+INITIAL & 90 & 0.197 & MEDIAL \\
+MEDIAL & 208 & 0.456 & FINAL; INITIAL \\
+FINAL & 158 & 0.346 & MEDIAL \\
+\bottomrule
+\end{tabular}
+
+\subsection{Pairwise Distinctiveness Tests}
+\begin{tabular}{lrrrrl}
+\toprule
+\textbf{role\_pair} & \textbf{js\_preceding} & \textbf{js\_following} & \textbf{site\_cramers\_v} & \textbf{icon\_cramers\_v} & \textbf{verdict} \\
+\midrule
+INITIAL vs MEDIAL & 1.000 & 0.776 & 0.460 & 0.452 & DISTINCT \\
+MEDIAL vs FINAL & 0.625 & 1.000 & 0.438 & 0.382 & DISTINCT \\
+INITIAL vs FINAL & 1.000 & 0.285 & 0.280 & 0.349 & NOT DISTINCT \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Verdict: SPLIT}
+At least one role pair (INITIAL vs MEDIAL, MEDIAL vs FINAL) exceeded the pre-declared distinctiveness threshold on both the preceding- and following-sign distributions, supporting separating those roles into distinct downstream tokens.
+
+\subsection*{Caveat: the INITIAL role's preceding-sign comparison is structurally trivial}
+By definition, INITIAL-position 032 is always preceded by the sentinel
+\texttt{START}, never by an actual sign. Any comparison involving INITIAL
+will therefore register the maximum possible preceding-sign JS divergence
+(1.0) regardless of whether 032 behaves differently there for any
+substantive reason. The \emph{following}-sign divergence is the only
+informative axis for comparisons that include INITIAL, and it is on that
+axis that INITIAL vs. FINAL fails to clear the threshold (0.285 < 0.3)
+despite a large site/icon Cramer's V -- meaning what follows 032 at the
+start of an inscription is not reliably different from what follows it at
+the end, even though the two positions differ (trivially) in what precedes
+them and (non-trivially) in their site/icon profile. Read the SPLIT verdict
+above as strongest for MEDIAL vs. the edge positions, and treat the
+INITIAL-vs-FINAL comparison as the weakest part of the case for a full
+three-way split.
